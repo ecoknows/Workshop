@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,} from 'react-native';
+import { View, Text } from '../../../components';
 
-function Profile() {
+function JobProfile({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
+      <Text caption accent bold >Job Profile</Text>
     </View>
   );
 }
 
-export default Profile;
+export default JobProfile;
 
 
 const styles = StyleSheet.create({

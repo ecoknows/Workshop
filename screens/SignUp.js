@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, } from 'react-native';
+import { Text, View } from '../components';
 
-function SignUp() {
+function SignUp({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>SignUp</Text>
-      <StatusBar style="auto" />
+      <Text caption accent bold touchable press={()=> navigation.navigate('UserScreen')} >SignUp</Text>
     </View>
   );
 }

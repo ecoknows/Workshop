@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet,} from 'react-native';
-import { Text, View } from '../components';
+import { View, Text } from '../../../components';
 
-function Login({navigation}) {
+function EmployeeStatus({navigation}) {
   return (
     <View style={styles.container}>
-      <Text caption accent bold touchable press={()=> navigation.navigate('UserScreen')}>Login</Text>
+      <Text caption accent bold >Employee Status</Text>
     </View>
   );
 }
 
-export default Login;
+export default EmployeeStatus;
 
 
 const styles = StyleSheet.create({

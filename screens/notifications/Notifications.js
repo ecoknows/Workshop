@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,} from 'react-native';
+import { View, Text } from '../../components';
 
-function JobSearch() {
+function Notifications() {
   return (
     <View style={styles.container}>
-      <Text>JobSearch</Text>
+      <Text accent caption bold>Notifications</Text>
     </View>
   );
 }
 
-export default JobSearch;
+export default Notifications;
 
 
 const styles = StyleSheet.create({

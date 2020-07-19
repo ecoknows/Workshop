@@ -8,7 +8,14 @@ import { Text, Image, StyleSheet } from 'react-native';
 import {
     JobSearch,
     Profile,
+    JobProfile,
+    EmployerStatus,
+    EmployeeStatus,
     Notifications,
+    InfoSlide,
+    Login,
+    SignUp,
+    WorkerProfile,
 } from '../screens';
 
 
@@ -18,7 +25,7 @@ import { theme } from '../constants';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-function UserScreen_BottomNavigation({navigation}){
+function User_BottomNavigation({navigation}){
     const [active, setActive] = useState('Profile');
 
     return(
@@ -89,15 +96,108 @@ function UserScreen_BottomNavigation({navigation}){
     );
 }
 
+function Employee_BottomNavigation({navigation}){
+    const [active, setActive] = useState('Employee');
+
+    return(
+        <Tab.Navigator
+                  
+        tabBarOptions={{
+
+            style: {				
+                elevation: 0,
+                borderTopWidth: 0,
+            },
+            tabStyle:{
+                height: 50,
+            }
+        }}
+        >
+
+            <Tab.Screen name="Employee" component={EmployeeStatus} 
+             listeners={{
+                tabPress: e => {
+                    setActive('Employee')
+                },
+                }}
+            options={{
+                tabBarLabel: () => <Text style={[styles.text,{color: active == 'Profile' ?  theme.colors.accent: 'black'}]}>Employee</Text>,
+                tabBarIcon: ({ color, size }) => (
+                    <Image source={(active == 'Employee' )? require('../assets/icons/employee_click.png') : require('../assets/icons/employee.png')}
+                     resizeMode='cover'
+                      style={styles.icon}
+                    />
+                ),
+            }}
+            />
+            <Tab.Screen name="Employer" component={EmployerStatus} 
+             listeners={{
+                tabPress: e => {
+                    setActive('Employer')
+                },
+                }}
+            options={{
+                tabBarLabel: () => <Text style={[styles.text,{color: active == 'Employer' ?  theme.colors.accent: 'black'}]} >Employer</Text>,
+                tabBarIcon: ({ color, size }) => (
+                  <Image source={(active == 'Employer' )? require('../assets/icons/employer_click.png') : require('../assets/icons/employer.png')}
+                   resizeMode='cover'
+                    style={styles.icon}
+                  />
+                ),
+            }}
+            />
+
+        </Tab.Navigator>
+    );
+}
+
 function Navigation({navigation}){
     return(
         <NavigationContainer>
             <Stack.Navigator mode='modal' >
-                <Stack.Screen name='UserScreen' component={UserScreen_BottomNavigation}
+                <Stack.Screen name='InfoSlide' component={InfoSlide}
                     options={{
                         headerShown: false,
                     }}
                 />
+                
+                <Stack.Screen name='UserScreen' component={User_BottomNavigation}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+
+                <Stack.Screen name='Login' component={Login}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                
+                <Stack.Screen name='SignUp' component={SignUp}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                
+                <Stack.Screen name='JobProfile' component={JobProfile}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                
+                <Stack.Screen name='Employee' component={Employee_BottomNavigation}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+
+                
+                <Stack.Screen name='WorkerProfile' component={WorkerProfile}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
