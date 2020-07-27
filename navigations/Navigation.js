@@ -190,7 +190,6 @@ function Navigation({navigation}){
                         headerShown: false,
                     }}
                 />
-
                 
                 <Stack.Screen name='WorkerProfile' component={WorkerProfile}
                     options={{
