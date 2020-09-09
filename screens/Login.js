@@ -1,23 +1,142 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet,} from 'react-native';
-import { Text, View } from '../components';
+import { StyleSheet, 
+  Text, 
+  View, 
+  Image, 
+  TextInput, 
+  TouchableOpacity, 
+  TouchableWithoutFeedback, 
+  KeyboardAvoidingView,
+  Keyboard } from 'react-native';
+import { AntDesign as Icon} from '@expo/vector-icons';
 
 function Login({navigation}) {
+  
+  const[Hide,setHide] = React.useState(true);
+
   return (
+
+  <TouchableWithoutFeedback onPress={() => {
+    Keyboard.dismiss();
+    }}>
     <View style={styles.container}>
-      <Text caption accent bold touchable press={()=> navigation.navigate('UserScreen')}>Login</Text>
+      <Image source={require('../assets/Login.png')} style={styles.image} resizeMode="contain"/>
+      <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-90}>
+        <Text style={styles.text}>Email</Text>
+        <TextInput
+        style={styles.input}
+        placeholder='email@email.com'
+        placeholderTextColor='#dfe6e9'  
+        returnKeyType='next'
+        />
+
+        <Text style={styles.text}>Password</Text>
+        <TextInput
+        style={styles.input}
+        placeholder='**********'
+        placeholderTextColor='#dfe6e9'
+        returnKeyType='done'
+        secureTextEntry={Hide}
+        
+        />
+          
+        <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
+          <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+        </TouchableOpacity>   
+
+        <TouchableOpacity style={styles.loginBtn} onPress={()=> {Keyboard.dismiss(); navigation.navigate('UserScreen')}}>
+          <Text style={styles.loginText}>LOGIN</Text>
+        </TouchableOpacity>
+
+        <TouchableWithoutFeedback>
+           <Text style={{color: '#f68025', fontWeight: 'bold', alignSelf: 'center', marginTop: 10}}>Forgot Password</Text>
+        </TouchableWithoutFeedback>
+       
+      </KeyboardAvoidingView>
+
+      <Text style={{
+        color: '#003A63', 
+        alignSelf: 'center', 
+        marginTop: 40
+        }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
+      </Text>
+
+      <View style={styles.socIcon}>
+        <TouchableOpacity>
+          <Icon name='facebook-square' size={28} color='#4267B2'/>
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Icon name='google' size={28} color='#DB4437'/>
+        </TouchableOpacity>
+
+      </View>
+      
+     
     </View>
+  </TouchableWithoutFeedback>
+    
+    
   );
 }
 
 export default Login;
 
-
 const styles = StyleSheet.create({
   container: {
+    display: 'flex',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 20,
+    paddingHorizontal:10,
+    backgroundColor: '#fff'
+  },
+  image:{
+    width: 355,
+    height: 269,
+  },
+  form:{
+    marginHorizontal: 20,
+  },
+  text:{
+    color: '#f68025',
+    fontSize: 16,
+    fontWeight: '400',
+    marginVertical: 5,
+  },
+  input:{
+    borderBottomColor: "#f68025", 
+    borderBottomWidth: 2, 
+    borderStyle: 'solid', 
+    marginBottom: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 8,
+  },
+  eyeBtn: {
+    alignSelf: 'flex-end',
+    position: "absolute",
+    top: 125,
+    
+  },  
+  loginBtn: {
+    borderColor: '#f68025',
+    borderWidth: 2,
+    borderRadius: 5,
+    padding: 5,
+    paddingHorizontal: 30,
+    marginTop: 10,
+    alignSelf: 'center'
+  },
+  loginText:{
+    color: '#f68025',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  socIcon: {
+    flexDirection: 'row',  
+    justifyContent: 'space-evenly', 
+  alignSelf: 'center', 
+  marginTop: 15, 
+  width: 125 
   },
 });
