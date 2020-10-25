@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import { theme } from '../constants';
 
 const ViewField = props => {
     const {
@@ -12,13 +13,18 @@ const ViewField = props => {
 
     // behaviour
     touchable,
+    round,
 
     // flex
     flex,
     row,
 
+    //size
+    scale,
+
     //colr
     white,
+    accent,
 
     ...rest
     } = props;
@@ -32,12 +38,18 @@ const ViewField = props => {
         flex == false && { flex: 0},
         flex && {flex: flex},
 
+        round && {borderRadius: round},
+
+        //size
+        scale && {height: scale, width: scale},
+
         // position
         center && {justifiyContent: 'center'},
         middle && {alignItems: 'center'},
 
         //color
         white && styles.white,
+        accent && styles.accent,
         
     ];
 
@@ -68,6 +80,6 @@ const styles = StyleSheet.create({
     row: { flexDirection: 'row'},
 
     //colors 
-
     white: {backgroundColor: 'white'},
+    accent: {backgroundColor: theme.colors.accent},
 });
