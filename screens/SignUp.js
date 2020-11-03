@@ -1,5 +1,6 @@
+
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
 import { StyleSheet, 
   Text, 
   View, 
@@ -10,80 +11,97 @@ import { StyleSheet,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
+import { sign_up } from '../database/firebase';
 
-function SignUp({navigation}) {
+function Main({navigation}) {
   
-  const[Hide,setHide] = React.useState(true);
+  const[Hide,setHide] = useState(true);
+  const[name,setName] = useState('');
+  const[email,setEmail] = useState('');
+  const[password,setPassword] = useState('');
 
   return (
 
-  <TouchableWithoutFeedback onPress={() => {
-    Keyboard.dismiss();
-    }}>
-    <View style={styles.container}>
-      
-      <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
-      <Image source={require('../assets/Signup.png')} style={styles.image} resizeMode="contain"/>
-      <View style={{backgroundColor: '#FFFFFF', padding: 5}}>
-        
-        <Text style={styles.text}>Name</Text>
-          <TextInput
-          style={styles.input}
-          placeholder='Alex Camry'
-          placeholderTextColor='#dfe6e9'  
-          returnKeyType='next'
-        />
-        <Text style={styles.text}>Email</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='email@email.com'
-          placeholderTextColor='#dfe6e9'  
-          returnKeyType='next'
-        />
-
-        <Text style={styles.text}>Password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='**********'
-          placeholderTextColor='#dfe6e9'
-          returnKeyType='done'
-          secureTextEntry={Hide}
-        />
+      <TouchableWithoutFeedback onPress={() => {
+        Keyboard.dismiss();
+        }}>
+        <View style={styles.container}>
+          
+          <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
+          <Image source={require('../assets/Signup.png')} style={styles.image} resizeMode="contain"/>
+          <View style={{backgroundColor: '#FFFFFF', padding: 5}}>
             
-        <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-          <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
-        </TouchableOpacity>   
+            <Text style={styles.text}>Name</Text>
+              <TextInput
+              style={styles.input}
+              placeholder='Alex Camry'
+              placeholderTextColor='#dfe6e9'  
+              returnKeyType='next'
+              onChangeText={ text=>setName(text)}
+              value={name}
+            />
+            <Text style={styles.text}>Email</Text>
+            <TextInput
+              style={styles.input}
+              placeholder='email@email.com'
+              placeholderTextColor='#dfe6e9'  
+              returnKeyType='next'
+              onChangeText={ text=>setEmail(text)}
+              value={email}
+            />
 
-        <TouchableOpacity style={styles.SignupBtn} onPress={()=> {Keyboard.dismiss(); navigation.navigate('UserScreen')}}>
-          <Text style={styles.SignupText}>Signup</Text>
-        </TouchableOpacity>
+            <Text style={styles.text}>Password</Text>
+            <TextInput
+              style={styles.input}
+              placeholder='**********'
+              placeholderTextColor='#dfe6e9'
+              returnKeyType='done'
+              secureTextEntry={Hide}
+              onChangeText={ text=>setPassword(text)}
+              value={password}
+            />
+                
+            <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
+              <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+            </TouchableOpacity>   
+
+            <TouchableOpacity style={styles.SignupBtn} onPress={ () => SignUpButtonClick(name,email,password, navigation)}>
+              <Text style={styles.SignupText}>Signup</Text>
+            </TouchableOpacity>
+            </View>
+          </KeyboardAvoidingView>
+          
+          <Text style={{
+            color: '#003A63', 
+            alignSelf: 'center', 
+            marginTop: 15
+            }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
+          </Text>
+
+          <View style={styles.socIcon}>
+            <TouchableOpacity>
+              <Icon name='facebook-square' size={28} color='#4267B2'/>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <Icon name='google' size={28} color='#DB4437'/>
+            </TouchableOpacity>
+          </View>
         </View>
-      </KeyboardAvoidingView>
-      
-      <Text style={{
-        color: '#003A63', 
-        alignSelf: 'center', 
-        marginTop: 15
-        }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
-      </Text>
-
-      <View style={styles.socIcon}>
-        <TouchableOpacity>
-          <Icon name='facebook-square' size={28} color='#4267B2'/>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Icon name='google' size={28} color='#DB4437'/>
-        </TouchableOpacity>
-      </View>
-    </View>
-  </TouchableWithoutFeedback>
-    
+      </TouchableWithoutFeedback>
+        
     
   );
 }
 
-export default SignUp;
+function SignUpButtonClick (name, email, pass, navigation){
+  sign_up(email,pass, ()=>{
+    Keyboard.dismiss(); 
+    navigation.navigate('UserScreen');
+  });
+}
+
+export default Main;
 
 const styles = StyleSheet.create({
   container: {

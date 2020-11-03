@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React,{useState} from 'react';
 import { StyleSheet, 
   Text, 
   View, 
@@ -10,10 +10,14 @@ import { StyleSheet,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
+import { sign_in } from '../database/firebase';
 
-function Login({navigation}) {
+function Main({navigation}) {
   
-  const[Hide,setHide] = React.useState(true);
+  const[Hide,setHide] = useState(true);
+
+  const[email,setEmail] = useState('');
+  const[password,setPassword] = useState('');
 
   return (
 
@@ -25,19 +29,23 @@ function Login({navigation}) {
       <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-90}>
         <Text style={styles.text}>Email</Text>
         <TextInput
-        style={styles.input}
-        placeholder='email@email.com'
-        placeholderTextColor='#dfe6e9'  
-        returnKeyType='next'
+          style={styles.input}
+          placeholder='email@email.com'
+          placeholderTextColor='#dfe6e9'  
+          returnKeyType='next'
+          onChangeText={ text=>setEmail(text)}
+          value={email}
         />
 
         <Text style={styles.text}>Password</Text>
         <TextInput
-        style={styles.input}
-        placeholder='**********'
-        placeholderTextColor='#dfe6e9'
-        returnKeyType='done'
-        secureTextEntry={Hide}
+          style={styles.input}
+          placeholder='**********'
+          placeholderTextColor='#dfe6e9'
+          returnKeyType='done'
+          secureTextEntry={Hide}
+          onChangeText={ text=>setPassword(text)}
+          value={password}
         
         />
           
@@ -45,7 +53,7 @@ function Login({navigation}) {
           <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
         </TouchableOpacity>   
 
-        <TouchableOpacity style={styles.loginBtn} onPress={()=> {Keyboard.dismiss(); navigation.navigate('UserScreen')}}>
+        <TouchableOpacity style={styles.loginBtn} onPress={()=> SignInButtonClick(email,password,navigation)}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
 
@@ -81,7 +89,15 @@ function Login({navigation}) {
   );
 }
 
-export default Login;
+
+function SignInButtonClick (email, pass, navigation){
+  sign_in(email,pass, ()=>{
+    Keyboard.dismiss(); 
+    navigation.navigate('UserScreen');
+  });
+}
+
+export default Main;
 
 const styles = StyleSheet.create({
   container: {
