@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, } from 'react-native';
 import { View, Text } from '../../components';
+import { NAME, USER_ID } from '../../database/current_user';
 
 function Profile({navigation}) {
+  console.log(USER_ID, NAME);
   return (
     <View style={styles.container}>
       <Text h1 accent bold>Profile</Text>

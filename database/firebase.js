@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 import { YellowBox } from 'react-native';
-import { check_login_user } from './current_user';
+import { check_login_user, update_login_user } from './current_user';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCG42jP5wJvX2kTe_c1z9KYGZj2qyDWBoE",
@@ -83,6 +83,16 @@ function add_users(user_info, func){
         });
 }
 
+const get_user = async(uid)=>{
+    const userDoc = await firebase.firestore()
+                        .collection(USERS)
+                        .doc(uid)
+                        .get();
+
+    const data = userDoc.data();
+    update_login_user(data);
+
+}
 
 export{
     InitializeFirebase,
@@ -90,5 +100,6 @@ export{
     sign_up,
     add_users,
     current_user_id,
+    get_user
 
 }

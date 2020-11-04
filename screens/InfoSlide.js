@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components';
+import {check_login_user } from '../database/current_user';
 
 function Main({navigation}) {
 
