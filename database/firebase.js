@@ -54,6 +54,10 @@ function sign_up(email, pass, func){
         })
 }
 
+/* Firestore Methods */
+
+
+
 export{
     InitializeFirebase,
     sign_in,
