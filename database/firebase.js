@@ -49,6 +49,7 @@ function sign_in(email, pass, func){
         })
 }
 
+
 function sign_up(email, pass, func){
     firebase.auth()
         .createUserWithEmailAndPassword(email,pass)
