@@ -97,14 +97,13 @@ function Main({navigation}) {
 function SignUpButtonClick (name, email, pass, navigation){
 
   sign_up(email,pass, ()=>{
-    
+    const uid = current_user_id();
     add_users({
-      uid: current_user_id(),
+      uid,
       name,
       email,
       pass,
     })
-    set_user_info({uid, name});
     navigation.navigate('UserScreen');
   });
 }

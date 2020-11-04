@@ -1,5 +1,6 @@
 const colors = {
-    accent : '#F68025'
+    accent : '#F68025',
+    peach : '#FFF0DA',
 }
 
 const font = {

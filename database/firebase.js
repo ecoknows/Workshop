@@ -1,7 +1,8 @@
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 import { YellowBox } from 'react-native';
-import { check_login_user, update_login_user } from './current_user';
+import { check_login_user, set_user_info, update_login_user } from './current_user';
+import { DATABASE_TAGS, ERROR_TAGS, SUCCESS_TAGS } from '../constants/TAGS';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCG42jP5wJvX2kTe_c1z9KYGZj2qyDWBoE",
@@ -37,14 +38,14 @@ function sign_in(email, pass, func){
         .auth()
         .signInWithEmailAndPassword(email, pass)
         .then(()=>{
-            console.log("Successfull Login");
+            console.log(SUCCESS_TAGS,DATABASE_TAGS,"Login Success");
             if(func != undefined){
                 func();
             }
         })
         .catch(error => {
             let errorMessage = error.message;
-            console.log(errorMessage);
+            console.log(ERROR_TAGS ,DATABASE_TAGS ,errorMessage);
         })
 }
 
@@ -52,7 +53,7 @@ function sign_up(email, pass, func){
     firebase.auth()
         .createUserWithEmailAndPassword(email,pass)
         .then(()=>{
-            console.log("Successfull Create");
+            console.log(SUCCESS_TAGS,DATABASE_TAGS,"Create User Success");
             if(func != undefined){
                 func();
             }
@@ -61,9 +62,9 @@ function sign_up(email, pass, func){
             let errorCode = error.code;
             let errorMessage = error.message;
             if (errorCode == 'auth/weak-password') {
-                console.log("Weak Password");
+                console.log(ERROR_TAGS,DATABASE_TAGS,"Weak Password");
             } else {
-             console.log(errorMessage);
+             console.log(ERROR_TAGS,DATABASE_TAGS,errorMessage);
             }
         })
 }
@@ -76,11 +77,14 @@ function add_users(user_info, func){
         .doc(uid)
         .set(user_info)
         .then(()=>{
-            console.log('Successfully Add User');
+            console.log(SUCCESS_TAGS, DATABASE_TAGS,'User Add Success');
             if(func != undefined){
                 func();
             }
         });
+        
+    set_user_info(user_info);
+    update_login_user(user_info);
 }
 
 const get_user = async(uid)=>{

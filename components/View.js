@@ -10,6 +10,7 @@ const ViewField = props => {
     // position
     center,
     middle,
+    end,
 
     // behaviour
     touchable,
@@ -18,12 +19,14 @@ const ViewField = props => {
     // flex
     flex,
     row,
+    rowVerse,
 
     //size
     scale,
 
     //colr
     white,
+    peach,
     accent,
 
     ...rest
@@ -35,6 +38,7 @@ const ViewField = props => {
 
         // flex
         row && styles.row,
+        rowVerse && styles.rowVerse,
         flex == false && { flex: 0},
         flex && {flex: flex},
 
@@ -46,9 +50,11 @@ const ViewField = props => {
         // position
         center && {justifiyContent: 'center'},
         middle && {alignItems: 'center'},
+        end && {justifiyContent: 'flex-end',},
 
         //color
         white && styles.white,
+        peach && styles.peach,
         accent && styles.accent,
         
     ];
@@ -78,8 +84,10 @@ const styles = StyleSheet.create({
 
 
     row: { flexDirection: 'row'},
+    rowVerse: {flexDirection: 'row-reverse'},
 
     //colors 
     white: {backgroundColor: 'white'},
+    peach: {backgroundColor: theme.colors.peach},
     accent: {backgroundColor: theme.colors.accent},
 });
