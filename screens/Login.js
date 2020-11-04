@@ -10,7 +10,8 @@ import { StyleSheet,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
-import { sign_in } from '../database/firebase';
+import { current_user_id, sign_in } from '../database/firebase';
+import { set_user_info, update_login_user } from '../database/current_user';
 
 function Main({navigation}) {
   
@@ -92,7 +93,10 @@ function Main({navigation}) {
 
 function SignInButtonClick (email, pass, navigation){
   sign_in(email,pass, ()=>{
-    Keyboard.dismiss(); 
+    Keyboard.dismiss();
+    update_login_user({
+      uid:current_user_id(),
+    })
     navigation.navigate('UserScreen');
   });
 }

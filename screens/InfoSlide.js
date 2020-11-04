@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components';
 
-function InfoSlide({navigation}) {
+function Main({navigation}) {
+
+  useEffect(()=>{
+    check_login_user(()=>{
+      navigation.navigate('UserScreen');
+    });
+  },[]);
 
   return (
     <View style={styles.container}>
@@ -17,7 +23,7 @@ function InfoSlide({navigation}) {
   );
 }
 
-export default InfoSlide;
+export default Main;
 
 
 const styles = StyleSheet.create({

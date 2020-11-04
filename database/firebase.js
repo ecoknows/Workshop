@@ -1,5 +1,7 @@
 import * as firebase from 'firebase';
-import 'firebase/firestore'
+import 'firebase/firestore';
+import { YellowBox } from 'react-native';
+import { check_login_user } from './current_user';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCG42jP5wJvX2kTe_c1z9KYGZj2qyDWBoE",
@@ -10,12 +12,24 @@ var firebaseConfig = {
   messagingSenderId: "804151395338",
   appId: "1:804151395338:web:4a30ffc7201e321ba3cbf3"
 };
+
+const USERS = 'Users';
+
 /* Starting Firebase */
 function InitializeFirebase(){
     // Initialize Firebase
+    YellowBox.ignoreWarnings(['Setting a timer']);
+    console.ignoredYellowBox = ['Setting a timer'];
+    check_login_user();
     if(firebase.apps.length === 0)
       firebase.initializeApp(firebaseConfig);
 }
+
+/* CURRENT USER LOGIN */
+function current_user_id(){
+    return firebase.auth().currentUser.uid;
+}
+
 
 /* Authentication Methods */
 function sign_in(email, pass, func){
@@ -55,11 +69,26 @@ function sign_up(email, pass, func){
 }
 
 /* Firestore Methods */
-
+function add_users(user_info, func){
+    const { uid } = user_info;
+    firebase.firestore()
+        .collection(USERS)
+        .doc(uid)
+        .set(user_info)
+        .then(()=>{
+            console.log('Successfully Add User');
+            if(func != undefined){
+                func();
+            }
+        });
+}
 
 
 export{
     InitializeFirebase,
     sign_in,
     sign_up,
+    add_users,
+    current_user_id,
+
 }

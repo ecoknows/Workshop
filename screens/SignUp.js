@@ -11,7 +11,8 @@ import { StyleSheet,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
-import { sign_up } from '../database/firebase';
+import { sign_up, add_users, current_user_id } from '../database/firebase';
+import { set_user_info } from '../database/current_user';
 
 function Main({navigation}) {
   
@@ -19,7 +20,6 @@ function Main({navigation}) {
   const[name,setName] = useState('');
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
-
   return (
 
       <TouchableWithoutFeedback onPress={() => {
@@ -95,8 +95,16 @@ function Main({navigation}) {
 }
 
 function SignUpButtonClick (name, email, pass, navigation){
+
   sign_up(email,pass, ()=>{
-    Keyboard.dismiss(); 
+    
+    add_users({
+      uid: current_user_id(),
+      name,
+      email,
+      pass,
+    })
+    set_user_info({uid, name});
     navigation.navigate('UserScreen');
   });
 }
