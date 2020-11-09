@@ -9,6 +9,13 @@ const font = {
 
 const size = {
     padding : 8,
+
+
+    x_large: 300,
+    large: 200,
+    meduim: 120,
+    small: 100,
+
 }
 
 export {
