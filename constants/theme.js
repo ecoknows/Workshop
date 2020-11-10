@@ -1,6 +1,10 @@
 const colors = {
     accent : '#F68025',
     peach : '#FFF0DA',
+    gray : '#4F4F4F',
+    blue : '#3488CC',
+    yellow: '#939004',
+    red: '#F43737',
 }
 
 const font = {

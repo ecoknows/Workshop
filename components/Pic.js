@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Image, Dimensions} from 'react-native';
 import { theme } from '../constants'
 import {BoxShadow} from 'react-native-shadow';
+import View from './View';
 
 const { width, height } = Dimensions.get('window');
 const IMAGE_SIZE_PERCENT = .30; // 10%
@@ -38,20 +39,17 @@ const Pic = props =>{
     ];
 
     if(profile_picture){
-        const shadowOpt = {
-			width:  width * IMAGE_SIZE_PERCENT,
-			height: height * ((IMAGE_SIZE_PERCENT/2)+.005),
-			color:"#F68025",
-			border:1,
-			radius: 60,
-			opacity:0.2,
-			x:0,
-			y:5,
-		}
         return(
-            <BoxShadow setting={shadowOpt}>
-                 <Image style={PicStyle} source={src} {...rest}/>    
-            </BoxShadow>
+            <View flex={false} center middle>
+                      <Image 
+                        source={require('../assets/image/profile_pic.png')}
+                        style={{position: 'absolute', resizeMode: 'contain', 
+                            height: height * 0.41,
+                            width: width * 0.41,
+                        }}
+                        />
+                        <Image style={PicStyle} source={src} {...rest}/>    
+            </View>
         )
 
     }
@@ -78,9 +76,10 @@ const styles = StyleSheet.create({
 
     profile_picture:{
         height: height * ((IMAGE_SIZE_PERCENT/2)+.005),// 10%    
-        width: width * IMAGE_SIZE_PERCENT,// 10%
+        width: width * IMAGE_SIZE_PERCENT + 0.5,// 10%
         borderRadius: width * IMAGE_SIZE_PERCENT,
         borderColor: '#F68025',
+        marginBottom: 20,
         borderWidth: 2,
     }
 
