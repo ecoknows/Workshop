@@ -48,7 +48,7 @@ const ViewField = props => {
         scale && {height: scale, width: scale},
 
         // position
-        center && {justifiyContent: 'center'},
+        center && {justifyContent: 'center'},
         middle && {alignItems: 'center'},
         end && {justifiyContent: 'flex-end',},
 

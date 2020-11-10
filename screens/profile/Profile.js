@@ -3,6 +3,7 @@ import { StyleSheet, } from 'react-native';
 import { View, Text, Pic } from '../../components';
 import { theme } from '../../constants';
 
+
 function Main({navigation}) {
   return (
     <View accent>
@@ -14,21 +15,11 @@ function Main({navigation}) {
 
 function Top(props){
   return(
-    <View peach row>
-      <View accent>
-
-      </View>
-      
-      <View white>
-        
+    <View peach middle center>
         <Pic 
         src={require('../../assets/temp_image/john_smith.png')}
         profile_picture 
         />
-      </View>
-      <View peach>
-
-      </View>
     </View>
   );
 }
