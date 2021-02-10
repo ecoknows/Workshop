@@ -1,7 +1,11 @@
-import { createStore, applyMiddleware } from 'redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import { rootReducer } from './reducers';
+import { userSignInReducer } from './reducers/user.reducer';
 
-const middleware = applyMiddleware(thunk);
+const RootReducer = combineReducers({
+    userSignIn: userSignInReducer
+});
 
-export const store = createStore(rootReducer, middleware);
+
+const middleWare = applyMiddleware(thunk);
+export const store = createStore(RootReducer, middleWare);

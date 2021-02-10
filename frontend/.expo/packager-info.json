@@ -1,10 +1,6 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9028,
-  "expoServerNgrokUrl": "https://2p-mxk.ecovillaraza3.camry.exp.direct",
-  "packagerNgrokUrl": "https://packager.2p-mxk.ecovillaraza3.camry.exp.direct",
-  "ngrokPid": 2908,
-  "webpackServerPort": null
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null
 }

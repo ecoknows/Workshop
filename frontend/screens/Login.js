@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
+import Axios from 'axios';
 import { StyleSheet, 
   Text, 
   View, 
@@ -12,13 +13,27 @@ import { StyleSheet,
 import { AntDesign as Icon} from '@expo/vector-icons';
 import { current_user_id, get_user, sign_in } from '../database/firebase';
 import { set_user_info, update_login_user } from '../database/current_user';
+import {useSelector, useDispatch} from 'react-redux';
+import { signin } from '../redux/actions/user.actiobs';
 
 function Main({navigation}) {
-  
   const[Hide,setHide] = useState(true);
-
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
+
+  const UserState = useSelector((state)=> state.userSignIn);
+  const dispatch = useDispatch();
+  const { loading, userData, error } = UserState;
+
+  useEffect(() => {
+    if(userData){
+      console.log(userData);
+    }
+    if(error){
+      console.log(error);
+    }
+  }, [userData, error]);
+
 
   return (
 
@@ -54,7 +69,7 @@ function Main({navigation}) {
           <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
         </TouchableOpacity>   
 
-        <TouchableOpacity style={styles.loginBtn} onPress={()=> SignInButtonClick(email,password,navigation)}>
+        <TouchableOpacity style={styles.loginBtn} onPress={()=> SignInButtonClick(email,password,navigation,dispatch)}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
 
@@ -91,12 +106,13 @@ function Main({navigation}) {
 }
 
 
-function SignInButtonClick (email, pass, navigation){
-  sign_in(email,pass, ()=>{
-    Keyboard.dismiss();
-    get_user(current_user_id());
-    navigation.navigate('UserScreen');
-  });
+function SignInButtonClick (email, pass, navigation,dispatch){
+  dispatch(signin(email,pass))
+  // sign_in(email,pass, ()=>{
+  //   Keyboard.dismiss();
+  //   get_user(current_user_id());
+  //   navigation.navigate('UserScreen');
+  // });
 }
 
 export default Main;

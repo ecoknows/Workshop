@@ -3,8 +3,9 @@ import Navigation from './navigations/Navigation';
 import { InitializeFirebase } from './database/firebase';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
+import axios from 'axios';
 import { Provider } from 'react-redux';
-import {store} from './redux';
+import { store } from './redux/store';
 
 
 const  getFonts =()=> Font.loadAsync({
@@ -21,11 +22,8 @@ const  getFonts =()=> Font.loadAsync({
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  axios.defaults.baseURL = 'http://192.168.1.15:3001';
 
-  useEffect(() => {
-    InitializeFirebase();
-  },[]);
-  
   if(fontsLoaded){
     return(
       <Provider store={store}>
