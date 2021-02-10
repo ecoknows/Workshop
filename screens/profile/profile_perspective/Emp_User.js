@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, } from 'react-native';
+import { StyleSheet,TouchableOpacity, StatusBar } from 'react-native';
 import { View, Text, Pic } from '../../../components';
-
+import {useDispatch} from 'react-redux';
+import {openDrawerAction} from '../../../redux';
 
 function Main({navigation}) {
   return (
@@ -12,13 +13,23 @@ function Main({navigation}) {
   );
 }
 
+
 function Top(props){
+  const dispatch = useDispatch();
   return(
-    <View flex={false} middle center paddingTop={30} paddingBottom={20}>
-        <Pic 
-        src={require('../../../assets/icons/burger.png')}
-        style={{position: 'absolute', resizeMode: 'contain', top:'10%', right:'5%'}}
-        />
+    <View flex={false} middle center paddingTop={StatusBar.currentHeight+ 10} paddingBottom={20}>
+      
+        <TouchableOpacity style={{position: 'absolute', top:StatusBar.currentHeight+5, right:'5%', height: 40,width: 40, alignItems:'flex-end'}}
+        onPress={()=>{
+          dispatch(openDrawerAction())
+        }}
+        >
+
+            <Pic 
+            src={require('../../../assets/icons/burger.png')}
+            style={{resizeMode: 'contain', height: 20, width: 20}}
+            />
+        </TouchableOpacity>
         <Pic 
         src={require('../../../assets/temp_image/john_smith.png')}
         profile_picture 
@@ -63,7 +74,7 @@ function Bottom(props){
       <View flex={false} style={styles.bottom_botton_style_first} row>
         <Pic 
         src={require('../../../assets/icons/bubble_message.png')}
-        style={{resizeMode:'contain'}}
+        style={styles.icon}
         />
         
         <Text bold size={17} style={styles.bottom_botton_text_style}> 
@@ -121,4 +132,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     color: '#917C7C',
   },
+  icon:{
+      height: 45,
+      width: 45,
+      resizeMode:'contain'
+  }
 });

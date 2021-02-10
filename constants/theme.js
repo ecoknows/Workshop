@@ -1,4 +1,6 @@
-const colors = {
+import { Dimensions } from "react-native"
+
+export const colors = {
     accent : '#F68025',
     peach : '#FFF0DA',
     gray : '#4F4F4F',
@@ -7,11 +9,11 @@ const colors = {
     red: '#F43737',
 }
 
-const font = {
+export const font = {
     h1 : 25,
 }
 
-const size = {
+export const size = {
     padding : 8,
 
 
@@ -22,8 +24,4 @@ const size = {
 
 }
 
-export {
-    colors,
-    font,
-    size,
-}
+export const {width, height} = Dimensions.get('window');

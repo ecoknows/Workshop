@@ -20,6 +20,7 @@ import {
 
 
 import { theme } from '../constants';
+import { Drawer } from '../components';
 
 
 const Tab = createBottomTabNavigator();
@@ -198,6 +199,7 @@ function Navigation({navigation}){
                 />
 
             </Stack.Navigator>
+            <Drawer/>
         </NavigationContainer>
     );
 }

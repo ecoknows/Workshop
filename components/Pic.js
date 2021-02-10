@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 
     profile_picture:{
         height: height * ((IMAGE_SIZE_PERCENT/2)+.005),// 10%    
-        width: width * IMAGE_SIZE_PERCENT + 0.5,// 10%
+        width: width * IMAGE_SIZE_PERCENT + 0.9 +11,// 10%
         borderRadius: width * IMAGE_SIZE_PERCENT,
         borderColor: '#F68025',
         marginBottom: 20,

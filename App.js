@@ -3,6 +3,8 @@ import Navigation from './navigations/Navigation';
 import { InitializeFirebase } from './database/firebase';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
+import { Provider } from 'react-redux';
+import {store} from './redux';
 
 
 const  getFonts =()=> Font.loadAsync({
@@ -26,7 +28,9 @@ export default function App() {
   
   if(fontsLoaded){
     return(
-      <Navigation/>
+      <Provider store={store}>
+        <Navigation/>
+      </Provider>
     );
   } else {
     

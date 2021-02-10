@@ -22,6 +22,7 @@ const TextField = props => {
     blue,
     yellow,
     red,
+    color,
 
     // font size
     caption, 
@@ -41,6 +42,7 @@ const TextField = props => {
         styles.text,
 
         // color
+        color && {color},
         accent && styles.accent,
         gray && styles.gray,
         blue && styles.blue,
@@ -58,6 +60,7 @@ const TextField = props => {
 
         // font weight
         bold && styles.bold,
+        
 
         // margins
         marginX && {marginLeft: marginX[0] || 0 ,marginRight: marginX[1] || 0 },

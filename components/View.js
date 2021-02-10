@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Animated} from 'react-native';
 import { theme } from '../constants';
 
 const ViewField = props => {
     const {
     style,
     children,
+    animated,
 
     // position
     center,
@@ -20,6 +21,7 @@ const ViewField = props => {
     flex,
     row,
     rowVerse,
+    absolute,
 
     //size
     scale,
@@ -41,6 +43,7 @@ const ViewField = props => {
         rowVerse && styles.rowVerse,
         flex == false && { flex: 0},
         flex && {flex: flex},
+        absolute && {position: 'absolute'},
 
         round && {borderRadius: round},
 
@@ -58,6 +61,11 @@ const ViewField = props => {
         accent && styles.accent,
         
     ];
+    if(animated){
+        return(
+             <Animated.View style={ViewStyle} {...rest} >{children}</Animated.View>
+        )
+    }
 
 
     if(touchable){

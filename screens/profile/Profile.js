@@ -5,7 +5,10 @@ import {Emp_User} from './profile_perspective';
 
 function Main({navigation}) {
   return (
+    <View>
+    
     <Emp_User/>
+    </View>
   );
 }
 
