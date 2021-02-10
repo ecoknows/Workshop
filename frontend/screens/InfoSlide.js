@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components';
 import {check_login_user } from '../database/current_user';
+import {useSelector, useDispatch} from 'react-redux';
 
 function Main({navigation}) {
 
@@ -16,7 +17,7 @@ function Main({navigation}) {
       <Text caption accent bold>Info Slide</Text>
 
       <View flex={false} row>
-         <Text caption accent bold touchable press={()=> navigation.navigate('Login')}>Login </Text>
+         <Text caption accent bold touchable press={()=> {navigation.navigate('Login')}}>Login </Text>
          <Text caption accent bold touchable press={()=> navigation.navigate('SignUp')}> Sign up</Text>
       </View>
 
