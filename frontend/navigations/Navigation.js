@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -21,7 +21,8 @@ import {
 
 import { theme } from '../constants';
 import { Drawer } from '../components';
-
+import { useDispatch} from 'react-redux';
+import { checkUser } from '../redux';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -153,9 +154,13 @@ function Employee_BottomNavigation({navigation}){
 }
 
 function Navigation({navigation}){
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(checkUser());
+    }, [])
     return(
         <NavigationContainer>
-            <Stack.Navigator mode='modal' >
+            <Stack.Navigator mode='modal' initialRouteName='UserScreen'>
                 <Stack.Screen name='InfoSlide' component={InfoSlide}
                     options={{
                         headerShown: false,

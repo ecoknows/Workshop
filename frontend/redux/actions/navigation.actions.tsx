@@ -1,5 +1,5 @@
-import { ActionCreator } from 'redux';
-import {DRAWER_TEXT} from '../types';
+
+import {DRAWER_TEXT} from '../types/navigation.types';
 
 
  export function openDrawerAction(status: boolean){
