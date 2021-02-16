@@ -8,6 +8,6 @@ const RootReducer = combineReducers({
     drawerState: drawerReducer,
 });
 
-
+export type RootState = ReturnType<typeof RootReducer>;
 const middleWare = applyMiddleware(thunk);
 export const store = createStore(RootReducer, middleWare);

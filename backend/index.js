@@ -22,7 +22,6 @@ mongoose.connect(process.env.DATABASE_URL,{
     console.log("Database connected");
 })
 
-
 app.listen(PORT, ()=>{
     console.log(`Camry Server is Running at ${PORT}`);
     const tunnel = localtunnel(PORT, { subdomain: 'tupsystem-api'} ,(err, tunnel) => {

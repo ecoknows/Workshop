@@ -1,4 +1,4 @@
-import {DrawerType, DRAWER_TEXT} from '../types';
+import {DrawerType, DRAWER_TEXT} from '../types/navigation.types';
 
 interface NAVIGATION_INTERFACE {
     drawer: boolean

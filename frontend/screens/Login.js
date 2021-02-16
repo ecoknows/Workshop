@@ -12,22 +12,24 @@ import { StyleSheet,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
 import { current_user_id, get_user, sign_in } from '../database/firebase';
-import { set_user_info, update_login_user } from '../database/current_user';
+import { update_login_user } from '../database/current_user';
 import {useSelector, useDispatch} from 'react-redux';
-import { signin } from '../redux/actions/user.actiobs';
+import { signin } from '../redux/actions';
 
 function Main({navigation}) {
   const[Hide,setHide] = useState(true);
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
 
-  const UserState = useSelector((state)=> state.userSignIn);
+  const UserState = useSelector((state)=> state.userDetails);
   const dispatch = useDispatch();
   const { loading, userData, error } = UserState;
 
   useEffect(() => {
     if(userData){
-      console.log(userData);
+      Keyboard.dismiss();
+      update_login_user(userData);
+      navigation.navigate('UserScreen');
     }
     if(error){
       console.log(error);
@@ -69,7 +71,7 @@ function Main({navigation}) {
           <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
         </TouchableOpacity>   
 
-        <TouchableOpacity style={styles.loginBtn} onPress={()=> SignInButtonClick(email,password,navigation,dispatch)}>
+        <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
 
@@ -106,14 +108,14 @@ function Main({navigation}) {
 }
 
 
-function SignInButtonClick (email, pass, navigation,dispatch){
-  dispatch(signin(email,pass))
-  // sign_in(email,pass, ()=>{
-  //   Keyboard.dismiss();
-  //   get_user(current_user_id());
-  //   navigation.navigate('UserScreen');
-  // });
-}
+// function SignInButtonClick (email, pass, navigation,dispatch){
+//   dispatch(signin(email,pass))
+//   // sign_in(email,pass, ()=>{
+//   //   Keyboard.dismiss();
+//   //   get_user(current_user_id());
+//   //   navigation.navigate('UserScreen');
+//   // });
+// }
 
 export default Main;
 

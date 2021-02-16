@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity, StatusBar } from 'react-native';
 import { View, Text, Pic } from '../../../components';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {openDrawerAction} from '../../../redux';
 
-function Main({navigation}) {
+function Main({navigation} ) {
   return (
     <View white>
     <Top/>
@@ -14,8 +14,10 @@ function Main({navigation}) {
 }
 
 
-function Top(props){
+function Top(props ){
   const dispatch = useDispatch();
+  const UserState = useSelector((state) => state.userDetails);
+  const { error, loading ,userData} = UserState;
   return(
     <View flex={false} middle center paddingTop={StatusBar.currentHeight+ 10} paddingBottom={20}>
       
