@@ -35,34 +35,11 @@ function Top(props){
         profile_picture 
         />
         <Text extra_bold gray size={17}> 
-          Russel Johnson 
+          Jerico C. Villaraza
         </Text>
-        <Text bold blue size={14} marginY={[5,5]}> 
-          Employer
+        <Text bold size={12} gray> 
+          Manila, Philippines
         </Text>
-        <View flex={false} row>
-          
-          <View center middle>
-            <Text bold yellow size={14}> 
-              LOCATION
-            </Text>
-            <Text semi_bold size={14}> 
-              Manila
-            </Text>
-          </View>
-          
-          <View center middle> 
-            <Text bold yellow size={14}> 
-              AUTHORIZED
-            </Text>
-            
-            <Text red semi_bold size={14}> 
-              Scam
-            </Text>
-          </View>
-
-
-        </View>
         
     </View>
   );
@@ -71,39 +48,7 @@ function Top(props){
 function Bottom(props){
   return(
     <View white flex={1.5} paddingVertical={10}> 
-      <View flex={false} style={styles.bottom_botton_style_first} row>
-        <Pic 
-        src={require('../../../assets/icons/bubble_message.png')}
-        style={styles.icon}
-        />
-        
-        <Text bold size={17} style={styles.bottom_botton_text_style}> 
-           Want to contact me ? 
-        </Text>
-      </View>
-      <View flex={false} style={styles.bottom_botton_style} row>
-        <Pic 
-        src={require('../../../assets/icons/report.png')}
-        style={{resizeMode:'contain'}}
-        />
-        
-        <Text bold size={17} style={styles.bottom_botton_text_style}> 
-           Did I do wrong ? 
-        </Text>
-      </View>
-      
-      <View flex={false} style={styles.bottom_botton_style} row>
-        <Pic 
-        src={require('../../../assets/icons/rate.png')}
-        style={{resizeMode:'contain'}}
-        />
-        
-        <Text bold size={17} style={styles.bottom_botton_text_style}> 
-           Rate Me
-        </Text>
-      </View>
-
-
+     
     </View>
   );
 }
