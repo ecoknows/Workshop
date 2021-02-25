@@ -1,6 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import { theme } from '../constants';
 
 interface TextProps{
@@ -14,6 +13,7 @@ interface TextProps{
     accent?: boolean,
     gray?: boolean,
     blue?: boolean,
+    green?: boolean,
     yellow?: boolean,
     red?: boolean,
 
@@ -22,6 +22,7 @@ interface TextProps{
     extra_bold?: boolean,
     semi_bold?: boolean,
     bold?: boolean,
+    medium?: boolean,
 
 
 
@@ -47,6 +48,7 @@ const TextField = (props:TextProps) => {
     // color
     accent,
     gray,
+    green,
     blue,
     yellow,
     red,
@@ -62,12 +64,14 @@ const TextField = (props:TextProps) => {
     semi_bold,
     bold,
     press,
+    medium,
 
     ...rest
     } = props;
 
     const TextStyle : any = [
         style,
+        styles.text,
 
         // color
         color && {color},
@@ -76,6 +80,7 @@ const TextField = (props:TextProps) => {
         blue && styles.blue,
         yellow && styles.yellow,
         red && styles.red,
+        green && styles.green,
 
         // font sizes
         caption && styles.caption,
@@ -88,6 +93,7 @@ const TextField = (props:TextProps) => {
 
         // font weight
         bold && styles.bold,
+        medium && styles.medium,
         
 
         // margins
@@ -113,24 +119,24 @@ const TextField = (props:TextProps) => {
 export default TextField;
 
 const styles = StyleSheet.create({
-
+    text: {fontFamily:'Noto-regular'},
     // color
     accent : {color: theme.colors.accent},
     gray: {color: theme.colors.gray},
     blue : {color: theme.colors.blue},
     yellow : {color: theme.colors.yellow},
+    green : {color: theme.colors.green},
     red : {color: theme.colors.red},
 
     // sizes
     caption: { fontSize: 15},
     h1: { fontSize: theme.font.h1},
 
-    //open_sans
-    extra_bold: {fontFamily:'OpenSans-extra-bold'},
-    semi_bold: {fontFamily: 'OpenSans-semi-bold'},
-
-    // weight
-    bold: {fontFamily:'OpenSans-bold'}
+    //noto_sans
+    extra_bold: {fontFamily:'Noto-extra-bold'},
+    medium: {fontFamily: 'Noto-medium'},
+    semi_bold: {fontFamily: 'Noto-semi-bold'},
+    bold: {fontFamily:'Noto-bold'},
     
 
 });

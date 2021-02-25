@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Image, Dimensions} from 'react-native';
 import { theme } from '../constants'
-import {BoxShadow} from 'react-native-shadow';
 import View from './View';
 
 const { width, height } = Dimensions.get('window');
 const IMAGE_SIZE_PERCENT = .30; // 10%
+
+
 
 const Pic = props =>{
     const {
@@ -14,6 +15,7 @@ const Pic = props =>{
         src,
         flex,
         scale,
+        green,
 
         // constant sizes
         medium,
@@ -27,7 +29,6 @@ const Pic = props =>{
     } = props;
 
     const PicStyle = [
-        style,
         flex == false && { flex: 0},
         flex && { flex: flex },
         styles.pic,
@@ -35,12 +36,47 @@ const Pic = props =>{
         // size
         scale && {height: scale, width: scale},
         profile_picture && styles.profile_picture,
+        style,
 
     ];
 
+
+
+    if(profile_picture && medium && green){
+        return(
+            <View center middle>
+
+                <Image 
+                source={require('../assets/image/profile_pic_green.png')}
+                style={{position: 'absolute', resizeMode: 'contain', 
+                    height: height * 0.30,
+                    width: width * 0.30
+                }}
+                />
+                <Image style={[PicStyle, {height: theme.width * .25, width: theme.width * .25, borderColor:theme.colors.green}]} source={src} {...rest}/>    
+            </View>
+        )
+    }
+
+    if(profile_picture && medium){
+        return(
+            <View center middle>
+
+                <Image 
+                source={require('../assets/image/profile_pic.png')}
+                style={{position: 'absolute', resizeMode: 'contain', 
+                    height: height * 0.30,
+                    width: width * 0.30
+                }}
+                />
+                <Image style={[PicStyle, {height: theme.width * .25, width: theme.width * .25}]} source={src} {...rest}/>    
+            </View>
+        )
+    }
+
     if(profile_picture){
         return(
-            <View flex={false} center middle>
+            <View center middle>
                       <Image 
                         source={require('../assets/image/profile_pic.png')}
                         style={{position: 'absolute', resizeMode: 'contain', 
@@ -48,7 +84,7 @@ const Pic = props =>{
                             width: width * 0.41,
                         }}
                         />
-                        <Image style={PicStyle} source={src} {...rest}/>    
+                        <Image style={[PicStyle]} source={src} {...rest}/>    
             </View>
         )
 

@@ -9,11 +9,12 @@ import { store } from './redux/store';
 
 
 const  getFonts =()=> Font.loadAsync({
-  'OpenSans-bold' : require('./assets/fonts/open-sans/OpenSans-Bold.ttf'),
-  'OpenSans-extra-bold' : require('./assets/fonts/open-sans/OpenSans-ExtraBold.ttf'),
-  'OpenSans-semi-bold' : require('./assets/fonts/open-sans/OpenSans-SemiBold.ttf'),
+  'Noto-medium' : require('./assets/fonts/noto-sans/NotoSans-Medium.ttf'),
+  'Noto-extra-bold' : require('./assets/fonts/noto-sans/NotoSans-ExtraBold.ttf'),
+  'Noto-bold' : require('./assets/fonts/noto-sans/NotoSans-Bold.ttf'),
+  'Noto-semi-bold' : require('./assets/fonts/noto-sans/NotoSans-SemiBold.ttf'),
+  'Noto-regular' : require('./assets/fonts/noto-sans/NotoSans-Regular.ttf'),
   'OpenSans-light' : require('./assets/fonts/open-sans/OpenSans-Light.ttf'),
-  'OpenSans-regular' : require('./assets/fonts/open-sans/OpenSans-Regular.ttf'),
   'Ambit-bold' : require('./assets/fonts/ambit/Ambit-Bold.otf'),
   'Ambit-light' : require('./assets/fonts/ambit/Ambit-Light.otf'),
   'Ambit-regular' : require('./assets/fonts/ambit/Ambit-Regular.otf'),
@@ -24,7 +25,7 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   axios.defaults.baseURL = 'http://192.168.1.15:3001';
 
-  if(fontsLoaded){
+  if(fontsLoaded){  
     return(
       <Provider store={store}>
         <Navigation/>

@@ -35,14 +35,11 @@ const ViewField = props => {
     } = props;
 
     const ViewStyle = [
-        style,
-        styles.view,
-
         // flex
         row && styles.row,
         rowVerse && styles.rowVerse,
-        flex == false && { flex: 0},
-        flex && {flex: flex},
+        flex == true && { flex: 1},
+        flex != true && flex != false && {flex: flex},
         absolute && {position: 'absolute'},
 
         round && {borderRadius: round},
@@ -63,14 +60,14 @@ const ViewField = props => {
     ];
     if(animated){
         return(
-             <Animated.View style={ViewStyle} {...rest} >{children}</Animated.View>
+             <Animated.View style={[ViewStyle,style]}  {...rest} >{children}</Animated.View>
         )
     }
 
 
     if(touchable){
         return(
-        <View style={ViewStyle} {...rest} >
+        <View style={[ViewStyle,style]} {...rest} >
             <TouchableOpacity style={{justifyContent: 'center', alignItems: 'center'}} onPress={props.press}>
                 {children}
             </TouchableOpacity>
@@ -79,17 +76,13 @@ const ViewField = props => {
     }
 
     return(
-        <View style={ViewStyle} {...rest} >{children}</View>
+        <View style={[ViewStyle,style]} {...rest} >{children}</View>
     )
 }
 
 export default ViewField;
 
 const styles = StyleSheet.create({
-    view : {
-        flex: 1,
-    },// default text 
-
 
     row: { flexDirection: 'row'},
     rowVerse: {flexDirection: 'row-reverse'},

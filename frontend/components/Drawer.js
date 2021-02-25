@@ -5,13 +5,14 @@ import View from './View';
 import Pic from './Pic';
 import Text from './Text';
 import {useDispatch, useSelector} from 'react-redux';
-import {closeDrawerAction} from '../redux';
+import {closeDrawerAction, openBottomDrawerAction} from '../redux';
+import Skills from './Skills';
 
 let is_drawer_open = false;
 
 export default function Drawer(props) {
     const [hide, setHide] = useState(true);
-    const drawer_anim = useRef(new Animated.Value(-theme.height * 0.5)).current;
+    const drawer_anim = useRef(new Animated.Value(-theme.height * 0.55)).current;
     const {drawer} = useSelector( (state) => state.drawerState)
     const dispatch = useDispatch();
 
@@ -25,7 +26,7 @@ export default function Drawer(props) {
 
     const closeDrawer =()=>{
         Animated.timing(drawer_anim,{
-            toValue: -theme.height * 0.5,
+            toValue: -theme.height * 0.55,
             duration: 1000,
             useNativeDriver: true
         }).start(({finished})=>{
@@ -35,6 +36,10 @@ export default function Drawer(props) {
 
     const handleClose =()=>{
         dispatch(closeDrawerAction());
+    }
+
+    const openBottomDrawer=(tabSelected)=>{
+        dispatch(openBottomDrawerAction({status: true,tabSelected}))
     }
 
     useEffect(() => {
@@ -62,7 +67,7 @@ export default function Drawer(props) {
     return (
         <View style={styles.container}>
             <Fade drawer_anim={drawer_anim} handleClose={handleClose}/>
-            <DrawerView drawer_anim={drawer_anim} handleClose={handleClose}/>
+            <DrawerView drawer_anim={drawer_anim} handleClose={handleClose} openBottomDrawer={openBottomDrawer}/>
         </View>
     )
 }
@@ -82,7 +87,7 @@ function Fade({drawer_anim, handleClose}){
     )
 }
 
-function DrawerView({drawer_anim,handleClose}){
+function DrawerView({drawer_anim,handleClose,openBottomDrawer}){
     return(
         <View animated flex={false} style={[styles.drawerView,
             {transform:[{
@@ -94,16 +99,32 @@ function DrawerView({drawer_anim,handleClose}){
             <View flex={false}  middle center>
                 
                 <Pic 
-                src={require('../assets/temp_image/john_smith.png')}
+                src={require('../assets/image/user/man.png')}
                 profile_picture 
                 />
 
                 <Text extra_bold gray size={17}> 
                 Jerico C. Villaraza
                 </Text>
-                <Text bold size={12} gray> 
+                <Text medium size={12} gray> 
                 Manila, Philippines
                 </Text>
+
+
+                <View flex={false} style={{width: '90%'}} center middle>
+                    <Skills 
+                        skills={['Manager', 'Enterprenuer', 0]}
+                        size={10}
+                        iconScale={13}
+                        add
+                        />
+                </View>
+                <View flex={false} center middle style={{marginTop: 20}}>
+                    <Text semi_bold size={16} gray touchable press={() => openBottomDrawer(0)}> Edit Profile </Text>
+                    <Text semi_bold size={16} gray touchable press={() => openBottomDrawer(1)}> Messages </Text>
+                    <Text semi_bold size={16} gray touchable press={() => openBottomDrawer(2)}> Workers </Text>
+                    <Text semi_bold size={16} gray touchable press={() => openBottomDrawer(3)}> Applicants </Text>
+                </View>
 
             </View>
         </View>
@@ -125,7 +146,7 @@ const styles = StyleSheet.create({
         position:'absolute',
         right:0,
         backgroundColor:'white',
-        height: '50%',
+        height: '55%',
         width:'65%',
         borderBottomEndRadius: 40,
         borderBottomStartRadius: 40,

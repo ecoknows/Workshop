@@ -20,7 +20,7 @@ import {
 
 
 import { theme } from '../constants';
-import { Drawer } from '../components';
+import { BottomDrawer, Drawer } from '../components';
 import { useDispatch} from 'react-redux';
 import { checkUser } from '../redux';
 
@@ -205,6 +205,7 @@ function Navigation({navigation}){
 
             </Stack.Navigator>
             <Drawer/>
+            <BottomDrawer/>
         </NavigationContainer>
     );
 }

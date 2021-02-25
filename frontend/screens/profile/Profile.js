@@ -5,7 +5,7 @@ import {Emp_User} from './profile_perspective';
 
 function Main({navigation}) {
   return (
-    <View>
+    <View flex>
     
     <Emp_User/>
     </View>
