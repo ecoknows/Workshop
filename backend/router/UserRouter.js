@@ -1,6 +1,6 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import UserModel from '../models/UserModel.js';
+import Worker from '../models/Worker.js';
 import bcrypt from 'bcryptjs';
 
 const userRoutes = express.Router();
@@ -16,7 +16,7 @@ const respondSend =(user, res)=>{
 
 userRoutes.post('/login',
     expressAsyncHandler(async(req,res)=>{
-        const user = await UserModel.findOne({ email: req.body.email });
+        const user = await Worker.findOne({ email: req.body.email });
         console.log(req.body);
         if (user) {
           if (bcrypt.compareSync(req.body.password, user.password)) {
@@ -28,7 +28,7 @@ userRoutes.post('/login',
               is_employee: user.is_employee,
             });
             return;
-          }
+          } 
         }
         res.status(401).send({ message: 'Invalid email or password' });
     })
@@ -36,7 +36,7 @@ userRoutes.post('/login',
 
 userRoutes.post('/register', 
     expressAsyncHandler(async (req,res)=>{
-        const user = new UserModel({
+        const user = new Worker({
             email: req.body.email,
             firstname: req.body.firstname,
             lastname: req.body.lastname,

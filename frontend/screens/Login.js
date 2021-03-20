@@ -10,7 +10,8 @@ import { StyleSheet,
   TouchableWithoutFeedback, 
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
-import { AntDesign as Icon} from '@expo/vector-icons';
+
+import {AntDesign, Fontisto} from '@expo/vector-icons';
 import { current_user_id, get_user, sign_in } from '../database/firebase';
 import { update_login_user } from '../database/current_user';
 import {useSelector, useDispatch} from 'react-redux';
@@ -20,6 +21,7 @@ function Main({navigation}) {
   const[Hide,setHide] = useState(true);
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
+
 
   const UserState = useSelector((state)=> state.userDetails);
   const dispatch = useDispatch();
@@ -43,62 +45,55 @@ function Main({navigation}) {
     Keyboard.dismiss();
     }}>
     <View style={styles.container}>
-      <Image source={require('../assets/Login.png')} style={styles.image} resizeMode="contain"/>
+      <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Login</Text>
+      <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
       <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-90}>
-        <Text style={styles.text}>Email</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='email@email.com'
-          placeholderTextColor='#dfe6e9'  
-          returnKeyType='next'
-          onChangeText={ text=>setEmail(text)}
-          value={email}
-        />
 
-        <Text style={styles.text}>Password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='**********'
-          placeholderTextColor='#dfe6e9'
-          returnKeyType='done'
-          secureTextEntry={Hide}
-          onChangeText={ text=>setPassword(text)}
-          value={password}
-        
-        />
+        <View>
+
           
-        <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-          <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
-        </TouchableOpacity>   
+          <TextInput
+            style={styles.input}
+            placeholder='EMAIL ADDRESS'
+            placeholderTextColor='#808080'  
+            returnKeyType='next'
+            onChangeText={ text=>setEmail(text)}
+            value={email}
+          />
+        </View>
 
+        <View>
+          
+          <TextInput
+            style={styles.input}
+            placeholder='**********'
+            placeholderTextColor='#808080'
+            returnKeyType='done'
+            secureTextEntry={Hide}
+            onChangeText={ text=>setPassword(text)}
+            value={password}
+          />
+
+          <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
+            <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+          </TouchableOpacity> 
+        </View>
+          
         <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
 
-        <TouchableWithoutFeedback>
-           <Text style={{color: '#f68025', fontWeight: 'bold', alignSelf: 'center', marginTop: 10}}>Forgot Password</Text>
-        </TouchableWithoutFeedback>
+        <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center', top: 150}}>Haven't made an account yet? 
+          <TouchableWithoutFeedback>
+            <Text style={{color: '#f68025', fontWeight: 'bold'}}>Sign Up</Text>
+          </TouchableWithoutFeedback>
+        </Text>
+        
        
       </KeyboardAvoidingView>
 
-      <Text style={{
-        color: '#003A63', 
-        alignSelf: 'center', 
-        marginTop: 40
-        }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
-      </Text>
-
-      <View style={styles.socIcon}>
-        <TouchableOpacity>
-          <Icon name='facebook-square' size={28} color='#4267B2'/>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Icon name='google' size={28} color='#DB4437'/>
-        </TouchableOpacity>
-
-      </View>
       
+    
      
     </View>
   </TouchableWithoutFeedback>
@@ -107,15 +102,6 @@ function Main({navigation}) {
   );
 }
 
-
-// function SignInButtonClick (email, pass, navigation,dispatch){
-//   dispatch(signin(email,pass))
-//   // sign_in(email,pass, ()=>{
-//   //   Keyboard.dismiss();
-//   //   get_user(current_user_id());
-//   //   navigation.navigate('UserScreen');
-//   // });
-// }
 
 export default Main;
 
@@ -128,11 +114,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   image:{
-    width: 355,
-    height: 269,
+    marginTop: 20,
+    alignSelf: 'center',
+    width: 137,
+    height: 137,
   },
   form:{
     marginHorizontal: 20,
+    marginTop: 50
   },
   text:{
     color: '#f68025',
@@ -141,38 +130,31 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   input:{
-    borderBottomColor: "#f68025", 
-    borderBottomWidth: 2, 
+    borderBottomWidth: 1, 
     borderStyle: 'solid', 
-    marginBottom: 10,
+    marginBottom: 20,
     paddingHorizontal: 8,
     paddingVertical: 8,
+    fontSize: 18,
   },
   eyeBtn: {
     alignSelf: 'flex-end',
     position: "absolute",
-    top: 125,
+    top: 10,
     
   },  
   loginBtn: {
     borderColor: '#f68025',
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 20,
     padding: 5,
-    paddingHorizontal: 30,
-    marginTop: 10,
+    paddingHorizontal: 50,
+    top:90,
     alignSelf: 'center'
   },
   loginText:{
     color: '#f68025',
     fontSize: 20,
     fontWeight: 'bold',
-  },
-  socIcon: {
-    flexDirection: 'row',  
-    justifyContent: 'space-evenly', 
-  alignSelf: 'center', 
-  marginTop: 15, 
-  width: 125 
   },
 });

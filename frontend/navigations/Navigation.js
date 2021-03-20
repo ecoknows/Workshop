@@ -160,7 +160,7 @@ function Navigation({navigation}){
     }, [])
     return(
         <NavigationContainer>
-            <Stack.Navigator mode='modal' initialRouteName='UserScreen'>
+            <Stack.Navigator mode='modal' initialRouteName='InfoSlide'>
                 <Stack.Screen name='InfoSlide' component={InfoSlide}
                     options={{
                         headerShown: false,
