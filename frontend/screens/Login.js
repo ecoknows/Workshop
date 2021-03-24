@@ -1,112 +1,131 @@
-import { StatusBar } from 'expo-status-bar';
-import React,{useState, useEffect} from 'react';
-import Axios from 'axios';
-import { StyleSheet, 
-  Text, 
-  View, 
-  Image, 
-  TextInput, 
-  TouchableOpacity, 
-  TouchableWithoutFeedback, 
+import React, { useState, useEffect } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
   KeyboardAvoidingView,
-  Keyboard } from 'react-native';
-import { AntDesign as Icon} from '@expo/vector-icons';
-import { current_user_id, get_user, sign_in } from '../database/firebase';
-import { update_login_user } from '../database/current_user';
-import {useSelector, useDispatch} from 'react-redux';
-import { signin } from '../redux/actions';
+  Keyboard,
+} from 'react-native';
+import { AntDesign as Icon } from '@expo/vector-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { checkUser, signin } from '../redux/actions';
 
-function Main({navigation}) {
-  const[Hide,setHide] = useState(true);
-  const[email,setEmail] = useState('');
-  const[password,setPassword] = useState('');
+function Main({ navigation }) {
+  const [Hide, setHide] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const UserState = useSelector((state)=> state.userDetails);
+  const UserState = useSelector((state) => state.userDetails);
   const dispatch = useDispatch();
   const { loading, userData, error } = UserState;
-
+  console.log(userData);
   useEffect(() => {
-    if(userData){
+    if (userData) {
       Keyboard.dismiss();
-      update_login_user(userData);
-      navigation.navigate('UserScreen');
+      navigation.replace('UserScreen');
     }
-    if(error){
+    if (error) {
       console.log(error);
     }
   }, [userData, error]);
 
-
   return (
-
-  <TouchableWithoutFeedback onPress={() => {
-    Keyboard.dismiss();
-    }}>
-    <View style={styles.container}>
-      <Image source={require('../assets/Login.png')} style={styles.image} resizeMode="contain"/>
-      <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-90}>
-        <Text style={styles.text}>Email</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='email@email.com'
-          placeholderTextColor='#dfe6e9'  
-          returnKeyType='next'
-          onChangeText={ text=>setEmail(text)}
-          value={email}
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
+      <View style={styles.container}>
+        <Image
+          source={require('../assets/Login.png')}
+          style={styles.image}
+          resizeMode="contain"
         />
+        <KeyboardAvoidingView
+          behavior="position"
+          style={styles.form}
+          keyboardVerticalOffset={-90}
+        >
+          <Text style={styles.text}>Email</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="email@email.com"
+            placeholderTextColor="#dfe6e9"
+            returnKeyType="next"
+            onChangeText={(text) => setEmail(text)}
+            value={email}
+          />
 
-        <Text style={styles.text}>Password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='**********'
-          placeholderTextColor='#dfe6e9'
-          returnKeyType='done'
-          secureTextEntry={Hide}
-          onChangeText={ text=>setPassword(text)}
-          value={password}
-        
-        />
-          
-        <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-          <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
-        </TouchableOpacity>   
+          <Text style={styles.text}>Password</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="**********"
+            placeholderTextColor="#dfe6e9"
+            returnKeyType="done"
+            secureTextEntry={Hide}
+            onChangeText={(text) => setPassword(text)}
+            value={password}
+          />
 
-        <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
-          <Text style={styles.loginText}>LOGIN</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.eyeBtn}
+            onPress={() => setHide(!Hide)}
+          >
+            <Icon
+              name={Hide === false ? 'eye' : 'eyeo'}
+              size={30}
+              color="#f68025"
+            />
+          </TouchableOpacity>
 
-        <TouchableWithoutFeedback>
-           <Text style={{color: '#f68025', fontWeight: 'bold', alignSelf: 'center', marginTop: 10}}>Forgot Password</Text>
-        </TouchableWithoutFeedback>
-       
-      </KeyboardAvoidingView>
+          <TouchableOpacity
+            style={styles.loginBtn}
+            onPress={() => dispatch(signin(email, password))}
+          >
+            <Text style={styles.loginText}>LOGIN</Text>
+          </TouchableOpacity>
 
-      <Text style={{
-        color: '#003A63', 
-        alignSelf: 'center', 
-        marginTop: 40
-        }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
-      </Text>
+          <TouchableWithoutFeedback>
+            <Text
+              style={{
+                color: '#f68025',
+                fontWeight: 'bold',
+                alignSelf: 'center',
+                marginTop: 10,
+              }}
+            >
+              Forgot Password
+            </Text>
+          </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
 
-      <View style={styles.socIcon}>
-        <TouchableOpacity>
-          <Icon name='facebook-square' size={28} color='#4267B2'/>
-        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#003A63',
+            alignSelf: 'center',
+            marginTop: 40,
+          }}
+        >
+          ▬▬▬▬▬▬▬▬ Sign Up with ▬▬▬▬▬▬▬▬
+        </Text>
 
-        <TouchableOpacity>
-          <Icon name='google' size={28} color='#DB4437'/>
-        </TouchableOpacity>
+        <View style={styles.socIcon}>
+          <TouchableOpacity>
+            <Icon name="facebook-square" size={28} color="#4267B2" />
+          </TouchableOpacity>
 
+          <TouchableOpacity>
+            <Icon name="google" size={28} color="#DB4437" />
+          </TouchableOpacity>
+        </View>
       </View>
-      
-     
-    </View>
-  </TouchableWithoutFeedback>
-    
-    
+    </TouchableWithoutFeedback>
   );
 }
-
 
 // function SignInButtonClick (email, pass, navigation,dispatch){
 //   dispatch(signin(email,pass))
@@ -124,36 +143,35 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     paddingTop: 20,
-    paddingHorizontal:10,
-    backgroundColor: '#fff'
+    paddingHorizontal: 10,
+    backgroundColor: '#fff',
   },
-  image:{
+  image: {
     width: 355,
     height: 269,
   },
-  form:{
+  form: {
     marginHorizontal: 20,
   },
-  text:{
+  text: {
     color: '#f68025',
     fontSize: 16,
     fontWeight: '400',
     marginVertical: 5,
   },
-  input:{
-    borderBottomColor: "#f68025", 
-    borderBottomWidth: 2, 
-    borderStyle: 'solid', 
+  input: {
+    borderBottomColor: '#f68025',
+    borderBottomWidth: 2,
+    borderStyle: 'solid',
     marginBottom: 10,
     paddingHorizontal: 8,
     paddingVertical: 8,
   },
   eyeBtn: {
     alignSelf: 'flex-end',
-    position: "absolute",
+    position: 'absolute',
     top: 125,
-    
-  },  
+  },
   loginBtn: {
     borderColor: '#f68025',
     borderWidth: 2,
@@ -161,18 +179,18 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingHorizontal: 30,
     marginTop: 10,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
-  loginText:{
+  loginText: {
     color: '#f68025',
     fontSize: 20,
     fontWeight: 'bold',
   },
   socIcon: {
-    flexDirection: 'row',  
-    justifyContent: 'space-evenly', 
-  alignSelf: 'center', 
-  marginTop: 15, 
-  width: 125 
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignSelf: 'center',
+    marginTop: 15,
+    width: 125,
   },
 });
