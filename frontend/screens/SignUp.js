@@ -1,6 +1,5 @@
 
 import React, {useState} from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, 
   Text, 
   View, 
@@ -13,6 +12,8 @@ import { StyleSheet,
 import { AntDesign as Icon} from '@expo/vector-icons';
 import { sign_up, add_users, current_user_id } from '../database/firebase';
 import { set_user_info } from '../database/current_user';
+import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails'
+import { acc } from 'react-native-reanimated';
 
 function Main({navigation}) {
   
@@ -20,73 +21,78 @@ function Main({navigation}) {
   const[name,setName] = useState('');
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
+  const[detailsDone, isDone] = useState(false);
+  const[accountStatus,setStatus] = useState('');
+  
   return (
 
       <TouchableWithoutFeedback onPress={() => {
         Keyboard.dismiss();
         }}>
-        <View style={styles.container}>
-          
+        <View style={styles.container}>          
           <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
-          <Image source={require('../assets/Signup.png')} style={styles.image} resizeMode="contain"/>
-          <View style={{backgroundColor: '#FFFFFF', padding: 5}}>
-            
-            <Text style={styles.text}>Name</Text>
+            <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Sign Up</Text>
+            <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
+            <View style={{padding: 5}}>
+              
               <TextInput
-              style={styles.input}
-              placeholder='Alex Camry'
-              placeholderTextColor='#dfe6e9'  
-              returnKeyType='next'
-              onChangeText={ text=>setName(text)}
-              value={name}
-            />
-            <Text style={styles.text}>Email</Text>
-            <TextInput
-              style={styles.input}
-              placeholder='email@email.com'
-              placeholderTextColor='#dfe6e9'  
-              returnKeyType='next'
-              onChangeText={ text=>setEmail(text)}
-              value={email}
-            />
+                style={styles.input}
+                placeholder='FULL NAME'
+                placeholderTextColor='#808080'  
+                returnKeyType='next'
+                onChangeText={ text=>setName(text)}
+                value={name}
+              />
 
-            <Text style={styles.text}>Password</Text>
-            <TextInput
-              style={styles.input}
-              placeholder='**********'
-              placeholderTextColor='#dfe6e9'
-              returnKeyType='done'
-              secureTextEntry={Hide}
-              onChangeText={ text=>setPassword(text)}
-              value={password}
-            />
-                
-            <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-              <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
-            </TouchableOpacity>   
+              <TextInput
+                style={styles.input}
+                placeholder='EMAIL ADDRESS'
+                placeholderTextColor='#808080'  
+                returnKeyType='next'
+                onChangeText={ text=>setEmail(text)}
+                value={email}
+              />
 
-            <TouchableOpacity style={styles.SignupBtn} onPress={ () => SignUpButtonClick(name,email,password, navigation)}>
-              <Text style={styles.SignupText}>Signup</Text>
-            </TouchableOpacity>
+              <TextInput
+                style={styles.input}
+                placeholder='**********'
+                placeholderTextColor='#808080'
+                returnKeyType='done'
+                secureTextEntry={Hide}
+                onChangeText={ text=>setPassword(text)}
+                value={password}
+              />          
+              <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
+                <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+              </TouchableOpacity>  
+
+              <TextInput
+                style={styles.input}
+                placeholder='**********'
+                placeholderTextColor='#808080'
+                returnKeyType='done'
+                secureTextEntry={Hide}
+                onChangeText={ text=>setPassword(text)}
+                value={password}
+              />
+              <TouchableOpacity style={styles.SignupBtn} onPress={ () => isDone(!detailsDone)}>
+                {console.log(detailsDone)}
+                <Text style={styles.SignupText}>Signup</Text>
+              </TouchableOpacity>
+
+              <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center'}}>Already Have an Account? 
+                <TouchableWithoutFeedback>
+                  <Text style={{color: '#f68025', fontWeight: 'bold'}}> Log In</Text>
+                </TouchableWithoutFeedback>
+              </Text>
             </View>
-          </KeyboardAvoidingView>
-          
-          <Text style={{
-            color: '#003A63', 
-            alignSelf: 'center', 
-            marginTop: 15
-            }}>▬▬▬▬▬▬▬▬  Sign Up with  ▬▬▬▬▬▬▬▬
-          </Text>
+              
+          </KeyboardAvoidingView>         
 
-          <View style={styles.socIcon}>
-            <TouchableOpacity>
-              <Icon name='facebook-square' size={28} color='#4267B2'/>
-            </TouchableOpacity>
+          {detailsDone && <AccountDetails Visibility={true} handler={isDone} status={setStatus} />}
+          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true}/>}
+          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true}/>}
 
-            <TouchableOpacity>
-              <Icon name='google' size={28} color='#DB4437'/>
-            </TouchableOpacity>
-          </View>
         </View>
       </TouchableWithoutFeedback>
         
@@ -116,14 +122,16 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 20,
     paddingHorizontal: 5,
-    backgroundColor: '#f68025'
   },
   image:{
-    width: 349,
-    height: 255,
+    marginTop: 20,
+    marginBottom: 20,
+    alignSelf: 'center',
+    width: 117,
+    height: 117,
   },
   form:{
-    marginHorizontal: 5,
+    marginHorizontal: 15,
   },
   text:{
     color: '#f68025',
@@ -133,10 +141,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   input:{
-    borderBottomColor: "#f68025", 
-    borderBottomWidth: 2, 
+    borderBottomWidth: 1, 
     borderStyle: 'solid', 
-    marginBottom: 5,
+    marginBottom: 30,
     paddingHorizontal: 8,
     paddingVertical: 5,
     marginHorizontal: 10,
@@ -144,17 +151,17 @@ const styles = StyleSheet.create({
   eyeBtn: {
     alignSelf: 'flex-end',
     position: "absolute",
-    top: 200,
-    left: 295 
+    top: 150,
+    left: 275 
   },  
   SignupBtn: {
     borderColor: '#f68025',
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 20,
     padding: 5,
     paddingHorizontal: 30,
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 20,
+    marginBottom: 20,
     alignSelf: 'center'
   },
   SignupText:{
@@ -162,11 +169,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  socIcon: {
-    flexDirection: 'row',  
-    justifyContent: 'space-evenly', 
-    alignSelf: 'center', 
-    marginTop: 10, 
-    width: 125 
-  },
+
 });

@@ -228,7 +228,6 @@ function Employee_BottomNavigation({ navigation }) {
     </Tab.Navigator>
   );
 }
-
 function Navigation() {
   const dispatch = useDispatch();
 

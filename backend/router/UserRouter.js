@@ -5,7 +5,6 @@ import bcrypt from 'bcryptjs';
 import { NEW } from '../api/api_constants.js';
 
 const userRouter = express.Router();
-
 const respondSend = (user, res) => {
   res.send({
     is_employee: true,
