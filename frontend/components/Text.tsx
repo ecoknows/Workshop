@@ -1,40 +1,37 @@
 import React from 'react';
-import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { theme } from '../constants';
 
-interface TextProps{
-    style?: object,
-    children? : any,
-    touchable? : () => void,
+interface TextProps {
+  style?: object;
+  children?: any;
+  touchable?: () => void;
 
-    marginX? : number[],
-    marginY? : number[],
+  marginX?: number[];
+  marginY?: number[];
 
-    accent?: boolean,
-    gray?: boolean,
-    blue?: boolean,
-    green?: boolean,
-    yellow?: boolean,
-    red?: boolean,
+  accent?: boolean;
+  gray?: boolean;
+  blue?: boolean;
+  green?: boolean;
+  yellow?: boolean;
+  red?: boolean;
 
-    caption?: boolean,
-    h1?: boolean,
-    extra_bold?: boolean,
-    semi_bold?: boolean,
-    bold?: boolean,
-    medium?: boolean,
+  caption?: boolean;
+  h1?: boolean;
+  extra_bold?: boolean;
+  semi_bold?: boolean;
+  bold?: boolean;
+  medium?: boolean;
+  center?: boolean;
 
-
-
-    color?: string,
-    size?: number,
-    press?: ()=> void,
-
-
+  color?: string;
+  size?: number;
+  press?: () => void;
 }
 
-const TextField = (props:TextProps) => {
-    const {
+const TextField = (props: TextProps) => {
+  const {
     style,
     children,
 
@@ -53,9 +50,10 @@ const TextField = (props:TextProps) => {
     yellow,
     red,
     color,
+    center,
 
     // font size
-    caption, 
+    caption,
     h1,
     size,
 
@@ -67,76 +65,76 @@ const TextField = (props:TextProps) => {
     medium,
 
     ...rest
-    } = props;
+  } = props;
 
-    const TextStyle : any = [
-        style,
-        styles.text,
+  const TextStyle: any = [
+    style,
+    styles.text,
 
-        // color
-        color && {color},
-        accent && styles.accent,
-        gray && styles.gray,
-        blue && styles.blue,
-        yellow && styles.yellow,
-        red && styles.red,
-        green && styles.green,
+    // color
+    color && { color },
+    accent && styles.accent,
+    gray && styles.gray,
+    blue && styles.blue,
+    yellow && styles.yellow,
+    red && styles.red,
+    green && styles.green,
 
-        // font sizes
-        caption && styles.caption,
-        h1 && styles.h1,
-        size && {fontSize: size},
+    // font sizes
+    caption && styles.caption,
+    h1 && styles.h1,
+    size && { fontSize: size },
+    center && { textAlign: 'center' },
 
-        //Open_Sans
-        extra_bold && styles.extra_bold,
-        semi_bold && styles.semi_bold,
+    //Open_Sans
+    extra_bold && styles.extra_bold,
+    semi_bold && styles.semi_bold,
 
-        // font weight
-        bold && styles.bold,
-        medium && styles.medium,
-        
+    // font weight
+    bold && styles.bold,
+    medium && styles.medium,
 
-        // margins
-        marginX && {marginLeft: marginX[0] || 0 ,marginRight: marginX[1] || 0 },
-        marginY && {marginTop: marginY[0] || 0 ,marginBottom: marginY[1] || 0 }
+    // margins
+    marginX && { marginLeft: marginX[0] || 0, marginRight: marginX[1] || 0 },
+    marginY && { marginTop: marginY[0] || 0, marginBottom: marginY[1] || 0 },
+  ];
 
-    ];
+  if (touchable) {
+    return (
+      <TouchableOpacity onPress={press}>
+        <Text style={TextStyle} {...rest}>
+          {children}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
 
-
-    if(touchable){
-        return(
-            <TouchableOpacity onPress={press}>
-                <Text style={TextStyle} {...rest} >{children}</Text>
-            </TouchableOpacity>
-        );
-    }
-
-    return(
-        <Text style={TextStyle} {...rest} >{children}</Text>
-    )
-}
+  return (
+    <Text style={TextStyle} {...rest}>
+      {children}
+    </Text>
+  );
+};
 
 export default TextField;
 
 const styles = StyleSheet.create({
-    text: {fontFamily:'Noto-regular'},
-    // color
-    accent : {color: theme.colors.accent},
-    gray: {color: theme.colors.gray},
-    blue : {color: theme.colors.blue},
-    yellow : {color: theme.colors.yellow},
-    green : {color: theme.colors.green},
-    red : {color: theme.colors.red},
+  text: { fontFamily: 'Noto-regular' },
+  // color
+  accent: { color: theme.colors.accent },
+  gray: { color: theme.colors.gray },
+  blue: { color: theme.colors.blue },
+  yellow: { color: theme.colors.yellow },
+  green: { color: theme.colors.green },
+  red: { color: theme.colors.red },
 
-    // sizes
-    caption: { fontSize: 15},
-    h1: { fontSize: theme.font.h1},
+  // sizes
+  caption: { fontSize: 15 },
+  h1: { fontSize: theme.font.h1 },
 
-    //noto_sans
-    extra_bold: {fontFamily:'Noto-extra-bold'},
-    medium: {fontFamily: 'Noto-medium'},
-    semi_bold: {fontFamily: 'Noto-semi-bold'},
-    bold: {fontFamily:'Noto-bold'},
-    
-
+  //noto_sans
+  extra_bold: { fontFamily: 'Noto-extra-bold' },
+  medium: { fontFamily: 'Noto-medium' },
+  semi_bold: { fontFamily: 'Noto-semi-bold' },
+  bold: { fontFamily: 'Noto-bold' },
 });

@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity, Animated} from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { theme } from '../constants';
 
-const ViewField = props => {
-    const {
+const ViewField = (props) => {
+  const {
     style,
     children,
     animated,
@@ -32,63 +32,67 @@ const ViewField = props => {
     accent,
 
     ...rest
-    } = props;
+  } = props;
 
-    const ViewStyle = [
-        // flex
-        row && styles.row,
-        rowVerse && styles.rowVerse,
-        flex == true && { flex: 1},
-        flex != true && flex != false && {flex: flex},
-        absolute && {position: 'absolute'},
+  const ViewStyle = [
+    // flex
+    row && styles.row,
+    rowVerse && styles.rowVerse,
+    flex == true && { flex: 1 },
+    flex != true && flex != false && { flex: flex },
+    absolute && { position: 'absolute' },
 
-        round && {borderRadius: round},
+    round && { borderRadius: round },
 
-        //size
-        scale && {height: scale, width: scale},
+    //size
+    scale && { height: scale, width: scale },
 
-        // position
-        center && {justifyContent: 'center'},
-        middle && {alignItems: 'center'},
-        end && {justifiyContent: 'flex-end',},
+    // position
+    center && { justifyContent: 'center' },
+    middle && { alignItems: 'center' },
+    end && { justifiyContent: 'flex-end' },
 
-        //color
-        white && styles.white,
-        peach && styles.peach,
-        accent && styles.accent,
-        
-    ];
-    if(animated){
-        return(
-             <Animated.View style={[ViewStyle,style]}  {...rest} >{children}</Animated.View>
-        )
-    }
+    //color
+    white && styles.white,
+    peach && styles.peach,
+    accent && styles.accent,
+  ];
+  if (animated) {
+    return (
+      <Animated.View style={[ViewStyle, style]} {...rest}>
+        {children}
+      </Animated.View>
+    );
+  }
 
+  if (touchable) {
+    return (
+      <View style={[ViewStyle, style]} {...rest}>
+        <TouchableOpacity
+          style={{ justifyContent: 'center', alignItems: 'center' }}
+          onPress={props.press}
+        >
+          {children}
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
-    if(touchable){
-        return(
-        <View style={[ViewStyle,style]} {...rest} >
-            <TouchableOpacity style={{justifyContent: 'center', alignItems: 'center'}} onPress={props.press}>
-                {children}
-            </TouchableOpacity>
-        </View>
-        );
-    }
-
-    return(
-        <View style={[ViewStyle,style]} {...rest} >{children}</View>
-    )
-}
+  return (
+    <View style={[ViewStyle, style]} {...rest}>
+      {children}
+    </View>
+  );
+};
 
 export default ViewField;
 
 const styles = StyleSheet.create({
+  row: { flexDirection: 'row' },
+  rowVerse: { flexDirection: 'row-reverse' },
 
-    row: { flexDirection: 'row'},
-    rowVerse: {flexDirection: 'row-reverse'},
-
-    //colors 
-    white: {backgroundColor: 'white'},
-    peach: {backgroundColor: theme.colors.peach},
-    accent: {backgroundColor: theme.colors.accent},
+  //colors
+  white: { backgroundColor: 'white' },
+  peach: { backgroundColor: theme.colors.peach },
+  accent: { backgroundColor: theme.colors.accent },
 });

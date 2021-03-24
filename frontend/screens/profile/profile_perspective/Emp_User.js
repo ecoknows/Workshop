@@ -1,118 +1,166 @@
-import React from 'react';
-import { StyleSheet,TouchableOpacity, StatusBar } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, TouchableOpacity, StatusBar } from 'react-native';
 import { View, Text, Pic, Table } from '../../../components';
-import {useDispatch, useSelector} from 'react-redux';
-import {openDrawerAction} from '../../../redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { openBottomDrawerAction, openDrawerAction } from '../../../redux';
 import Skills from '../../../components/Skills';
 import { theme } from '../../../constants';
+import { add_selected_job, get_jobs } from '../../../redux/actions/jobs.actions';
 
-function Main({navigation} ) {
+function Main({ navigation }) {
   return (
     <View flex white>
-    <Top/>
-    <Bottom/>
+      <Top navigation={navigation} />
+      <Bottom />
     </View>
   );
 }
 
-const testdata = [
-  {job:'Software Developer', workers: '4/5', status: true},
-  {job:'Graphics Designer', workers: '2/2', status: false},
-  {job:'Mechanical Engineer', workers: '5/6', status: true} 
-]
-
-
-function Top(){
+function Top({navigation}) {
   const dispatch = useDispatch();
+  const JobsState = useSelector((state) => state.jobsListState);
   const UserState = useSelector((state) => state.userDetails);
-  const { error, loading ,userData} = UserState;
-  return(
-    <View middle center paddingHorizontal={5} paddingTop={StatusBar.currentHeight}>
-        <TouchableOpacity style={{position: 'absolute', top:StatusBar.currentHeight+5, right:'5%', height: 40,width: 40, alignItems:'flex-end'}}
-        onPress={()=>{
-          dispatch(openDrawerAction())
-        }}
-        >
 
-        <Pic 
-        src={require('../../../assets/icons/burger.png')}
-        style={{resizeMode: 'contain', height: 20, width: 20}}
+  const CreateJobState = useSelector((state) => state.jobCreateState);
+  const {jobCreated} = CreateJobState;
+
+  const { error, loading, jobs } = JobsState;
+  const { userData } = UserState;
+  useEffect(() => {
+    dispatch(get_jobs());
+  }, [jobCreated]);
+
+  useEffect(() => {
+    if(userData == undefined){
+      navigation.navigate('Login');
+    }
+  }, [userData])
+
+  return (
+    <View
+      paddingHorizontal={5}
+      paddingTop={StatusBar.currentHeight}
+      height="100%"
+    >
+      <TouchableOpacity
+        style={{
+          position: 'absolute',
+          top: StatusBar.currentHeight + 5,
+          right: '5%',
+          height: 40,
+          width: 40,
+          alignItems: 'flex-end',
+        }}
+        onPress={() => {
+          dispatch(openDrawerAction());
+        }}
+      >
+        <Pic
+          src={require('../../../assets/icons/burger.png')}
+          style={{ resizeMode: 'contain', height: 20, width: 20 }}
         />
-        </TouchableOpacity>
-        <Pic 
-        src={require('../../../assets/image/user/man.png')}
-        profile_picture 
+      </TouchableOpacity>
+
+      <View center middle>
+        <Pic
+          src={require('../../../assets/image/user/man.png')}
+          profile_picture
         />
-        <Text extra_bold gray size={23}> 
+        <Text extra_bold gray size={23}>
           Jerico C. Villaraza
         </Text>
-        <Text medium size={14} gray> 
+        <Text medium size={14} gray>
           Manila, Philippines
         </Text>
 
         <View width={'80%'} marginVertical={5} center middle>
-          <Skills skills={['Manager', 'Enterprenuer', 0]}/>
+          <Skills skills={userData?.most_skilled} />
         </View>
-        
-        <Table
-            height={'50%'}
-            data={testdata}
-            renderHeader={()=>(
-              <View row paddingVertical={3}>
-                <View flex={1.3}>
-                    <Text bold gray>Find Employee</Text>
-                </View>
-                <View flex middle>
-                    <Text bold gray>Workers</Text>
-                </View>
-                <View flex middle>
-                    <Text bold gray>Status</Text>
-                </View>
-              </View>
-            )}
-            renderItem={({item},index)=>(
-              <View row key={index} center middle style={{borderTopColor: '#CCCCCC', borderTopWidth: 1, paddingVertical: 3}}>
-                <View flex={1.3} >
-                    <Text gray>{item.job}</Text>
-                </View>
-                <View flex middle>
-                    <Text gray>{item.workers}</Text>
-                </View>
-                <View flex middle>
-                    {
-                      item.status? <Text green>Available</Text> : <Text red>Full</Text>
-                    }
-                </View>
-              </View>
-            )}
-        />
+      </View>
 
-        <TouchableOpacity style={{paddingTop:10}}>
+      <View flex>
+        <Table
+          maxHeight="100%"
+          data={jobs}
+          renderHeader={() => (
+            <View row paddingVertical={3}>
+              <View flex={1.3}>
+                <Text bold gray>
+                  Find Employee
+                </Text>
+              </View>
+              <View flex middle>
+                <Text bold gray>
+                  Workers
+                </Text>
+              </View>
+              <View flex middle>
+                <Text bold gray>
+                  Status
+                </Text>
+              </View>
+            </View>
+          )}
+          renderItem={({ item }, index) => (
+            <TouchableOpacity
+              onPress={() => {
+                dispatch(openBottomDrawerAction({ status: true, tabSelected: 6 }));
+                dispatch(add_selected_job(item));
+              }}
+              key={index}
+              style={{
+                borderTopColor: '#CCCCCC',
+                borderTopWidth: 1,
+                paddingVertical: 3,
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <View flex={1.3}>
+                <Text gray>{item.job}</Text>
+              </View>
+              <View flex middle>
+                <Text gray>{item.current_workers} / {item.max_workers}</Text>
+              </View>
+              <View flex middle>
+                {item.current_workers != item.max_workers ? (
+                  <Text green>Available</Text>
+                ) : (
+                  <Text red>Full</Text>
+                )}
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+      <View center middle>
+        <TouchableOpacity
+          style={{ paddingTop: 10 }}
+          onPress={() => {
+            dispatch(openBottomDrawerAction({ status: true, tabSelected: 5 }));
+          }}
+        >
           <View row middle>
-            <Pic
-              src={require('../../../assets/icons/profile/job.png')}
-            />
-            <Text semi_bold color='#145DCA'>Add a Job</Text>
+            <Pic src={require('../../../assets/icons/profile/job.png')} />
+            <Text semi_bold color="#145DCA">
+              Add a Job
+            </Text>
           </View>
         </TouchableOpacity>
-        
+      </View>
     </View>
   );
 }
 
-function Bottom(props){
-  return(
-    <View white flex={1.5} paddingVertical={10}> 
-     
-    </View>
-  );
+function Bottom(props) {
+  return <View white flex={1.5} paddingVertical={10}></View>;
 }
 
 export default Main;
 
-
 const styles = StyleSheet.create({
-  bottom_botton_style_first : {
+  bottom_botton_style_first: {
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderTopColor: '#EAEAEA',
@@ -120,21 +168,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: '10%',
     paddingVertical: '2%',
   },
-  bottom_botton_style : {
+  bottom_botton_style: {
     borderBottomWidth: 1,
     borderBottomColor: '#EAEAEA',
     paddingHorizontal: '10%',
     paddingVertical: '2%',
   },
-  bottom_botton_text_style : {
-    textAlign: 'center', 
+  bottom_botton_text_style: {
+    textAlign: 'center',
     textAlignVertical: 'center',
     marginLeft: 10,
     color: '#917C7C',
   },
-  icon:{
-      height: 45,
-      width: 45,
-      resizeMode:'contain'
-  }
+  icon: {
+    height: 45,
+    width: 45,
+    resizeMode: 'contain',
+  },
 });

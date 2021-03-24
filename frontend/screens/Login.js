@@ -1,13 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import React,{useState, useEffect} from 'react';
-import Axios from 'axios';
-import { StyleSheet, 
-  Text, 
-  View, 
-  Image, 
-  TextInput, 
-  TouchableOpacity, 
-  TouchableWithoutFeedback, 
+import React, { useState, useEffect } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 
@@ -26,18 +25,16 @@ function Main({navigation}) {
   const UserState = useSelector((state)=> state.userDetails);
   const dispatch = useDispatch();
   const { loading, userData, error } = UserState;
-
+  console.log(userData);
   useEffect(() => {
-    if(userData){
+    if (userData) {
       Keyboard.dismiss();
-      update_login_user(userData);
-      navigation.navigate('UserScreen');
+      navigation.replace('UserScreen');
     }
-    if(error){
+    if (error) {
       console.log(error);
     }
   }, [userData, error]);
-
 
   return (
 
@@ -102,7 +99,6 @@ function Main({navigation}) {
   );
 }
 
-
 export default Main;
 
 const styles = StyleSheet.create({
@@ -110,8 +106,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     paddingTop: 20,
-    paddingHorizontal:10,
-    backgroundColor: '#fff'
+    paddingHorizontal: 10,
+    backgroundColor: '#fff',
   },
   image:{
     marginTop: 20,
@@ -119,11 +115,11 @@ const styles = StyleSheet.create({
     width: 137,
     height: 137,
   },
-  form:{
+  form: {
     marginHorizontal: 20,
     marginTop: 50
   },
-  text:{
+  text: {
     color: '#f68025',
     fontSize: 16,
     fontWeight: '400',
@@ -152,7 +148,7 @@ const styles = StyleSheet.create({
     top:90,
     alignSelf: 'center'
   },
-  loginText:{
+  loginText: {
     color: '#f68025',
     fontSize: 20,
     fontWeight: 'bold',

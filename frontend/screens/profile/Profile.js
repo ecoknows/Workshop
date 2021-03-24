@@ -7,7 +7,7 @@ function Main({navigation}) {
   return (
     <View flex>
     
-    <Emp_User/>
+    <Emp_User navigation={navigation}/>
     </View>
   );
 }
