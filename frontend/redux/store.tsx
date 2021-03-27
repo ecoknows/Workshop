@@ -4,13 +4,11 @@ import {
   bottomDrawerReducer,
   drawerReducer,
 } from './reducers/navigation.reducer';
-import { userSignInReducer,userRegisterReducer } from './reducers/user.reducer';
+import { userSignInReducer } from './reducers/user.reducer';
 import { jobsListReducer, jobCreateReducer,jobsSelectReducer } from './reducers/jobs.reducer';
 
 const RootReducer = combineReducers({
   userDetails: userSignInReducer,
-  userRegisterState: userRegisterReducer,
-
   drawerState: drawerReducer,
   bottomDrawerState: bottomDrawerReducer,
   jobsListState: jobsListReducer,

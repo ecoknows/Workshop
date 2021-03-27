@@ -34,6 +34,13 @@ function Top({navigation}) {
     if(userData == undefined){
       navigation.navigate('Login');
     }
+    if(userData){
+      console.log(userData, " tatatetete");
+      if(!userData.verified){
+        console.log(" bumaril");
+        navigation.navigate('SignUp');
+      }
+    }
   }, [userData])
 
   return (

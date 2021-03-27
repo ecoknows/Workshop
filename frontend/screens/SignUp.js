@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
 
 
+
 function Main({navigation}) {  
   const[Hide,setHide] = useState(true);
   const[name,setName] = useState('');
@@ -24,12 +25,16 @@ function Main({navigation}) {
   const[confirm_password,setConfirmPassword] = useState('');
   const[detailsDone, isDone] = useState(false);
   const[accountStatus,setStatus] = useState('');
-
-  const UserState = useSelector(state => state.userRegisterState);
+  const UserState = useSelector(state => state.userDetails);
   const { userData, error } = UserState;
   const dispatch = useDispatch();
   
-  console.log(error);
+  if(UserState.userData && detailsDone == false){
+    if(!UserState.userData.verified){
+      isDone(true);
+    }
+  }
+
   useEffect(() => {
     if(userData){
       isDone(!detailsDone);
@@ -117,6 +122,7 @@ function Main({navigation}) {
     
   );
 }
+
 
 export default Main;
 

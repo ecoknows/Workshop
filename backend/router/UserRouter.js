@@ -30,7 +30,6 @@ userRouter.post(
       if (bcrypt.compareSync(req.body.password, user.password)) {
         res.send({
           _id: user._id,
-          is_employer: false,
 
           email: user.email,
           password: bcrypt.hashSync(user.password, 8),
@@ -53,12 +52,11 @@ userRouter.post(
   '/register',
   expressAsyncHandler(async (req, res) => {
     const body = req.body;
-    const user = User.find({email: body.email})
-    console.log(user);
+    const user = await User.findOne({email: body.email})
 
     if(!user){
       const employee = new User({
-        is_employer: false,
+        verified: false,
         email: body.email,
         password: bcrypt.hashSync(body.password, 8),
         full_name: body.full_name,
@@ -78,27 +76,28 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     const query = req.query;
     const body = req.body;
-    const user = await User.findOne({ _id : query.id });
-
+    const user = await User.findOne({ email : query.email });
     if(user){
-      
-      user.most_skilled = body.most_skilled;
+      user.verified = true;
       user.birth_day = body.birth_day;
       user.address = body.address;
       user.city = body.city;
       user.sex = body.sex;
-      user.status = body.status; 
       user.name_of_document = body.name_of_document;
       user.documentation_link = body.documentation_link;
       user.position = body.position;
 
-      if(user.is_employer){
+      if(body.status == 'Employer'){
+        user.is_employer = true,
         user.name_of_business = body.name_of_business;
         user.address_of_business = body.address_of_business;
         user.nature_of_business = body.nature_of_business;
       }else{
+        user.is_employer = false,
         nature_of_work = body.nature_of_work;
       }
+      const verifiedUser = await user.save();
+      res.send(verifiedUser);
 
     }else{
       res.status(401).send({ message: 'Cannot find account' });

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { StyleSheet, 
   Text, 
@@ -8,7 +8,8 @@ import { StyleSheet,
   TouchableOpacity, 
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
-
+import {useSelector, useDispatch } from 'react-redux';
+import { verify } from '../redux';
  
 export function AccountDetails({Visibility, handler, status}){
   const [modalVisible, setModalVisible] = useState(Visibility);
@@ -17,6 +18,22 @@ export function AccountDetails({Visibility, handler, status}){
   const [City, setCity] = useState('');
   const [Sex, setSex] = useState('');
   const [AccountStatus, setAccountStatus] = useState('');
+  const dispatch = useDispatch();
+  const UserState = useSelector(state => state.userDetails);
+
+  if(Visibility != modalVisible){
+    setModalVisible(Visibility);
+  }
+
+  const SignUpButtonClick =()=>{
+    dispatch(verify({
+      birth_day: Birthday,
+      address: Address,
+      city: City,
+      sex: Sex,
+      status: AccountStatus,
+    },'Account'))
+  }
 
   return(
     <Modal
@@ -96,6 +113,7 @@ export function AccountDetails({Visibility, handler, status}){
             <TouchableOpacity style={styles.SignupBtn} onPress={() => {
               setModalVisible(!modalVisible); 
               handler(!modalVisible);
+              SignUpButtonClick();
               status(AccountStatus)}}>
               <Text style={styles.SignupText}>Next</Text>
             </TouchableOpacity>        
@@ -112,12 +130,25 @@ export function AccountDetails({Visibility, handler, status}){
 }
 
 export function AccountStatusEmployer({Visibility}){
-  const [modalVisible, setModalVisible] = useState(Visibility);
+  const [name_of_business, setNameBusiness] = useState('');
+  const [address_of_business, setAddressBusiness] = useState('');
+  const [nature_of_business, setNatureBusiness] = useState('');
+  const [position, setPosition] = useState('');
+  const dispatch = useDispatch();
+
+  const SignUpButtonClick =()=>{
+    dispatch(verify({
+      name_of_business,
+      address_of_business,
+      nature_of_business,
+      position,
+    }, 'Employer'))
+  }
   return(
     <Modal
     animationType="slide"
     statusBarTranslucent={true}
-    visible={modalVisible}
+    visible={Visibility}
     >
       <View>
         <Text style={styles.title}>{`Employer\nAccount`}</Text>
@@ -128,7 +159,7 @@ export function AccountStatusEmployer({Visibility}){
             placeholder='NAME OF BUSINESS'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            onChangeText={text => setNameBusiness(text)}
           />
 
           <TextInput
@@ -136,7 +167,7 @@ export function AccountStatusEmployer({Visibility}){
             placeholder='ADDRESS OF BUSINESS'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            onChangeText={text => setAddressBusiness(text)}
           />
 
           <TextInput
@@ -144,7 +175,7 @@ export function AccountStatusEmployer({Visibility}){
             placeholder='NATURE OF BUSINESS'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            onChangeText={text => setNatureBusiness(text)}
           />
 
           <TextInput
@@ -152,13 +183,11 @@ export function AccountStatusEmployer({Visibility}){
             placeholder='POSITION'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            onChangeText={text => setPosition(text)}
           />
 
           <TouchableOpacity style={styles.SignupBtn} 
-          onPress={ () => {
-            setModalVisible(!modalVisible); 
-            SignUpButtonClick(name,email,password, navigation)}}>
+          onPress={ () => SignUpButtonClick()}>
 
             <Text style={styles.SignupText}>Finish</Text>
           </TouchableOpacity>
@@ -201,7 +230,7 @@ export function AccountStatusEmployee({Visibility}){
           
           <TouchableOpacity style={styles.SignupBtn} onPress={ () => {
             setModalVisible(!modalVisible); 
-            SignUpButtonClick(name,email,password, navigation)
+            // SignUpButtonClick(name,email,password, navigation)
             }}>
             <Text style={styles.SignupText}>Finish</Text>
           </TouchableOpacity>

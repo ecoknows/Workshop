@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
-    is_employer: { type: Boolean, required: true },
+    verified: { type: Boolean, required: true},
 
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -10,13 +10,13 @@ const userSchema = new mongoose.Schema(
     authorized: { type: Number, required: true },
 
 
-    
-    most_skilled: { type: [String],  },
+    is_employer: { type: Boolean},
+    most_skilled: { type: [String],},
     birth_day: {type: String, },
     address: {type: String, },
     city: {type: String, },
     sex: {type: String, },
-    status: {type: String, }, 
+
     name_of_document: {type: String},
     documentation_link: {type: String},
     position: {type: String},

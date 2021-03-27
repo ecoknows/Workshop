@@ -40,10 +40,6 @@ export const USER_SIGNIN_REQUEST = 'USER_SIGNIN_REQUEST';
 export const USER_SIGNIN_SUCCESS = 'USER_SIGNIN_SUCCESS';
 export const USER_SIGNIN_FAIL = 'USER_SIGNIN_FAIL';
 
-export const USER_REGISTER_REQUEST = 'USER_REGISTER_REQUEST';
-export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
-export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL';
-
 
 
 export const USER_SIGNOUT = 'USER_SIGNOUT';
@@ -55,13 +51,8 @@ interface UserSuccessType extends DefaultPropertiesInterface {
 
 export type UserReducerType = UserSuccessType;
 export type UserActionType =
-  | RequestInterface<typeof USER_REGISTER_REQUEST>
   | RequestInterface<typeof USER_SIGNIN_REQUEST>
   | RequestInterface<typeof USER_SIGNOUT>
-  | SuccessAndFailInterface<
-      typeof USER_REGISTER_SUCCESS | typeof USER_REGISTER_FAIL,
-      UserInterface
-    >
   | SuccessAndFailInterface<
       typeof USER_SIGNIN_SUCCESS | typeof USER_SIGNIN_FAIL,
       UserInterface
