@@ -42,8 +42,14 @@ export function AccountDetails({Visibility, handler, status}){
     visible={modalVisible}
     >
       <View>
-        <Text style={styles.title}>
-          {`Account\nDetails`}</Text>
+        <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
+          <Text style={styles.title}>{`Account\nDetails`}</Text>
+          <Text style={styles.back} onPress={()=>{
+            setModalVisible(!modalVisible); 
+            handler(!modalVisible);
+            }}>BACK</Text>
+        </View>
+        
 
           <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-160}>
   
@@ -107,7 +113,7 @@ export function AccountDetails({Visibility, handler, status}){
                   marginVertical: 5,
                   marginHorizontal: 10,
                 }}  
-              onChangeItem={item => setAccountStatus(item.value)}
+              onChangeItem={item => {setAccountStatus(item.value)}}
             />
               
             <TouchableOpacity style={styles.SignupBtn} onPress={() => {
@@ -151,7 +157,15 @@ export function AccountStatusEmployer({Visibility}){
     visible={Visibility}
     >
       <View>
-        <Text style={styles.title}>{`Employer\nAccount`}</Text>
+        <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
+          <Text style={styles.title}>{`Employer\nAccount`}</Text>
+          <Text style={styles.back} onPress={()=>{
+            setModalVisible(!modalVisible); 
+            handler(true);
+            status('');
+            }}>BACK</Text>
+        </View>
+        
         <KeyboardAvoidingView behavior="position" style={styles.form}>
 
           <TextInput
@@ -200,7 +214,7 @@ export function AccountStatusEmployer({Visibility}){
   )
 }
 
-export function AccountStatusEmployee({Visibility}){
+export function AccountStatusEmployee({Visibility, handler, status}){
   const [modalVisible, setModalVisible] = useState(Visibility);
   return(
     <Modal
@@ -209,7 +223,15 @@ export function AccountStatusEmployee({Visibility}){
     visible={modalVisible}
     >
       <View>
-        <Text style={styles.title}>{`Employee\nAccount`}</Text>
+        <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
+          <Text style={styles.title}>{`Employee\nAccount`}</Text>
+          <Text style={styles.back} onPress={()=>{
+            setModalVisible(!modalVisible); 
+            handler(true);
+            status('');
+            }}>BACK</Text>
+        </View>
+        
         <KeyboardAvoidingView behavior="position" style={styles.form}>
 
           <TextInput
@@ -256,7 +278,14 @@ const styles = StyleSheet.create({
     marginLeft: 20, 
     marginTop: 40, 
     marginBottom:30,
-    color:'#4f4f4f' },
+    color:'#4f4f4f' 
+  },
+  back:{
+    marginRight: 20, 
+    marginTop: 50, 
+    marginBottom:30,
+    color:'#4f4f4f'
+  },
   form:{
     marginHorizontal: 35,
     marginTop: 20,

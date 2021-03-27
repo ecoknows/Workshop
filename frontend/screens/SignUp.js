@@ -104,7 +104,7 @@ function Main({navigation}) {
               </TouchableOpacity>
 
               <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center'}}>Already Have an Account? 
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={()=>navigation.navigate('Login')}>
                   <Text style={{color: '#f68025', fontWeight: 'bold'}}> Log In</Text>
                 </TouchableWithoutFeedback>
               </Text>
@@ -113,8 +113,8 @@ function Main({navigation}) {
           </KeyboardAvoidingView>         
 
           {detailsDone && <AccountDetails Visibility={true} handler={isDone} status={setStatus} />}
-          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true}/>}
-          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true}/>}
+          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true} handler={isDone} status={setStatus}/>}
+          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true} handler={isDone} status={setStatus}/>}
 
         </View>
       </ScrollView>
