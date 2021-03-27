@@ -83,8 +83,8 @@ function Main({navigation}) {
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
 
-        <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center', top: 150}}>Haven't made an account yet? 
-          <TouchableWithoutFeedback>
+        <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center', marginTop: 150}}>Haven't made an account yet? 
+          <TouchableWithoutFeedback onPress={()=>navigation.navigate('SignUp')} >
             <Text style={{color: '#f68025', fontWeight: 'bold'}}>Sign Up</Text>
           </TouchableWithoutFeedback>
         </Text>
