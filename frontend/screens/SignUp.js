@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, 
   Text, 
   View, 
@@ -7,28 +7,47 @@ import { StyleSheet,
   TextInput, 
   TouchableOpacity, 
   TouchableWithoutFeedback, 
+  ScrollView,
   KeyboardAvoidingView,
   Keyboard } from 'react-native';
 import { AntDesign as Icon} from '@expo/vector-icons';
-import { sign_up, add_users, current_user_id } from '../database/firebase';
-import { set_user_info } from '../database/current_user';
-import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails'
-import { acc } from 'react-native-reanimated';
+import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails';
+import { useSelector, useDispatch } from 'react-redux';
+import { register } from '../redux';
 
-function Main({navigation}) {
-  
+
+function Main({navigation}) {  
   const[Hide,setHide] = useState(true);
   const[name,setName] = useState('');
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
+  const[confirm_password,setConfirmPassword] = useState('');
   const[detailsDone, isDone] = useState(false);
   const[accountStatus,setStatus] = useState('');
+
+  const UserState = useSelector(state => state.userRegisterState);
+  const { userData, error } = UserState;
+  const dispatch = useDispatch();
+  
+  console.log(error);
+  useEffect(() => {
+    if(userData){
+      isDone(!detailsDone);
+    }
+  }, [userData])
+
+  const verfyingInputs =()=> {
+    dispatch(register(
+      name,
+      email,
+      password,
+      confirm_password,
+    ));
+  }
   
   return (
 
-      <TouchableWithoutFeedback onPress={() => {
-        Keyboard.dismiss();
-        }}>
+      <ScrollView>
         <View style={styles.container}>          
           <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
             <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Sign Up</Text>
@@ -72,11 +91,10 @@ function Main({navigation}) {
                 placeholderTextColor='#808080'
                 returnKeyType='done'
                 secureTextEntry={Hide}
-                onChangeText={ text=>setPassword(text)}
-                value={password}
+                onChangeText={ text=>setConfirmPassword(text)}
+                value={confirm_password}
               />
-              <TouchableOpacity style={styles.SignupBtn} onPress={ () => isDone(!detailsDone)}>
-                {console.log(detailsDone)}
+              <TouchableOpacity style={styles.SignupBtn} onPress={ verfyingInputs}>
                 <Text style={styles.SignupText}>Signup</Text>
               </TouchableOpacity>
 
@@ -94,31 +112,16 @@ function Main({navigation}) {
           {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true}/>}
 
         </View>
-      </TouchableWithoutFeedback>
+      </ScrollView>
         
     
   );
-}
-
-function SignUpButtonClick (name, email, pass, navigation){
-
-  sign_up(email,pass, ()=>{
-    const uid = current_user_id();
-    add_users({
-      uid,
-      name,
-      email,
-      pass,
-    })
-    navigation.navigate('UserScreen');
-  });
 }
 
 export default Main;
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
     flex: 1,
     paddingTop: 20,
     paddingHorizontal: 5,

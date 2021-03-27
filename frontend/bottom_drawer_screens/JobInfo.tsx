@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { theme } from '../constants';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeBottomDrawerAction } from '../redux';
+import { closeBottomDrawerAction, RootState } from '../redux';
 
 interface JobInfoProps {
   UserChoice: {
@@ -35,12 +35,11 @@ const person = [
 
 function JobInfo(props: JobInfoProps) {
   const { UserChoice, drawer_anim } = props;
-  const CreateJobState = useSelector((state) => state.jobsSelectedState);
+  const CreateJobState = useSelector((state : RootState) => state.jobsSelectedState);
   const {jobSelected} = CreateJobState;
   const [isApplicant, setApplicant] = useState(false);
 
   const dispatch = useDispatch();
-  console.log(jobSelected);
   
   return (
     <View

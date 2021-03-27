@@ -1,5 +1,8 @@
 import Axios from 'axios';
 import {
+  USER_REGISTER_FAIL,
+  USER_REGISTER_REQUEST,
+  USER_REGISTER_SUCCESS,
   USER_SIGNIN_FAIL,
   USER_SIGNIN_REQUEST,
   USER_SIGNIN_SUCCESS,
@@ -22,6 +25,30 @@ export const signin = (email: string, password: string) => async (
   } catch (error) {
     dispatch({
       type: USER_SIGNIN_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const register = (name: string, email: string, password: string, confirm_password: string) => async (
+  dispatch: any
+) => {
+  if(password != confirm_password){
+    dispatch({type: USER_REGISTER_FAIL, payload: "Password doesn't match"});
+    return;
+  }
+  dispatch({ type: USER_REGISTER_REQUEST });
+  try {
+    const { data } = await Axios.post('/user/register', { full_name: name, email, password, });
+    dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
+    console.log("Test");
+    update_login_user(data);
+  } catch (error) {
+    dispatch({
+      type: USER_REGISTER_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

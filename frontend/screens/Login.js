@@ -7,7 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  KeyboardAvoidingView,
+  ScrollView,
   Keyboard } from 'react-native';
 
 import {AntDesign, Fontisto} from '@expo/vector-icons';
@@ -15,6 +15,8 @@ import { current_user_id, get_user, sign_in } from '../database/firebase';
 import { update_login_user } from '../database/current_user';
 import {useSelector, useDispatch} from 'react-redux';
 import { signin } from '../redux/actions';
+import { red } from 'react-native-redash/lib/module/v1';
+import { theme } from '../constants';
 
 function Main({navigation}) {
   const[Hide,setHide] = useState(true);
@@ -37,63 +39,57 @@ function Main({navigation}) {
   }, [userData, error]);
 
   return (
+    <ScrollView style={styles.container}>
+      <View paddingHorizontal={20} height={theme.height}>
+            <View flex={1} >
+              <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Login</Text>
+              <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
+            </View>
 
-  <TouchableWithoutFeedback onPress={() => {
-    Keyboard.dismiss();
-    }}>
-    <View style={styles.container}>
-      <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Login</Text>
-      <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
-      <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-90}>
+            <View justifyContent='center' >
+              <TextInput
+                style={styles.input}
+                placeholder='EMAIL ADDRESS'
+                placeholderTextColor='#808080'  
+                returnKeyType='next'
+                onChangeText={ text=>setEmail(text)}
+                value={email}
+              />
 
-        <View>
+              <View style={styles.input}>
+                <TextInput
+                  style={{fontSize: 18,flex: 1}}
+                  placeholder='**********'
+                  placeholderTextColor='#808080'
+                  returnKeyType='done'
+                  secureTextEntry={Hide}
+                  onChangeText={ text=>setPassword(text)}
+                  value={password}
+                />
+                <TouchableOpacity onPress={ () => setHide(!Hide) }>
+                  <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+                </TouchableOpacity> 
+              </View>
 
-          
-          <TextInput
-            style={styles.input}
-            placeholder='EMAIL ADDRESS'
-            placeholderTextColor='#808080'  
-            returnKeyType='next'
-            onChangeText={ text=>setEmail(text)}
-            value={email}
-          />
-        </View>
-
-        <View>
-          
-          <TextInput
-            style={styles.input}
-            placeholder='**********'
-            placeholderTextColor='#808080'
-            returnKeyType='done'
-            secureTextEntry={Hide}
-            onChangeText={ text=>setPassword(text)}
-            value={password}
-          />
-
-          <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-            <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
-          </TouchableOpacity> 
-        </View>
-          
-        <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
-          <Text style={styles.loginText}>LOGIN</Text>
-        </TouchableOpacity>
-
-        <Text style={{color: '#808080', fontWeight: 'bold', alignSelf: 'center', top: 150}}>Haven't made an account yet? 
-          <TouchableWithoutFeedback>
-            <Text style={{color: '#f68025', fontWeight: 'bold'}}>Sign Up</Text>
-          </TouchableWithoutFeedback>
-        </Text>
+            </View>
+              
+            <View flex={1} justifyContent='center' alignItems='center' >
+              <View flex={1} justifyContent='flex-end'>
+                <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
+                  <Text style={styles.loginText}>LOGIN</Text>
+                </TouchableOpacity>
+              </View>
+              <View flex={1} justifyContent='center'>
+                <Text style={{color: '#808080', fontWeight: 'bold'}}>Haven't made an account yet? 
+                  <TouchableWithoutFeedback onPress={()=>navigation.navigate('SignUp')}>
+                    <Text style={{color: '#f68025', fontWeight: 'bold'}}>Sign Up</Text>
+                  </TouchableWithoutFeedback>
+                </Text>
+              </View>
+            </View>
+      </View>
         
-       
-      </KeyboardAvoidingView>
-
-      
-    
-     
-    </View>
-  </TouchableWithoutFeedback>
+  </ScrollView>
     
     
   );
@@ -103,11 +99,9 @@ export default Main;
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
     flex: 1,
     paddingTop: 20,
     paddingHorizontal: 10,
-    backgroundColor: '#fff',
   },
   image:{
     marginTop: 20,
@@ -131,21 +125,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     paddingHorizontal: 8,
     paddingVertical: 8,
-    fontSize: 18,
+    flexDirection: 'row',
   },
-  eyeBtn: {
-    alignSelf: 'flex-end',
-    position: "absolute",
-    top: 10,
-    
-  },  
   loginBtn: {
     borderColor: '#f68025',
     borderWidth: 2,
     borderRadius: 20,
     padding: 5,
     paddingHorizontal: 50,
-    top:90,
     alignSelf: 'center'
   },
   loginText: {
