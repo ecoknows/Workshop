@@ -14,6 +14,7 @@ import { AntDesign as Icon} from '@expo/vector-icons';
 import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
+import { delete_login_user } from '../database/current_user';
 
 
 
@@ -28,16 +29,12 @@ function Main({navigation}) {
   const UserState = useSelector(state => state.userDetails);
   const { userData, error } = UserState;
   const dispatch = useDispatch();
-  
-  if(UserState.userData && detailsDone == false){
-    if(!UserState.userData.verified){
-      isDone(true);
-    }
-  }
-
   useEffect(() => {
     if(userData){
-      isDone(!detailsDone);
+      if(!userData.verified && userData.sex == undefined || userData.birth_day == undefined || userData.address == undefined || userData.city == undefined)
+      {
+        isDone(true)
+      }
     }
   }, [userData])
 
@@ -49,6 +46,8 @@ function Main({navigation}) {
       confirm_password,
     ));
   }
+
+  delete_login_user()
   
   return (
 

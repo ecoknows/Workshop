@@ -27,10 +27,8 @@ function Main({navigation}) {
   const UserState = useSelector((state)=> state.userDetails);
   const dispatch = useDispatch();
   const { loading, userData, error } = UserState;
-  console.log(userData);
   useEffect(() => {
     if (userData) {
-      Keyboard.dismiss();
       navigation.replace('UserScreen');
     }
     if (error) {

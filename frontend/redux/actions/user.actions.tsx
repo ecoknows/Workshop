@@ -39,7 +39,16 @@ export const verify = (info, status) => async (
   }= getState();
 
   if(status == 'Account'){
-    dispatch({ type: USER_SIGNIN_SUCCESS, payload: {...userData,...info} });
+    if(
+      info.sex != '' || info.birth_day != '' || info.address != '' || info.city != ''
+    ){
+      dispatch({ type: USER_SIGNIN_SUCCESS, payload: {...userData,...info} });
+    }else{
+      dispatch({
+        type: USER_SIGNIN_FAIL,
+        payload: "Input ar empty please try again "
+      });
+    }
     return;
   }
   
@@ -54,7 +63,6 @@ export const verify = (info, status) => async (
       ...info
     });
     if(data){
-      console.log(data , " bakit ka naka nested");  
       update_login_user(data);
     }
   } catch (error) {

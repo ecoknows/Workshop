@@ -7,6 +7,7 @@ import { StyleSheet,
   TextInput, 
   TouchableOpacity, 
   KeyboardAvoidingView,
+  ScrollView,
   Keyboard } from 'react-native';
 import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
@@ -19,11 +20,23 @@ export function AccountDetails({Visibility, handler, status}){
   const [Sex, setSex] = useState('');
   const [AccountStatus, setAccountStatus] = useState('');
   const dispatch = useDispatch();
-  const UserState = useSelector(state => state.userDetails);
 
-  if(Visibility != modalVisible){
-    setModalVisible(Visibility);
-  }
+  const UserState = useSelector(state => state.userDetails);
+  const { userData } = UserState;
+
+  useEffect(() => {
+    if( Birthday==userData.birth_day && Address == userData.address && City == userData.city && Sex == userData.sex && AccountStatus == userData.status){
+      setModalVisible(!modalVisible); 
+      handler(!modalVisible);
+      status(AccountStatus);
+    }else{
+      setBirthday(userData.birth_day);
+      setAddress(userData.address);
+      setCity(userData.city);
+      setSex(userData.sex);
+      setAccountStatus(userData.status);
+    }
+  }, [userData]);
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -44,10 +57,6 @@ export function AccountDetails({Visibility, handler, status}){
       <View>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Account\nDetails`}</Text>
-          <Text style={styles.back} onPress={()=>{
-            setModalVisible(!modalVisible); 
-            handler(!modalVisible);
-            }}>BACK</Text>
         </View>
         
 
@@ -90,6 +99,7 @@ export function AccountDetails({Visibility, handler, status}){
             />
               
             <DropDownPicker
+              defaultValue={AccountStatus}
               placeholder='STATUS'
                 items={[
                   {label:'EMPLOYEE', value:'Employee'},
@@ -117,10 +127,10 @@ export function AccountDetails({Visibility, handler, status}){
             />
               
             <TouchableOpacity style={styles.SignupBtn} onPress={() => {
-              setModalVisible(!modalVisible); 
-              handler(!modalVisible);
+
               SignUpButtonClick();
-              status(AccountStatus)}}>
+              
+              }}>
               <Text style={styles.SignupText}>Next</Text>
             </TouchableOpacity>        
       
@@ -135,12 +145,13 @@ export function AccountDetails({Visibility, handler, status}){
   )
 }
 
-export function AccountStatusEmployer({Visibility}){
+export function AccountStatusEmployer({Visibility, handler, status}){
   const [name_of_business, setNameBusiness] = useState('');
   const [address_of_business, setAddressBusiness] = useState('');
   const [nature_of_business, setNatureBusiness] = useState('');
   const [position, setPosition] = useState('');
   const dispatch = useDispatch();
+  const [modalVisible, setModalVisible] = useState(Visibility);
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -156,7 +167,7 @@ export function AccountStatusEmployer({Visibility}){
     statusBarTranslucent={true}
     visible={Visibility}
     >
-      <View>
+      <ScrollView>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employer\nAccount`}</Text>
           <Text style={styles.back} onPress={()=>{
@@ -166,7 +177,7 @@ export function AccountStatusEmployer({Visibility}){
             }}>BACK</Text>
         </View>
         
-        <KeyboardAvoidingView behavior="position" style={styles.form}>
+        <View style={styles.form}>
 
           <TextInput
             style={styles.input}
@@ -206,8 +217,8 @@ export function AccountStatusEmployer({Visibility}){
             <Text style={styles.SignupText}>Finish</Text>
           </TouchableOpacity>
 
-        </KeyboardAvoidingView>
-      </View> 
+        </View>
+      </ScrollView> 
     </Modal>
     
   
@@ -216,6 +227,14 @@ export function AccountStatusEmployer({Visibility}){
 
 export function AccountStatusEmployee({Visibility, handler, status}){
   const [modalVisible, setModalVisible] = useState(Visibility);
+  const [nature_of_work, setNatureWork] = useState();
+  const dispatch = useDispatch();
+
+  const SignUpButtonClick =()=>{
+    dispatch(verify({
+      nature_of_work,
+    }, 'Employee'))
+  }
   return(
     <Modal
     animationType="slide"
@@ -239,7 +258,8 @@ export function AccountStatusEmployee({Visibility, handler, status}){
             placeholder='NATURE OF WORK'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            value={nature_of_work}
+            onChangeText={text => setNatureWork(text)}
           />
 
           <TextInput
@@ -251,8 +271,7 @@ export function AccountStatusEmployee({Visibility, handler, status}){
           />
           
           <TouchableOpacity style={styles.SignupBtn} onPress={ () => {
-            setModalVisible(!modalVisible); 
-            // SignUpButtonClick(name,email,password, navigation)
+            SignUpButtonClick();
             }}>
             <Text style={styles.SignupText}>Finish</Text>
           </TouchableOpacity>

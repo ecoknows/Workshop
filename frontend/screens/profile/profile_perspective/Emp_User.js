@@ -35,10 +35,9 @@ function Top({navigation}) {
       navigation.navigate('Login');
     }
     if(userData){
-      console.log(userData, " tatatetete");
+      console.log("Data USER: ",userData);
       if(!userData.verified){
-        console.log(" bumaril");
-        navigation.navigate('SignUp');
+        navigation.replace('SignUp');
       }
     }
   }, [userData])

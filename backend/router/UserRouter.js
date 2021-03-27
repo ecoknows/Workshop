@@ -5,21 +5,6 @@ import bcrypt from 'bcryptjs';
 import { NEW } from '../api/api_constants.js';
 
 const userRouter = express.Router();
-const respondSend = (user, res) => {
-  res.send({
-    is_employee: true,
-
-    email: user.email,
-    password: bcrypt.hashSync(user.password, 8),
-
-    full_name: user.full_name,
-
-    authorized: NEW,
-
-    location: user.location,
-    most_skilled: user.most_skilled,
-  });
-};
 
 userRouter.post(
   '/login',
@@ -28,19 +13,69 @@ userRouter.post(
     console.log(user);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
-        res.send({
-          _id: user._id,
+        if(!user.verified){
+          res.send({
+            _id: user._id,
+            verified: user.verified,
 
-          email: user.email,
-          password: bcrypt.hashSync(user.password, 8),
+            email: user.email,
+            full_name: user.full_name,
+            authorized: user.authorized,
+          });
 
-          full_name: user.full_name,
+        } else if(user.is_employer){
+          res.send({
+            _id: user._id,
+            verified: user.verified,
 
-          authorized: NEW,
+            email: user.email,
+            full_name: user.full_name,
+            authorized: user.authorized,
 
-          location: user.location,
-          most_skilled: user.most_skilled,
-        });
+
+            is_employer: user.is_employer,
+            birth_day: user.birth_day,
+            address: user.address,
+            city: user.city,
+            sex: user.sex,
+            most_skilled: user.most_skilled,
+
+            name_of_document: user.name_of_document,
+            documentation_link: user.documentation_link,
+            position: user.position,
+
+            // EMPLOYER
+            name_of_business: user.name_of_business,
+            address_of_business: user.address_of_business,
+            nature_of_business: user.nature_of_business,
+          });          
+        }else{
+
+          res.send({
+            verified: verifiedUser.verified,
+
+            email: verifiedUser.email,
+            password: verifiedUser.password,
+            full_name: verifiedUser.full_name,
+            authorized: verifiedUser.authorized,
+
+
+            is_employer: verifiedUser.is_employer,
+            birth_day: verifiedUser.birth_day,
+            address: verifiedUser.address,
+            city: verifiedUser.city,
+            sex: verifiedUser.sex,
+            most_skilled: user.most_skilled,
+
+            name_of_document: verifiedUser.name_of_document,
+            documentation_link: verifiedUser.documentation_link,
+            position: verifiedUser.position,
+
+            // EMPLOYEE
+            nature_of_work: verifiedUser.nature_of_work,
+          });
+        }
+
         return;
       }
     }
@@ -53,7 +88,6 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     const body = req.body;
     const user = await User.findOne({email: body.email})
-
     if(!user){
       const employee = new User({
         verified: false,
@@ -62,8 +96,17 @@ userRouter.post(
         full_name: body.full_name,
         authorized: NEW,
       });
-      const createdEmployee = await employee.save();
-      respondSend(createdEmployee, res);
+      const createdUser = await employee.save();
+
+      res.send({
+        verified: createdUser.verified,
+
+        email: createdUser.email,
+        password: createdUser.password,
+        full_name: createdUser.full_name,
+        authorized: createdUser.authorized,
+      });
+
     }else{
       res.status(401).send({ message: 'Email already exist!' });
     }
@@ -92,12 +135,63 @@ userRouter.post(
         user.name_of_business = body.name_of_business;
         user.address_of_business = body.address_of_business;
         user.nature_of_business = body.nature_of_business;
+        const verifiedUser = await user.save();
+
+        res.send({
+          verified: verifiedUser.verified,
+
+          email: verifiedUser.email,
+          password: verifiedUser.password,
+          full_name: verifiedUser.full_name,
+          authorized: verifiedUser.authorized,
+
+
+          is_employer: verifiedUser.is_employer,
+          birth_day: verifiedUser.birth_day,
+          address: verifiedUser.address,
+          city: verifiedUser.city,
+          sex: verifiedUser.sex,
+
+          name_of_document: verifiedUser.name_of_document,
+          documentation_link: verifiedUser.documentation_link,
+          position: verifiedUser.position,
+
+          // EMPLOYER
+          name_of_business: verifiedUser.name_of_business,
+          address_of_business: verifiedUser.address_of_business,
+          nature_of_business: verifiedUser.nature_of_business,
+        });
+
+
       }else{
         user.is_employer = false,
         nature_of_work = body.nature_of_work;
+        const verifiedUser = await user.save();
+
+        res.send({
+          verified: verifiedUser.verified,
+
+          email: verifiedUser.email,
+          password: verifiedUser.password,
+          full_name: verifiedUser.full_name,
+          authorized: verifiedUser.authorized,
+
+
+          is_employer: verifiedUser.is_employer,
+          birth_day: verifiedUser.birth_day,
+          address: verifiedUser.address,
+          city: verifiedUser.city,
+          sex: verifiedUser.sex,
+
+          name_of_document: verifiedUser.name_of_document,
+          documentation_link: verifiedUser.documentation_link,
+          position: verifiedUser.position,
+
+          // EMPLOYEE
+          nature_of_work: verifiedUser.nature_of_work,
+        });
+
       }
-      const verifiedUser = await user.save();
-      res.send(verifiedUser);
 
     }else{
       res.status(401).send({ message: 'Cannot find account' });
