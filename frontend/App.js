@@ -23,8 +23,10 @@ const getFonts = () =>
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  // axios.defaults.baseURL = 'http://10.0.2.2:3001/api';
-  axios.defaults.baseURL = 'http://192.168.1.15:3001/api';
+  // axios.defaults.baseURL = 'http://10.0.2.2:3001/api'; // EMULATOR API
+  // axios.defaults.baseURL = 'http://192.168.1.15:3001/api'; // LOCAL API WITH REAL DEVICE
+  axios.defaults.baseURL = 'https://hatdogsilog.loca.lt/api'; // OPEN PORT API 
+  
 
   if (fontsLoaded) {
     return (

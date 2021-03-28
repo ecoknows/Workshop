@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { StyleSheet, 
   Text, 
   View, 
@@ -24,25 +24,32 @@ function Main({navigation}) {
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
   const[confirm_password,setConfirmPassword] = useState('');
-  const[detailsDone, isDone] = useState(false);
-  const[accountStatus,setStatus] = useState('');
-  const UserState = useSelector(state => state.userDetails);
-  const { userData, error } = UserState;
+  const [accountStatus, setStatus] = useState('');
+  
   const dispatch = useDispatch();
+  const UserState = useSelector(state => state.userDetails);
 
+  const { userData, error } = UserState;
 
+  console.log(userData, error, accountStatus);
   useEffect(() => {
-    if(userData){
-      if(!userData.verified && accountStatus == '' )
-      {
-        isDone(true);
+    if (userData) {
+
+      if (
+        userData.birth_day || userData.address || userData.city || userData.sex || userData.status ||
+        userData.name_of_business || userData.address_of_business || userData.nature_of_business || userData.position
+      ) {
+        navigation.replace('UserScreen');
       }
 
-
-
+      
+      if ( accountStatus ==  '' && (!userData.birth_day || !userData.address || !userData.city || !userData.sex || !userData.status)) {
+        setStatus('Account');
+      } else if (accountStatus ==  'Account' && (!userData.name_of_business || !userData.address_of_business || !userData.nature_of_business || !userData.position)) {
+        setStatus(userData.status);
+      }
     }
-    
-  }, [userData])
+  },[userData])
 
 
   const verfyingInputs =()=> {
@@ -116,10 +123,10 @@ function Main({navigation}) {
             </View>
               
           </KeyboardAvoidingView>         
-
-          {detailsDone && <AccountDetails Visibility={true} handler={isDone} setStatus={setStatus} status={accountStatus} />}
-          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true} handler={isDone} status={setStatus} navigation={navigation}/>}
-          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true} handler={isDone} status={setStatus}  navigation={navigation}/>}
+ 
+        <AccountDetails accountStatus={accountStatus}/>
+        <AccountStatusEmployer accountStatus={accountStatus} setStatus={setStatus}/>
+        <AccountStatusEmployee accountStatus={accountStatus} setStatus={setStatus}/>
 
         </View>
       </ScrollView>

@@ -7,47 +7,19 @@ import { StyleSheet,
   TextInput, 
   TouchableOpacity, 
   KeyboardAvoidingView,
-  ScrollView,
-  Keyboard } from 'react-native';
+  ScrollView
+} from 'react-native';
 import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
  
-export function AccountDetails({Visibility, handler, setStatus, status}){
-  const [modalVisible, setModalVisible] = useState(Visibility);
+export function AccountDetails({accountStatus}){
   const [Birthday, setBirthday] = useState('')
   const [Address, setAddress] = useState('');
   const [City, setCity] = useState('');
   const [Sex, setSex] = useState('');
-  const [AccountStatus, setAccountStatus] = useState('');
+  const [statusChecker, setStatusChecker] = useState('');
+
   const dispatch = useDispatch();
-
-  const UserState = useSelector(state => state.userDetails);
-  const { userData } = UserState;
-
-  useEffect(() => {
-    if(
-      status != '',
-      Birthday==userData.birth_day && 
-      Address == userData.address && 
-      City == userData.city && 
-      Sex == userData.sex && 
-      AccountStatus == userData.status
-      ){
-      handler(!modalVisible);
-    }
-  }, [status])
-
-  useEffect(() => {
-    if( Birthday==userData.birth_day && Address == userData.address && City == userData.city && Sex == userData.sex && AccountStatus == userData.status){
-      setStatus(AccountStatus);
-    }else{
-      setBirthday(userData.birth_day);
-      setAddress(userData.address);
-      setCity(userData.city);
-      setSex(userData.sex);
-      setAccountStatus(userData.status);
-    }
-  }, [userData]);
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -55,7 +27,7 @@ export function AccountDetails({Visibility, handler, setStatus, status}){
       address: Address,
       city: City,
       sex: Sex,
-      status: AccountStatus,
+      status: statusChecker,
     },'Account'))
   }
 
@@ -63,7 +35,7 @@ export function AccountDetails({Visibility, handler, setStatus, status}){
     <Modal
     animationType="slide"
     transparent={true}
-    visible={modalVisible}
+    visible={accountStatus == 'Account'}
     >
       <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
@@ -110,7 +82,7 @@ export function AccountDetails({Visibility, handler, setStatus, status}){
             />
               
             <DropDownPicker
-              defaultValue={AccountStatus}
+              defaultValue={statusChecker}
               placeholder='STATUS'
                 items={[
                   {label:'EMPLOYEE', value:'Employee'},
@@ -134,7 +106,7 @@ export function AccountDetails({Visibility, handler, setStatus, status}){
                   marginVertical: 5,
                   marginHorizontal: 10,
                 }}  
-              onChangeItem={item => {setAccountStatus(item.value)}}
+              onChangeItem={item => {setStatusChecker(item.value)}}
             />
               
             <TouchableOpacity style={styles.SignupBtn} onPress={() => {
@@ -156,15 +128,12 @@ export function AccountDetails({Visibility, handler, setStatus, status}){
   )
 }
 
-export function AccountStatusEmployer({Visibility, handler, status, navigation}){
+export function AccountStatusEmployer({accountStatus, setStatus}){
   const [name_of_business, setNameBusiness] = useState('');
   const [address_of_business, setAddressBusiness] = useState('');
   const [nature_of_business, setNatureBusiness] = useState('');
   const [position, setPosition] = useState('');
   const dispatch = useDispatch();
-  const [modalVisible, setModalVisible] = useState(Visibility);
-  const UserState = useSelector(state => state.userDetails);
-  const { userData } = UserState;
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -174,26 +143,18 @@ export function AccountStatusEmployer({Visibility, handler, status, navigation})
       position,
     }, 'Employer'))
   }
-  useEffect(() => {
-    if( name_of_business==userData.name_of_business && address_of_business == userData.address_of_business && nature_of_business == userData.nature_of_business && position == userData.position){
-      navigation.replace('UserScreen');
-    }
-  }, [userData]);
+
 
   return(
     <Modal
     animationType="slide"
     transparent={true}
-    visible={Visibility}
+    visible={accountStatus == 'Employer'}
     >
       <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employer\nAccount`}</Text>
-          <Text style={styles.back} onPress={()=>{
-            setModalVisible(!modalVisible); 
-            handler(true);
-            status('');
-            }}>BACK</Text>
+          <Text style={styles.back} onPress={()=>setStatus('')}>BACK</Text>
         </View>
         
         <View style={styles.form}>
@@ -244,12 +205,10 @@ export function AccountStatusEmployer({Visibility, handler, status, navigation})
   )
 }
 
-export function AccountStatusEmployee({Visibility, handler, status}){
-  const [modalVisible, setModalVisible] = useState(Visibility);
-  const [nature_of_work, setNatureWork] = useState();
+export function AccountStatusEmployee({accountStatus}){
+  const [nature_of_work, setNatureWork] = useState('');
   const dispatch = useDispatch();
-  const UserState = useSelector(state => state.userDetails);
-  const { userData } = UserState;
+
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -257,25 +216,16 @@ export function AccountStatusEmployee({Visibility, handler, status}){
     }, 'Employee'))
   }
 
-  useEffect(() => {
-    if( nature_of_work==userData.nature_of_work ){
-      navigation.replace('UserScreen');
-    }
-  }, [userData]);
   return(
     <Modal
     animationType="slide"
     statusBarTranslucent={true}
-    visible={modalVisible}
+    visible={accountStatus == 'Employee'}
     >
       <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employee\nAccount`}</Text>
-          <Text style={styles.back} onPress={()=>{
-            setModalVisible(!modalVisible); 
-            handler(true);
-            status('');
-            }}>BACK</Text>
+          <Text style={styles.back} onPress={()=>setStatus('Account')}>BACK</Text>
         </View>
         
         <KeyboardAvoidingView behavior="position" style={styles.form}>
