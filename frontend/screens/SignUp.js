@@ -29,14 +29,21 @@ function Main({navigation}) {
   const UserState = useSelector(state => state.userDetails);
   const { userData, error } = UserState;
   const dispatch = useDispatch();
+
+
   useEffect(() => {
     if(userData){
-      if(!userData.verified && userData.sex == undefined || userData.birth_day == undefined || userData.address == undefined || userData.city == undefined)
+      if(!userData.verified && accountStatus == '' )
       {
-        isDone(true)
+        isDone(true);
       }
+
+
+
     }
+    
   }, [userData])
+
 
   const verfyingInputs =()=> {
     dispatch(register(
@@ -47,11 +54,10 @@ function Main({navigation}) {
     ));
   }
 
-  delete_login_user()
   
   return (
 
-      <ScrollView>
+      <ScrollView style={{backgroundColor:'white'}}>
         <View style={styles.container}>          
           <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
             <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Sign Up</Text>
@@ -111,9 +117,9 @@ function Main({navigation}) {
               
           </KeyboardAvoidingView>         
 
-          {detailsDone && <AccountDetails Visibility={true} handler={isDone} status={setStatus} />}
-          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true} handler={isDone} status={setStatus}/>}
-          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true} handler={isDone} status={setStatus}/>}
+          {detailsDone && <AccountDetails Visibility={true} handler={isDone} setStatus={setStatus} status={accountStatus} />}
+          {accountStatus == "Employer" && <AccountStatusEmployer Visibility={true} handler={isDone} status={setStatus} navigation={navigation}/>}
+          {accountStatus == "Employee" && <AccountStatusEmployee Visibility={true} handler={isDone} status={setStatus}  navigation={navigation}/>}
 
         </View>
       </ScrollView>

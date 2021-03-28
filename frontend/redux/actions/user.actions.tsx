@@ -55,14 +55,11 @@ export const verify = (info, status) => async (
   dispatch({ type: USER_SIGNIN_REQUEST });
   try {
     const { data } = await Axios.post(`/user/register/account?email=${userData.email}`, {
-      birth_day: userData.birth_day,
-      address: userData.address,
-      city: userData.city,
-      sex: userData.sex,
-      status: userData.status,
+      ...userData,
       ...info
     });
     if(data){
+      dispatch({ type: USER_SIGNIN_SUCCESS, payload: data});
       update_login_user(data);
     }
   } catch (error) {
@@ -86,7 +83,6 @@ export const register = (name: string, email: string, password: string, confirm_
   try {
     const { data } = await Axios.post('/user/register', { full_name: name, email, password, });
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
-    update_login_user(data);
   } catch (error) {
     dispatch({
       type: USER_SIGNIN_FAIL,

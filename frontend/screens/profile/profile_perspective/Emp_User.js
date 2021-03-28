@@ -35,7 +35,6 @@ function Top({navigation}) {
       navigation.navigate('Login');
     }
     if(userData){
-      console.log("Data USER: ",userData);
       if(!userData.verified){
         navigation.replace('SignUp');
       }

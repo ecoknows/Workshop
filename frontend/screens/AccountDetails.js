@@ -12,7 +12,7 @@ import { StyleSheet,
 import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
  
-export function AccountDetails({Visibility, handler, status}){
+export function AccountDetails({Visibility, handler, setStatus, status}){
   const [modalVisible, setModalVisible] = useState(Visibility);
   const [Birthday, setBirthday] = useState('')
   const [Address, setAddress] = useState('');
@@ -25,10 +25,21 @@ export function AccountDetails({Visibility, handler, status}){
   const { userData } = UserState;
 
   useEffect(() => {
-    if( Birthday==userData.birth_day && Address == userData.address && City == userData.city && Sex == userData.sex && AccountStatus == userData.status){
-      setModalVisible(!modalVisible); 
+    if(
+      status != '',
+      Birthday==userData.birth_day && 
+      Address == userData.address && 
+      City == userData.city && 
+      Sex == userData.sex && 
+      AccountStatus == userData.status
+      ){
       handler(!modalVisible);
-      status(AccountStatus);
+    }
+  }, [status])
+
+  useEffect(() => {
+    if( Birthday==userData.birth_day && Address == userData.address && City == userData.city && Sex == userData.sex && AccountStatus == userData.status){
+      setStatus(AccountStatus);
     }else{
       setBirthday(userData.birth_day);
       setAddress(userData.address);
@@ -51,10 +62,10 @@ export function AccountDetails({Visibility, handler, status}){
   return(
     <Modal
     animationType="slide"
-    statusBarTranslucent={true}
+    transparent={true}
     visible={modalVisible}
     >
-      <View>
+      <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Account\nDetails`}</Text>
         </View>
@@ -135,7 +146,7 @@ export function AccountDetails({Visibility, handler, status}){
             </TouchableOpacity>        
       
           </KeyboardAvoidingView>
-      </View>
+      </ScrollView>
     
     </Modal>
 
@@ -145,13 +156,15 @@ export function AccountDetails({Visibility, handler, status}){
   )
 }
 
-export function AccountStatusEmployer({Visibility, handler, status}){
+export function AccountStatusEmployer({Visibility, handler, status, navigation}){
   const [name_of_business, setNameBusiness] = useState('');
   const [address_of_business, setAddressBusiness] = useState('');
   const [nature_of_business, setNatureBusiness] = useState('');
   const [position, setPosition] = useState('');
   const dispatch = useDispatch();
   const [modalVisible, setModalVisible] = useState(Visibility);
+  const UserState = useSelector(state => state.userDetails);
+  const { userData } = UserState;
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -161,13 +174,19 @@ export function AccountStatusEmployer({Visibility, handler, status}){
       position,
     }, 'Employer'))
   }
+  useEffect(() => {
+    if( name_of_business==userData.name_of_business && address_of_business == userData.address_of_business && nature_of_business == userData.nature_of_business && position == userData.position){
+      navigation.replace('UserScreen');
+    }
+  }, [userData]);
+
   return(
     <Modal
     animationType="slide"
-    statusBarTranslucent={true}
+    transparent={true}
     visible={Visibility}
     >
-      <ScrollView>
+      <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employer\nAccount`}</Text>
           <Text style={styles.back} onPress={()=>{
@@ -229,19 +248,27 @@ export function AccountStatusEmployee({Visibility, handler, status}){
   const [modalVisible, setModalVisible] = useState(Visibility);
   const [nature_of_work, setNatureWork] = useState();
   const dispatch = useDispatch();
+  const UserState = useSelector(state => state.userDetails);
+  const { userData } = UserState;
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
       nature_of_work,
     }, 'Employee'))
   }
+
+  useEffect(() => {
+    if( nature_of_work==userData.nature_of_work ){
+      navigation.replace('UserScreen');
+    }
+  }, [userData]);
   return(
     <Modal
     animationType="slide"
     statusBarTranslucent={true}
     visible={modalVisible}
     >
-      <View>
+      <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employee\nAccount`}</Text>
           <Text style={styles.back} onPress={()=>{
@@ -277,7 +304,7 @@ export function AccountStatusEmployee({Visibility, handler, status}){
           </TouchableOpacity>
 
         </KeyboardAvoidingView>
-      </View>
+      </ScrollView>
     </Modal>
     
   
