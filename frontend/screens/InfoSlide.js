@@ -4,6 +4,8 @@ import { Text, View } from '../components';
 import { check_login_user } from '../database/current_user';
 import { useSelector, useDispatch } from 'react-redux';
 
+
+
 function Main({ navigation }) {
   return (
     <View style={styles.container}>

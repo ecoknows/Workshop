@@ -13,6 +13,7 @@ import {
   EmployeeStatus,
   Notifications,
   InfoSlide,
+  SplashScreen,
   Login,
   SignUp,
   WorkerProfile,
@@ -236,7 +237,16 @@ function Navigation() {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator mode="modal" initialRouteName="InfoSlide">
+      <Stack.Navigator mode="modal" initialRouteName="SplashScreen">
+      
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
         <Stack.Screen
           name="InfoSlide"
           component={InfoSlide}
@@ -245,6 +255,7 @@ function Navigation() {
           }}
         />
 
+        
         <Stack.Screen
           name="UserScreen"
           component={User_BottomNavigation}

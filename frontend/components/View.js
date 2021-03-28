@@ -11,6 +11,9 @@ const ViewField = (props) => {
     // position
     center,
     middle,
+    around,
+    between,
+    evenly,
     end,
 
     // behaviour
@@ -50,7 +53,10 @@ const ViewField = (props) => {
     // position
     center && { justifyContent: 'center' },
     middle && { alignItems: 'center' },
-    end && { justifiyContent: 'flex-end' },
+    between && { justifyContent: 'space-between' },
+    around && { justifyContent: 'space-around' },
+    evenly && { justifyContent: 'space-evenly' },
+    end && { justifyContent: 'flex-end' },
 
     //color
     white && styles.white,
