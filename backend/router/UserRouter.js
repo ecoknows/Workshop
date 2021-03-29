@@ -6,11 +6,63 @@ import { NEW } from '../api/api_constants.js';
 
 const userRouter = express.Router();
 
+const RespondEmployer =(res, createdUser)=>{
+  res.send({
+    _id: createdUser._id,
+    verified: createdUser.verified,
+
+    email: createdUser.email,
+    full_name: createdUser.full_name,
+    authorized: createdUser.authorized,
+
+
+    is_employer: createdUser.is_employer,
+    birth_day: createdUser.birth_day,
+    address: createdUser.address,
+    city: createdUser.city,
+    sex: createdUser.sex,
+    most_skilled: createdUser.most_skilled,
+
+    name_of_document: createdUser.name_of_document,
+    documentation_link: createdUser.documentation_link,
+    position: createdUser.position,
+
+
+    name_of_business: createdUser.name_of_business,
+    address_of_business: createdUser.address_of_business,
+    nature_of_business: createdUser.nature_of_business,
+  });
+}
+
+const RespondWorker =(res, createdUser)=>{
+  res.send({
+    _id: createdUser._id,
+    verified: createdUser.verified,
+
+    email: createdUser.email,
+    full_name: createdUser.full_name,
+    authorized: createdUser.authorized,
+
+
+    is_employer: createdUser.is_employer,
+    birth_day: createdUser.birth_day,
+    address: createdUser.address,
+    city: createdUser.city,
+    sex: createdUser.sex,
+    most_skilled: createdUser.most_skilled,
+
+    name_of_document: createdUser.name_of_document,
+    documentation_link: createdUser.documentation_link,
+    position: createdUser.position,
+
+    nature_of_work: createdUser.nature_of_work,
+  });
+}
+
 userRouter.post(
   '/login',
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
-    console.log(user);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         if(!user.verified){
@@ -24,56 +76,10 @@ userRouter.post(
           });
 
         } else if(user.is_employer){
-          res.send({
-            _id: user._id,
-            verified: user.verified,
 
-            email: user.email,
-            full_name: user.full_name,
-            authorized: user.authorized,
-
-
-            is_employer: user.is_employer,
-            birth_day: user.birth_day,
-            address: user.address,
-            city: user.city,
-            sex: user.sex,
-            most_skilled: user.most_skilled,
-
-            name_of_document: user.name_of_document,
-            documentation_link: user.documentation_link,
-            position: user.position,
-
-            // EMPLOYER
-            name_of_business: user.name_of_business,
-            address_of_business: user.address_of_business,
-            nature_of_business: user.nature_of_business,
-          });          
+          RespondEmployer(res, user);
         }else{
-
-          res.send({
-            verified: verifiedUser.verified,
-
-            email: verifiedUser.email,
-            password: verifiedUser.password,
-            full_name: verifiedUser.full_name,
-            authorized: verifiedUser.authorized,
-
-
-            is_employer: verifiedUser.is_employer,
-            birth_day: verifiedUser.birth_day,
-            address: verifiedUser.address,
-            city: verifiedUser.city,
-            sex: verifiedUser.sex,
-            most_skilled: user.most_skilled,
-
-            name_of_document: verifiedUser.name_of_document,
-            documentation_link: verifiedUser.documentation_link,
-            position: verifiedUser.position,
-
-            // EMPLOYEE
-            nature_of_work: verifiedUser.nature_of_work,
-          });
+          RespondWorker(res, user);
         }
 
         return;
@@ -106,7 +112,6 @@ userRouter.post(
         full_name: createdUser.full_name,
         authorized: createdUser.authorized,
       });
-
     }else{
       res.status(401).send({ message: 'Email already exist!' });
     }
@@ -137,59 +142,15 @@ userRouter.post(
         user.nature_of_business = body.nature_of_business;
         const verifiedUser = await user.save();
 
-        res.send({
-          verified: verifiedUser.verified,
-
-          email: verifiedUser.email,
-          password: verifiedUser.password,
-          full_name: verifiedUser.full_name,
-          authorized: verifiedUser.authorized,
-
-
-          is_employer: verifiedUser.is_employer,
-          birth_day: verifiedUser.birth_day,
-          address: verifiedUser.address,
-          city: verifiedUser.city,
-          sex: verifiedUser.sex,
-
-          name_of_document: verifiedUser.name_of_document,
-          documentation_link: verifiedUser.documentation_link,
-          position: verifiedUser.position,
-
-          // EMPLOYER
-          name_of_business: verifiedUser.name_of_business,
-          address_of_business: verifiedUser.address_of_business,
-          nature_of_business: verifiedUser.nature_of_business,
-        });
-
+        RespondEmployer(res, verifiedUser);
 
       }else{
         user.is_employer = false,
         nature_of_work = body.nature_of_work;
         const verifiedUser = await user.save();
 
-        res.send({
-          verified: verifiedUser.verified,
-
-          email: verifiedUser.email,
-          password: verifiedUser.password,
-          full_name: verifiedUser.full_name,
-          authorized: verifiedUser.authorized,
-
-
-          is_employer: verifiedUser.is_employer,
-          birth_day: verifiedUser.birth_day,
-          address: verifiedUser.address,
-          city: verifiedUser.city,
-          sex: verifiedUser.sex,
-
-          name_of_document: verifiedUser.name_of_document,
-          documentation_link: verifiedUser.documentation_link,
-          position: verifiedUser.position,
-
-          // EMPLOYEE
-          nature_of_work: verifiedUser.nature_of_work,
-        });
+        
+        RespondWorker(res, verifiedUser);
 
       }
 
@@ -198,5 +159,23 @@ userRouter.post(
     }
   })
 );
+
+
+userRouter.put(
+  '/:id/tag',
+  expressAsyncHandler(async (req,res) =>{
+    const user = await User.findById(req.params.id);
+    const body = req.body;
+    if(user){
+      user.most_skilled = body.most_skilled;
+      const updatedUser = await user.save();
+      console.log(updatedUser," what the", body.most_skilled);
+      if(updatedUser.is_employer){
+        RespondEmployer(res,updatedUser);
+      }else{
+        RespondWorker(res,updatedUser);
+      }
+    }
+}));
 
 export default userRouter;

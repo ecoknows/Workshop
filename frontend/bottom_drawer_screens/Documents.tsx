@@ -57,10 +57,7 @@ function Documents(props: DocumentsProps) {
             style={{ position: 'absolute', left: '2%', padding: 10 }}
             onPress={() => {
               dispatch(
-                closeBottomDrawerAction({
-                  status: false,
-                  tabSelected: 4,
-                })
+                closeBottomDrawerAction(4)
               );
             }}
           >

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -230,12 +230,13 @@ function Employee_BottomNavigation({ navigation }) {
 }
 function Navigation() {
   const dispatch = useDispatch();
+  let ref_navigation = createRef();
 
   useEffect(() => {
     dispatch(checkUser());
   }, []);
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={ref_navigation}>
       <Stack.Navigator mode="modal" initialRouteName="InfoSlide">
         <Stack.Screen
           name="InfoSlide"
@@ -293,7 +294,7 @@ function Navigation() {
           }}
         />
       </Stack.Navigator>
-      <Drawer/>
+      <Drawer navigation={ref_navigation}/>
       <BottomDrawer />
     </NavigationContainer>
   );

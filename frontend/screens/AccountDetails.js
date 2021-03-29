@@ -13,11 +13,11 @@ import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
  
 export function AccountDetails({accountStatus}){
-  const [Birthday, setBirthday] = useState('')
-  const [Address, setAddress] = useState('');
-  const [City, setCity] = useState('');
-  const [Sex, setSex] = useState('');
-  const [statusChecker, setStatusChecker] = useState('');
+  const [Birthday, setBirthday] = useState(null)
+  const [Address, setAddress] = useState(null);
+  const [City, setCity] = useState(null);
+  const [Sex, setSex] = useState(null);
+  const [statusChecker, setStatusChecker] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -109,11 +109,7 @@ export function AccountDetails({accountStatus}){
               onChangeItem={item => {setStatusChecker(item.value)}}
             />
               
-            <TouchableOpacity style={styles.SignupBtn} onPress={() => {
-
-              SignUpButtonClick();
-              
-              }}>
+            <TouchableOpacity style={styles.SignupBtn} onPress={SignUpButtonClick}>
               <Text style={styles.SignupText}>Next</Text>
             </TouchableOpacity>        
       
@@ -129,10 +125,10 @@ export function AccountDetails({accountStatus}){
 }
 
 export function AccountStatusEmployer({accountStatus, setStatus}){
-  const [name_of_business, setNameBusiness] = useState('');
-  const [address_of_business, setAddressBusiness] = useState('');
-  const [nature_of_business, setNatureBusiness] = useState('');
-  const [position, setPosition] = useState('');
+  const [name_of_business, setNameBusiness] = useState(null);
+  const [address_of_business, setAddressBusiness] = useState(null);
+  const [nature_of_business, setNatureBusiness] = useState(null);
+  const [position, setPosition] = useState(null);
   const dispatch = useDispatch();
 
   const SignUpButtonClick =()=>{
@@ -154,7 +150,7 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
       <ScrollView style={{backgroundColor:'white'}}>
         <View style={{flexDirection: 'row',justifyContent:'space-between'}}>
           <Text style={styles.title}>{`Employer\nAccount`}</Text>
-          <Text style={styles.back} onPress={()=>setStatus('')}>BACK</Text>
+          <Text style={styles.back} onPress={()=>{setStatus('Account')}}>BACK</Text>
         </View>
         
         <View style={styles.form}>
@@ -192,7 +188,7 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
           />
 
           <TouchableOpacity style={styles.SignupBtn} 
-          onPress={ () => SignUpButtonClick()}>
+          onPress={ SignUpButtonClick}>
 
             <Text style={styles.SignupText}>Finish</Text>
           </TouchableOpacity>
@@ -205,21 +201,23 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
   )
 }
 
-export function AccountStatusEmployee({accountStatus}){
-  const [nature_of_work, setNatureWork] = useState('');
+export function AccountStatusEmployee({accountStatus, setStatus}){
+  const [nature_of_work, setNatureWork] = useState(null);
+  const [position, setPosition] = useState(null);
   const dispatch = useDispatch();
 
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
       nature_of_work,
+      position,
     }, 'Employee'))
   }
 
   return(
     <Modal
     animationType="slide"
-    statusBarTranslucent={true}
+    transparent={true}
     visible={accountStatus == 'Employee'}
     >
       <ScrollView style={{backgroundColor:'white'}}>
@@ -244,7 +242,8 @@ export function AccountStatusEmployee({accountStatus}){
             placeholder='POSITION (if applicable)'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            onChangeText={text => null}
+            value={position}
+            onChangeText={text => setPosition(text)}
           />
           
           <TouchableOpacity style={styles.SignupBtn} onPress={ () => {

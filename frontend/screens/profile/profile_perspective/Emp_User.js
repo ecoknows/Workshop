@@ -26,20 +26,10 @@ function Top({navigation}) {
 
   const { error, loading, jobs } = JobsState;
   const { userData } = UserState;
+  console.log("UserData: " ,userData);
   useEffect(() => {
     dispatch(get_jobs());
   }, [jobCreated]);
-
-  useEffect(() => {
-    if(userData == undefined){
-      navigation.navigate('Login');
-    }
-    if(userData){
-      if(!userData.verified){
-        navigation.replace('SignUp');
-      }
-    }
-  }, [userData])
 
   return (
     <View
@@ -57,7 +47,7 @@ function Top({navigation}) {
           alignItems: 'flex-end',
         }}
         onPress={() => {
-          dispatch(openDrawerAction());
+          dispatch(openDrawerAction(0));
         }}
       >
         <Pic
@@ -72,14 +62,14 @@ function Top({navigation}) {
           profile_picture
         />
         <Text extra_bold gray size={23}>
-          Jerico C. Villaraza
+          {userData?.full_name}
         </Text>
         <Text medium size={14} gray>
-          Manila, Philippines
+          {userData?.city}, Philippines
         </Text>
 
         <View width={'80%'} marginVertical={5} center middle>
-          <Skills skills={userData?.most_skilled} />
+          <Skills skills={userData?.most_skilled} authorized={userData?.authorized || 0} />
         </View>
       </View>
 
@@ -109,7 +99,7 @@ function Top({navigation}) {
           renderItem={({ item }, index) => (
             <TouchableOpacity
               onPress={() => {
-                dispatch(openBottomDrawerAction({ status: true, tabSelected: 6 }));
+                dispatch(openBottomDrawerAction(6));
                 dispatch(add_selected_job(item));
               }}
               key={index}
@@ -143,7 +133,7 @@ function Top({navigation}) {
         <TouchableOpacity
           style={{ paddingTop: 10 }}
           onPress={() => {
-            dispatch(openBottomDrawerAction({ status: true, tabSelected: 5 }));
+            dispatch(openBottomDrawerAction(5));
           }}
         >
           <View row middle>
