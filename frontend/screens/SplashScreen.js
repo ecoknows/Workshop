@@ -1,6 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View, Pic, Circle, Button } from '../components';
+import { useSelector } from 'react-redux';
+
 
 const screens = [
   {
@@ -23,6 +25,19 @@ const screens = [
 function Main({ navigation }){
   const[count,setCount] = useState(0);
   const data = screens[count];
+  const { userData, error } = useSelector(state => state.userDetails);
+  
+  useEffect(() => {
+    if (userData) {
+      if(userData.verified){  
+          navigation.replace('UserScreen'); 
+      }
+    }
+    if (error) {
+      console.log(error);
+    }
+  }, [userData, error]);
+
 
   const ProgressBar = () => {
     return(

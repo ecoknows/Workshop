@@ -9,7 +9,10 @@ import { StyleSheet,
   TouchableWithoutFeedback, 
   ScrollView,
   KeyboardAvoidingView,
-  Keyboard } from 'react-native';
+  Keyboard
+} from 'react-native';
+  
+import { Pic } from '../components';
 import { AntDesign as Icon} from '@expo/vector-icons';
 import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails';
 import { useSelector, useDispatch } from 'react-redux';
@@ -72,51 +75,82 @@ function Main({navigation}) {
 
       <ScrollView style={{backgroundColor:'white'}}>
         <View style={styles.container}>          
-          <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-70}>
-            <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Sign Up</Text>
-            <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
+        <Text style={{ fontWeight: 'bold', fontSize: 38, marginLeft: 20, marginTop: 20, color: '#4f4f4f' }}>Sign Up</Text>
+            <View style={{justifyContent:'center', alignItems:'center'}}>
+              <TouchableOpacity style={styles.image} >
+                <Image source={require('../assets/image/Profile.png')} resizeMode="contain"
+                  style={{
+                    alignSelf: 'center',
+                    width: 117,
+                    height: 117,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+
             <View style={{padding: 5}}>
               
-              <TextInput
-                style={styles.input}
-                placeholder='FULL NAME'
-                placeholderTextColor='#808080'  
-                returnKeyType='next'
-                onChangeText={ text=>setName(text)}
-                value={name}
-              />
-
-              <TextInput
-                style={styles.input}
-                placeholder='EMAIL ADDRESS'
-                placeholderTextColor='#808080'  
-                returnKeyType='next'
-                onChangeText={ text=>setEmail(text)}
-                value={email}
-              />
-
-              <TextInput
-                style={styles.input}
-                placeholder='**********'
-                placeholderTextColor='#808080'
-                returnKeyType='done'
-                secureTextEntry={Hide}
-                onChangeText={ text=>setPassword(text)}
-                value={password}
-              />          
+              <View style={styles.input}>
+                <Pic
+                  src={require('../assets/icons/sign_up/user.png')}
+                  style={{marginRight: 10}}
+                />
+                <TextInput
+                    placeholder='FULL NAME'
+                    placeholderTextColor='#808080'  
+                    returnKeyType='next'
+                    onChangeText={ text=>setName(text)}
+                    value={name}
+                  />
+              </View>
+            
+              <View style={styles.input}>
+                <Pic
+                  src={require('../assets/icons/sign_up/mail.png')}
+                  style={{marginRight: 10}}
+                />
+                <TextInput
+                  placeholder='EMAIL ADDRESS'
+                  placeholderTextColor='#808080'  
+                  returnKeyType='next'
+                  onChangeText={ text=>setEmail(text)}
+                  value={email}
+                  />
+              </View>
+            
+              <View style={styles.input}>
+                <Pic
+                  src={require('../assets/icons/sign_up/password.png')}
+                  style={{marginRight: 10}}
+                />
+                <TextInput
+                  placeholder='**********'
+                  placeholderTextColor='#808080'
+                  returnKeyType='done'
+                  secureTextEntry={Hide}
+                  onChangeText={ text=>setPassword(text)}
+                  value={password}
+                  />
+              </View>
+            
               <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
                 <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
               </TouchableOpacity>  
 
-              <TextInput
-                style={styles.input}
+              <View style={styles.input}>
+                <Pic
+                  src={require('../assets/icons/sign_up/password.png')}
+                  style={{marginRight: 10}}
+                />
+                <TextInput
                 placeholder='**********'
                 placeholderTextColor='#808080'
                 returnKeyType='done'
                 secureTextEntry={Hide}
                 onChangeText={ text=>setConfirmPassword(text)}
                 value={confirm_password}
-              />
+                  />
+            </View>
               <TouchableOpacity style={styles.SignupBtn} onPress={ verfyingInputs}>
                 <Text style={styles.SignupText}>Signup</Text>
               </TouchableOpacity>
@@ -128,7 +162,6 @@ function Main({navigation}) {
               </Text>
             </View>
               
-          </KeyboardAvoidingView>         
  
         <AccountDetails accountStatus={accountStatus}/>
         <AccountStatusEmployer accountStatus={accountStatus} setStatus={setStatus}/>
@@ -148,14 +181,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    paddingHorizontal: 5,
+    paddingHorizontal: 20,
   },
   image:{
     marginTop: 20,
     marginBottom: 20,
-    alignSelf: 'center',
-    width: 117,
-    height: 117,
   },
   form:{
     marginHorizontal: 15,
@@ -167,13 +197,15 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
   },
-  input:{
+  input: {
+    flex: 1,
     borderBottomWidth: 1, 
     borderStyle: 'solid', 
     marginBottom: 30,
     paddingHorizontal: 8,
     paddingVertical: 5,
     marginHorizontal: 10,
+    flexDirection: 'row'
   },
   eyeBtn: {
     alignSelf: 'flex-end',

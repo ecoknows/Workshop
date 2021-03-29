@@ -237,7 +237,7 @@ function Navigation() {
     dispatch(checkUser());
   }, []);
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={ref_navigation}>
       <Stack.Navigator mode="modal" initialRouteName="SplashScreen">
       
         <Stack.Screen
