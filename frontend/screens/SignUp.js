@@ -18,6 +18,8 @@ import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './Ac
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
 import { delete_login_user } from '../database/current_user';
+import ImagePicker from 'react-native-image-crop-picker';
+
 
 
 
@@ -33,8 +35,6 @@ function Main({navigation}) {
   const UserState = useSelector(state => state.userDetails);
 
   const { userData, error } = UserState;
-
-  console.log("SignUp: " ,userData);
   useEffect(() => {
     if (userData) {
       if(userData.is_employer){
@@ -77,7 +77,15 @@ function Main({navigation}) {
         <View style={styles.container}>          
         <Text style={{ fontWeight: 'bold', fontSize: 38, marginLeft: 20, marginTop: 20, color: '#4f4f4f' }}>Sign Up</Text>
             <View style={{justifyContent:'center', alignItems:'center'}}>
-              <TouchableOpacity style={styles.image} >
+              <TouchableOpacity style={styles.image} onPress={()=>{
+                ImagePicker.openPicker({
+                  width: 300,
+                  height: 400,
+                  cropping: true
+                }).then(image => {
+                  console.log(image);
+                });
+              }}>
                 <Image source={require('../assets/image/Profile.png')} resizeMode="contain"
                   style={{
                     alignSelf: 'center',

@@ -17,7 +17,7 @@ app.use('/api/jobs', JobsRouter);
 app.use('/api/uploads', UploadRouter);
 
 mongoose.connect(
-  process.env.CLOUD_URL,
+  process.env.DATABASE_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
