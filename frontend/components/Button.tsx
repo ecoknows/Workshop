@@ -28,9 +28,8 @@ const styles = StyleSheet.create({
     borderColor: '#FF900D',
     borderWidth: 1,
     paddingHorizontal: 30,
-    paddingVertical: 2,
+    paddingVertical: 5,
     borderRadius: 20,
-    marginTop: 20,
     alignItems: 'center',
   },
 });

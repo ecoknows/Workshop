@@ -5,6 +5,7 @@ import Pic from './Pic';
 import Drawer from './Drawer';
 import BottomDrawer from './BottomDrawer';
 import Table from './Table';
+import Circle from './Circle';
 import CirclePercent from './CirclePercent';
 import Button from './Button';
 import ModalBox from './ModalBox';
@@ -17,6 +18,7 @@ export {
   Drawer,
   BottomDrawer,
   Table,
+  Circle,
   CirclePercent,
   Button,
   ModalBox,
