@@ -115,10 +115,7 @@ function Documents(props: DocumentsProps) {
             style={{ position: 'absolute', left: '2%', padding: 10 }}
             onPress={() => {
               dispatch(
-                closeBottomDrawerAction({
-                  status: false,
-                  tabSelected: 5,
-                })
+                closeBottomDrawerAction(5)
               );
             }}
           >
@@ -200,10 +197,7 @@ function Documents(props: DocumentsProps) {
             >
               <Button onPress={()=>{
                 dispatch(
-                  closeBottomDrawerAction({
-                    status: false,
-                    tabSelected: 5,
-                  })
+                  closeBottomDrawerAction(5)
                 );
               }}>Cancel</Button>
               <Button onPress={()=>{
@@ -216,10 +210,7 @@ function Documents(props: DocumentsProps) {
                     icons: profilePic,
                 }));
                 dispatch(
-                  closeBottomDrawerAction({
-                    status: false,
-                    tabSelected: 5,
-                  })
+                  closeBottomDrawerAction(5)
                 );
               }}>Save</Button>
             </View>

@@ -2,28 +2,28 @@
 import {DRAWER_TEXT, BOTTOM_DRAWER_TEXT} from '../types/navigation.types';
 
 
-export function openDrawerAction(){
+export function openDrawerAction(tabSelected: number){
      return{
          type: DRAWER_TEXT,
-         payload: true,
+         payload: {status : true, tabSelected},
      }
  }
- export function closeDrawerAction(){
+ export function closeDrawerAction(tabSelected: number){
      return{
          type: DRAWER_TEXT,
-         payload: false,
+         payload: {status : false, tabSelected},
      }
  }
- export function openBottomDrawerAction({status, tabSelected}: {status: boolean, tabSelected: number}){
+ export function openBottomDrawerAction(tabSelected: number){
      return{
          type: BOTTOM_DRAWER_TEXT,
-         payload: {status,tabSelected},
+         payload: {status: true,tabSelected},
      }
  }
 
- export function closeBottomDrawerAction({status, tabSelected}: {status: boolean, tabSelected: number}){
+ export function closeBottomDrawerAction(tabSelected: number){
     return{
         type: BOTTOM_DRAWER_TEXT,
-        payload: {status,tabSelected},
+        payload: {status: false,tabSelected},
     }
 }

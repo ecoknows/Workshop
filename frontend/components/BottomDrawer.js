@@ -49,10 +49,7 @@ export default function BottomDrawer(props) {
 
   const handleClose = () => {
     dispatch(
-      closeBottomDrawerAction({
-        status: false,
-        tabSelected: bottomDrawer.tabSelected,
-      })
+      closeBottomDrawerAction(bottomDrawer.tabSelected)
     );
   };
 

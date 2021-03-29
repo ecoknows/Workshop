@@ -66,10 +66,7 @@ function JobInfo(props: JobInfoProps) {
                 style={{ position: 'absolute', left: '2%', padding: 10 }}
                 onPress={() => {
                     dispatch(
-                    closeBottomDrawerAction({
-                        status: false,
-                        tabSelected: 6,
-                    })
+                    closeBottomDrawerAction(6)
                     );
                 }}
                 >

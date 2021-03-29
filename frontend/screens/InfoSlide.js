@@ -7,6 +7,19 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 function Main({ navigation }) {
+
+  const { userData, error } = useSelector(state=> state.userDetails);
+  useEffect(() => {
+    if (userData) {
+      if(userData.verified){  
+          navigation.replace('UserScreen'); 
+      }
+    }
+    if (error) {
+      console.log(error);
+    }
+  }, [userData, error]);
+
   return (
     <View style={styles.container}>
       <Text caption accent bold>
@@ -23,7 +36,7 @@ function Main({ navigation }) {
             navigation.navigate('Login');
           }}
         >
-          Login{' '}
+          Login
         </Text>
         <Text
           caption
@@ -32,7 +45,6 @@ function Main({ navigation }) {
           touchable
           press={() => navigation.navigate('SignUp')}
         >
-          {' '}
           Sign up
         </Text>
       </View>

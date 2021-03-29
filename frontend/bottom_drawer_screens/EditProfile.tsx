@@ -61,10 +61,7 @@ function EditProfile(props: EditProfileProps) {
             onPress={() => {
               if (!edit) {
                 dispatch(
-                  closeBottomDrawerAction({
-                    status: false,
-                    tabSelected: 0,
-                  })
+                  closeBottomDrawerAction(0)
                 );
               } else {
                 setEdit(false);

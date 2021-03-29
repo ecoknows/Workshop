@@ -31,15 +31,21 @@ function Main({navigation}) {
 
   const { userData, error } = UserState;
 
-  console.log(userData, error, accountStatus);
+  console.log("SignUp: " ,userData);
   useEffect(() => {
     if (userData) {
-
-      if (
-        userData.birth_day || userData.address || userData.city || userData.sex || userData.status ||
-        userData.name_of_business || userData.address_of_business || userData.nature_of_business || userData.position
-      ) {
-        navigation.replace('UserScreen');
+      if(userData.is_employer){
+        if (
+          userData.birth_day && userData.address && userData.city && userData.sex && userData.name_of_business && userData.address_of_business && userData.nature_of_business && userData.position
+        ) {
+          navigation.replace('UserScreen');
+        }
+      }else{
+        if (
+          userData.birth_day && userData.address && userData.city && userData.sex && userData.nature_of_work
+        ) {
+          navigation.replace('UserScreen');
+        }
       }
 
       

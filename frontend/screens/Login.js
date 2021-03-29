@@ -22,19 +22,7 @@ function Main({navigation}) {
   const[Hide,setHide] = useState(true);
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
-
-
-  const UserState = useSelector((state)=> state.userDetails);
   const dispatch = useDispatch();
-  const { loading, userData, error } = UserState;
-  useEffect(() => {
-    if (userData) {
-      navigation.replace('UserScreen');
-    }
-    if (error) {
-      console.log(error);
-    }
-  }, [userData, error]);
 
   return (
     <ScrollView style={styles.container}>

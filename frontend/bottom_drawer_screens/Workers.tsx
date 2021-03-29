@@ -214,10 +214,7 @@ function WorkersList(props: any) {
           style={{ position: 'absolute', left: '2%', padding: 10 }}
           onPress={() => {
             dispatch(
-              closeBottomDrawerAction({
-                status: false,
-                tabSelected: 2,
-              })
+              closeBottomDrawerAction(2)
             );
           }}
         >

@@ -225,10 +225,7 @@ function MessageList(props: MessageListProps) {
           style={{ position: 'absolute', left: '2%', padding: 10 }}
           onPress={() => {
             dispatch(
-              closeBottomDrawerAction({
-                status: false,
-                tabSelected: 1,
-              })
+              closeBottomDrawerAction(1)
             );
           }}
         >

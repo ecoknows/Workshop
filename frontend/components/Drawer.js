@@ -15,13 +15,13 @@ import { closeDrawerAction, openBottomDrawerAction, signout } from '../redux';
 import Skills from './Skills';
 
 let is_drawer_open = false;
+const LOG_OUT = 6;
 
-export default function Drawer() {
+export default function Drawer({navigation}) {
   const [hide, setHide] = useState(true);
   const drawer_anim = useRef(new Animated.Value(-theme.height * 0.55)).current;
   const { drawer } = useSelector((state) => state.drawerState);
   const dispatch = useDispatch();
-
   const openDrawer = () => {
     Animated.timing(drawer_anim, {
       toValue: 0,
@@ -29,7 +29,6 @@ export default function Drawer() {
       useNativeDriver: true,
     }).start();
   };
-
   const closeDrawer = () => {
     Animated.timing(drawer_anim, {
       toValue: -theme.height * 0.55,
@@ -37,15 +36,19 @@ export default function Drawer() {
       useNativeDriver: true,
     }).start(({ finished }) => {
       setHide(true);
+      if(drawer.tabSelected == LOG_OUT){
+        navigation.current?.navigate('Login')
+        dispatch(signout());
+      }
     });
   };
 
-  const handleClose = () => {
-    dispatch(closeDrawerAction());
+  const handleClose = (status) => {
+    dispatch(closeDrawerAction(status));
   };
 
   const openBottomDrawer = (tabSelected) => {
-    dispatch(openBottomDrawerAction({ status: true, tabSelected }));
+    dispatch(openBottomDrawerAction(tabSelected));
   };
 
   useEffect(() => {
@@ -54,12 +57,12 @@ export default function Drawer() {
     }
   }, [hide]);
 
-  if (drawer && !is_drawer_open) {
+  if (drawer.status && !is_drawer_open) {
     setHide(false);
     is_drawer_open = true;
   }
 
-  if (!drawer && is_drawer_open) {
+  if (!drawer.status && is_drawer_open) {
     closeDrawer();
     is_drawer_open = false;
   }
@@ -80,7 +83,7 @@ export default function Drawer() {
 
 function Fade({ drawer_anim, handleClose }) {
   return (
-    <TouchableWithoutFeedback onPress={handleClose}>
+    <TouchableWithoutFeedback onPress={()=>handleClose(-1)}>
       <View
         animated
         flex={false}
@@ -101,6 +104,7 @@ function Fade({ drawer_anim, handleClose }) {
 
 function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
   const dispatch = useDispatch();
+  const { userData } = useSelector((state) => state.userDetails);
 
   return (
     <View
@@ -120,7 +124,7 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
       <View>
         <TouchableOpacity
           style={{ position: 'absolute', left: '2%', padding: 10 }}
-          onPress={() => handleClose()}
+          onPress={() => handleClose(-1)}
         >
           <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
         </TouchableOpacity>
@@ -137,7 +141,8 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
 
         <View flex={false} style={{ width: '90%' }} center middle>
           <Skills
-            skills={['Manager', 'Enterprenuer', 0]}
+            skills={userData?.most_skilled}
+            authorized={userData?.authorized || 0}
             size={10}
             iconScale={13}
             add
@@ -196,8 +201,7 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
             gray
             touchable
             press={() => {
-              handleClose();
-              dispatch(signout());
+              handleClose(LOG_OUT);
             }}
           >
             Log out

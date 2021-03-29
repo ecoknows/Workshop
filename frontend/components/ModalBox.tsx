@@ -3,15 +3,17 @@ import { Modal, StyleSheet, TouchableOpacity,TouchableWithoutFeedback } from 're
 import Text from '../components/Text';
 import View from '../components/View';
 import Pic from '../components/Pic';
+import { theme } from '../constants';
 
 interface ModalBoxDialog {
-  children: any,
+  children: any;
   hide: boolean;
+  flex?: boolean;
   setHide: (status: boolean) => void
 }
 
 function ModalBox(props: ModalBoxDialog) {
-  const { hide, setHide, children} = props;
+  const { hide, setHide, children, flex} = props;
 
   const handleClose =()=> setHide(false);
 
@@ -20,7 +22,7 @@ function ModalBox(props: ModalBoxDialog) {
       <Fade handleClose={handleClose}/>
       <View style={styles.modalView} >
         <View style={styles.modalCenter}>
-          <View>
+          <View flex={flex} >
             <View paddingVertical={5} paddingStart={10}>
               <TouchableOpacity onPress={handleClose}>
                 <Pic
@@ -29,7 +31,7 @@ function ModalBox(props: ModalBoxDialog) {
                 />
               </TouchableOpacity>
             </View>
-            <View paddingHorizontal={19}>
+            <View paddingHorizontal={19} flex={flex} >
               {children}
             </View>
           </View>
@@ -55,7 +57,7 @@ export default ModalBox;
 const styles = StyleSheet.create({
   modalView: { flex: 1,justifyContent:'center', alignItems:'center'},
   modalCenter: {
-    minHeight: '30%',
+    minHeight: theme.height * .3,
     width: '90%',
     backgroundColor: 'white',
   },
