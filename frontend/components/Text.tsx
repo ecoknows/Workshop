@@ -133,8 +133,8 @@ const styles = StyleSheet.create({
   h1: { fontSize: theme.font.h1 },
 
   //noto_sans
-  extra_bold: { fontFamily: 'Noto-extra-bold' },
-  medium: { fontFamily: 'Noto-medium' },
-  semi_bold: { fontFamily: 'Noto-semi-bold' },
-  bold: { fontFamily: 'Noto-bold' },
+  extra_bold: { fontFamily: 'NotoSans-ExtraBold' },
+  medium: { fontFamily: 'NotoSans-Medium' },
+  semi_bold: { fontFamily: 'NotoSans-SemiBold' },
+  bold: { fontFamily: 'NotoSans-Bold' },
 });

@@ -15,7 +15,7 @@ const RespondEmployer =(res, createdUser)=>{
     full_name: createdUser.full_name,
     authorized: createdUser.authorized,
 
-
+    profile_pic: createdUser.profile_pic,
     is_employer: createdUser.is_employer,
     birth_day: createdUser.birth_day,
     address: createdUser.address,
@@ -44,6 +44,7 @@ const RespondWorker =(res, createdUser)=>{
     authorized: createdUser.authorized,
 
 
+    profile_pic: createdUser.profile_pic,
     is_employer: createdUser.is_employer,
     birth_day: createdUser.birth_day,
     address: createdUser.address,
@@ -70,6 +71,7 @@ userRouter.post(
             _id: user._id,
             verified: user.verified,
 
+            profile_pic: user.profile_pic,
             email: user.email,
             full_name: user.full_name,
             authorized: user.authorized,
@@ -97,6 +99,8 @@ userRouter.post(
     if(!user){
       const employee = new User({
         verified: false,
+
+        profile_pic: body.profile_pic,
         email: body.email,
         password: bcrypt.hashSync(body.password, 8),
         full_name: body.full_name,
@@ -107,6 +111,7 @@ userRouter.post(
       res.send({
         verified: createdUser.verified,
 
+        profile_pic: createdUser.profile_pic,
         email: createdUser.email,
         password: createdUser.password,
         full_name: createdUser.full_name,

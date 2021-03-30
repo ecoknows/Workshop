@@ -9,6 +9,7 @@ import Circle from './Circle';
 import CirclePercent from './CirclePercent';
 import Button from './Button';
 import ModalBox from './ModalBox';
+import Input from './Input';
 
 export {
   Text,
@@ -22,4 +23,5 @@ export {
   CirclePercent,
   Button,
   ModalBox,
+  Input,
 };

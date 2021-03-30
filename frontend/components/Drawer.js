@@ -13,6 +13,7 @@ import Text from './Text';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeDrawerAction, openBottomDrawerAction, signout } from '../redux';
 import Skills from './Skills';
+import { local_url } from '../constants/urls';
 
 let is_drawer_open = false;
 const LOG_OUT = 6;
@@ -128,7 +129,7 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
         >
           <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
         </TouchableOpacity>
-        <Pic src={require('../assets/image/user/man.png')} profile_picture />
+        <Pic src={ userData?.profile_pic ? {uri:local_url + userData?.profile_pic} : require('../assets/image/user/man.png')} profile_picture />
 
         <View center middle>
           <Text extra_bold gray size={17}>

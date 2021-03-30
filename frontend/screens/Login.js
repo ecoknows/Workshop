@@ -17,12 +17,12 @@ import { signin } from '../redux/actions';
 import { red } from 'react-native-redash/lib/module/v1';
 import { theme } from '../constants';
 
+
 function Main({navigation}) {
   const[Hide,setHide] = useState(true);
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
   const dispatch = useDispatch();
-
   return (
     <ScrollView style={styles.container}>
       <View paddingHorizontal={20} height={theme.height}>

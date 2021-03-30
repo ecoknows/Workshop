@@ -1,8 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   UserInterface,
-  USER_SIGNIN_FAIL,
-  USER_SIGNIN_SUCCESS,
 } from '../redux/types/user.types';
 
 const USER_KEY = 'users';
@@ -26,8 +24,10 @@ export const delete_login_user = async () => {
 
 export async function check_login_user() {
   try {
-    // const result = await AsyncStorage.getItem(USER_KEY);
+    const result = await AsyncStorage.getItem(USER_KEY);
+    console.log(result);
     if (result != null) {
+      
       return JSON.parse(result);
     }
   } catch (error) {

@@ -6,6 +6,7 @@ import { openBottomDrawerAction, openDrawerAction } from '../../../redux';
 import Skills from '../../../components/Skills';
 import { theme } from '../../../constants';
 import { add_selected_job, get_jobs } from '../../../redux/actions/jobs.actions';
+import { local_url } from '../../../constants/urls';
 
 function Main({ navigation }) {
   return (
@@ -58,7 +59,7 @@ function Top({navigation}) {
 
       <View center middle>
         <Pic
-          src={require('../../../assets/image/user/man.png')}
+          src={userData?.profile_pic ? {uri:local_url + userData?.profile_pic} :require('../../../assets/image/user/man.png')}
           profile_picture
         />
         <Text extra_bold gray size={23}>

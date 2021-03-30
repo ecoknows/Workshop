@@ -5,7 +5,8 @@ const uploadRouter = express.Router();
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, 'uploads/img/');
+    console.log(file, " hatdog");
+    cb(null, 'uploads/profile_pics/');
   },
   filename(req, file, cb) {
     cb(null, `${Date.now()}.jpg`);

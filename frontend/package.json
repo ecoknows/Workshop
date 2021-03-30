@@ -10,8 +10,6 @@
     "lint": "tslint -p \".\" -t stylish"
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-native": "0.64.0",
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-picker/picker": "^1.9.12",
@@ -20,6 +18,9 @@
     "@react-navigation/native": "^5.7.0",
     "@react-navigation/stack": "^5.7.0",
     "axios": "^0.21.1",
+    "react": "17.0.1",
+    "react-native": "0.64.0",
+    "react-native-document-picker": "^5.0.2",
     "react-native-dropdown-picker": "^4.0.2",
     "react-native-gesture-handler": "~1.6.0",
     "react-native-image-crop-picker": "^0.36.0",

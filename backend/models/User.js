@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     full_name: { type: String, required: true },
     authorized: { type: Number, required: true },
 
-
+    profile_pic: {type: String},
     is_employer: { type: Boolean},
     most_skilled: { type: [String],},
     birth_day: {type: String, },

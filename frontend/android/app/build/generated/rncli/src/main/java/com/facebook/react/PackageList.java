@@ -17,6 +17,8 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // @react-native-picker/picker
 import com.reactnativecommunity.picker.RNCPickerPackage;
+// react-native-document-picker
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-image-crop-picker
@@ -77,6 +79,7 @@ public class PackageList {
       new AsyncStoragePackage(),
       new RNCMaskedViewPackage(),
       new RNCPickerPackage(),
+      new DocumentPickerPackage(),
       new RNGestureHandlerPackage(),
       new PickerPackage(),
       new ReanimatedPackage(),

@@ -12,13 +12,13 @@ import { StyleSheet,
   Keyboard
 } from 'react-native';
   
-import { Pic } from '../components';
+import { Pic, Input } from '../components';
 import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
 import { delete_login_user } from '../database/current_user';
 import ImagePicker from 'react-native-image-crop-picker';
-
+import Axios from 'axios';
 
 
 function Main({navigation}) {  
@@ -28,7 +28,8 @@ function Main({navigation}) {
   const[password,setPassword] = useState('');
   const[confirm_password,setConfirmPassword] = useState('');
   const [accountStatus, setStatus] = useState('');
-  
+  const [profilePic, setProfilePic] = useState(null);
+
   const dispatch = useDispatch();
   const UserState = useSelector(state => state.userDetails);
 
@@ -59,14 +60,51 @@ function Main({navigation}) {
   },[userData])
 
 
-  const verfyingInputs =()=> {
+
+
+async function UploadImage(){
+
+  const formData = new FormData();
+  formData.append('image',{
+    name: 'deymsan',
+    type: profilePic.mime,
+    uri: profilePic.path,
+  });
+
+  try {
+    const { data } = await Axios.post('/uploads', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    if(data){
+      dispatch(register(
+        name,
+        email,
+        password,
+        confirm_password,
+        data,
+      ));
+    }
+  } catch (error) {
+
+  }
+
+}
+
+const verfyingInputs =()=> {
+  if(profilePic != null){
+    UploadImage();
+  }else{
     dispatch(register(
       name,
       email,
       password,
       confirm_password,
+      null,
     ));
   }
+}
 
   
   return (
@@ -81,15 +119,12 @@ function Main({navigation}) {
                   height: 400,
                   cropping: true
                 }).then(image => {
-                  console.log(image);
+                  setProfilePic(image);
                 });
               }}>
-                <Image source={require('../assets/image/Profile.png')} resizeMode="contain"
-                  style={{
-                    alignSelf: 'center',
-                    width: 117,
-                    height: 117,
-                  }}
+                <Pic
+                  src={profilePic ? {uri: profilePic.path} : require('../assets/image/user/man.png')}
+                  profile_picture
                 />
               </TouchableOpacity>
             </View>

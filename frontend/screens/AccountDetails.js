@@ -9,8 +9,13 @@ import { StyleSheet,
   KeyboardAvoidingView,
   ScrollView
 } from 'react-native';
+import { Pic } from '../components';
 import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
+
+import {Text as ComponentText} from '../components';
+import DocumentPicker from 'react-native-document-picker';
+
  
 export function AccountDetails({accountStatus}){
   const [Birthday, setBirthday] = useState(null)
@@ -18,8 +23,8 @@ export function AccountDetails({accountStatus}){
   const [City, setCity] = useState(null);
   const [Sex, setSex] = useState(null);
   const [statusChecker, setStatusChecker] = useState(null);
-
   const dispatch = useDispatch();
+  
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -43,7 +48,7 @@ export function AccountDetails({accountStatus}){
         </View>
         
 
-          <KeyboardAvoidingView  behavior="position" style={styles.form} keyboardVerticalOffset={-160}>
+          <View style={styles.form}>
   
             <TextInput
               style={styles.input}
@@ -113,7 +118,7 @@ export function AccountDetails({accountStatus}){
               <Text style={styles.SignupText}>Next</Text>
             </TouchableOpacity>        
       
-          </KeyboardAvoidingView>
+          </View>
       </ScrollView>
     
     </Modal>
@@ -130,6 +135,7 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
   const [nature_of_business, setNatureBusiness] = useState(null);
   const [position, setPosition] = useState(null);
   const dispatch = useDispatch();
+  const [documents, setDocuments] = useState([]);
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -138,6 +144,23 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
       nature_of_business,
       position,
     }, 'Employer'))
+  }
+
+  const pickDocument = async() =>{
+
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.images],
+      });
+      setDocuments(doc => [...doc, res]);
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+      } else {
+        throw err;
+      }
+    }
+
   }
 
 
@@ -186,6 +209,60 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
             returnKeyType='next'
             onChangeText={text => setPosition(text)}
           />
+
+          <View style={{flexDirection:'row', justifyContent:'flex-start', alignItems:'flex-start'}}>
+            <Pic
+              src={require('../assets/icons/document.png')}
+              scale={30}
+              style={{marginRight: 5}}
+            />
+            <View style={{paddingEnd: 5}}>
+              <View style={{flexDirection:'row', alignItems:'center'}}>
+                <ComponentText medium gray size={15} style={{marginEnd: 4}} >
+                  DOCUMENTATION: 
+                </ComponentText >
+
+                <ComponentText medium gray size={14} >(If applicable)</ComponentText >
+              </View>
+                <ComponentText medium gray size={12}>
+                  This may expedite the authorization process.
+                </ComponentText>  
+
+                <ComponentText medium gray size={12}>
+                  (e.g. business permit)
+                </ComponentText>  
+              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'flex-start', marginTop: 10}}>
+                <View style={{borderBottomColor: '#C6C6C6', borderBottomWidth: 1, paddingHorizontal:10, marginEnd: 16}}>
+                  <TextInput placeholder='Name of Document' style={{ paddingVertical:2}}/>
+                </View>
+
+                <TouchableOpacity style={{flexDirection:'row', borderColor:'#C6C6C6', borderWidth: 1, paddingHorizontal: 10, paddingVertical:2, borderRadius: 20, alignItems:'center', justifyContent:'center'}}
+                  onPress={pickDocument}
+                >
+                  <Text>
+                    Select File
+                  </Text>
+                  <Pic
+                    src={require('../assets/icons/upload.png')}
+                    scale={15}
+                    style={{marginLeft: 10}}
+                  />
+                </TouchableOpacity>
+              </View>
+
+              <View  style={{justifyContent:'center', alignItems:'center',marginTop: 10}}>
+                <TouchableOpacity>
+                  <Pic
+                    src={require('../assets/icons/add-gray.png')}
+                    scale={30}
+                  />
+                </TouchableOpacity>
+              </View>
+
+            </View>
+
+          </View>
+
 
           <TouchableOpacity style={styles.SignupBtn} 
           onPress={ SignUpButtonClick}>
