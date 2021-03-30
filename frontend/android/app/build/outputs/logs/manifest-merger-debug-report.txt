@@ -5,9 +5,9 @@ INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/Andr
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
 MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:8:1-18:12
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e16721182040aed28af7d3a098e700b/flipper-network-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/4dc27adcb1b081fdf9a0cef3e52301c7/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
 MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:expo-splash-screen] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
@@ -15,21 +15,22 @@ MERGED from [:react-native-async-storage_async-storage] /home/eco/GitHub/ecoknow
 MERGED from [:react-native-community_masked-view] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
 MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/07c487f512bb9e962abba8ff4b90bba9/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/edcea8cc38a211b028a498eb22c39c53/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/518257d8d9f5ae7743c8ccd4ec001da1/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-error-recovery] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-font] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -50,59 +51,61 @@ MERGED from [:unimodules-file-system-interface] /home/eco/GitHub/ecoknows/Camry/
 MERGED from [:unimodules-font-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721ce1ee44bcc4ef01ae266cc9e0e6c7/flipper-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/93be34d92a184112c30dc7afd8337e57/stetho-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ad2e61aeec3977c6069b365ec6e46819/fresco-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/089eff2ae4d4427c906b65821f00a00a/drawee-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e57622acdd75e3e69dd88062d204f9be/nativeimagefilters-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a5c51e7a453cfd45557b21b898d92d63/imagepipeline-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c67f4f1041f73c195cf520bc23b19473/nativeimagetranscoder-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0015d89e29cd2a6fed649d8eb0e994bb/imagepipeline-base-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/48f144b5ca95717b86e929b3938f09f8/soloader-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7dca42c052e713f328992d116d98f349/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b6464cf85deaa061383f2df3eb9e7eac/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dccd40edb2e077826853cddde5b4e22c/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/eeb81811fa1e5908e701e35fb04e8a9f/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/071d218453c713d0fe5584cac3ae3b60/annotation-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4983062526e194d0cd71dd6b8ad7d179/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -125,8 +128,8 @@ INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/And
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:2:3-64
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
 	android:name
@@ -165,16 +168,16 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:3-78
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
 	android:name
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:20-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:3-76
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
 	android:name
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:20-74
 uses-permission#android.permission.CAMERA
@@ -205,6 +208,8 @@ ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/Android
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:20-66
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:3-78
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
 	android:name
@@ -217,8 +222,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:3-76
 MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
 MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
 	android:name
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:20-74
 uses-permission#android.permission.WAKE_LOCK
@@ -235,42 +240,44 @@ MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/Androi
 MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:3-41:17
 MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
 MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/07c487f512bb9e962abba8ff4b90bba9/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/07c487f512bb9e962abba8ff4b90bba9/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/edcea8cc38a211b028a498eb22c39c53/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/edcea8cc38a211b028a498eb22c39c53/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/518257d8d9f5ae7743c8ccd4ec001da1/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/518257d8d9f5ae7743c8ccd4ec001da1/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/48f144b5ca95717b86e929b3938f09f8/soloader-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/48f144b5ca95717b86e929b3938f09f8/soloader-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b6464cf85deaa061383f2df3eb9e7eac/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b6464cf85deaa061383f2df3eb9e7eac/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/eeb81811fa1e5908e701e35fb04e8a9f/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/eeb81811fa1e5908e701e35fb04e8a9f/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/071d218453c713d0fe5584cac3ae3b60/annotation-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/071d218453c713d0fe5584cac3ae3b60/annotation-0.8.2/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:48-80
 		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:48-80
@@ -371,12 +378,12 @@ uses-sdk
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e16721182040aed28af7d3a098e700b/flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e16721182040aed28af7d3a098e700b/flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/4dc27adcb1b081fdf9a0cef3e52301c7/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/4dc27adcb1b081fdf9a0cef3e52301c7/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
 MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-splash-screen] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -391,6 +398,8 @@ MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/fronte
 MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-safe-area-context] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -399,28 +408,28 @@ MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/nod
 MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/07c487f512bb9e962abba8ff4b90bba9/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/07c487f512bb9e962abba8ff4b90bba9/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/edcea8cc38a211b028a498eb22c39c53/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/edcea8cc38a211b028a498eb22c39c53/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/518257d8d9f5ae7743c8ccd4ec001da1/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/518257d8d9f5ae7743c8ccd4ec001da1/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-error-recovery] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -461,112 +470,116 @@ MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry
 MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721ce1ee44bcc4ef01ae266cc9e0e6c7/flipper-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721ce1ee44bcc4ef01ae266cc9e0e6c7/flipper-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/93be34d92a184112c30dc7afd8337e57/stetho-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/93be34d92a184112c30dc7afd8337e57/stetho-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ad2e61aeec3977c6069b365ec6e46819/fresco-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ad2e61aeec3977c6069b365ec6e46819/fresco-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/089eff2ae4d4427c906b65821f00a00a/drawee-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/089eff2ae4d4427c906b65821f00a00a/drawee-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e57622acdd75e3e69dd88062d204f9be/nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e57622acdd75e3e69dd88062d204f9be/nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a5c51e7a453cfd45557b21b898d92d63/imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a5c51e7a453cfd45557b21b898d92d63/imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c67f4f1041f73c195cf520bc23b19473/nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c67f4f1041f73c195cf520bc23b19473/nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0015d89e29cd2a6fed649d8eb0e994bb/imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0015d89e29cd2a6fed649d8eb0e994bb/imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/48f144b5ca95717b86e929b3938f09f8/soloader-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/48f144b5ca95717b86e929b3938f09f8/soloader-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7dca42c052e713f328992d116d98f349/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7dca42c052e713f328992d116d98f349/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b6464cf85deaa061383f2df3eb9e7eac/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b6464cf85deaa061383f2df3eb9e7eac/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dccd40edb2e077826853cddde5b4e22c/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dccd40edb2e077826853cddde5b4e22c/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/57a7755ec7f8569f8e81b10deb53e9cc/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/eeb81811fa1e5908e701e35fb04e8a9f/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/eeb81811fa1e5908e701e35fb04e8a9f/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/071d218453c713d0fe5584cac3ae3b60/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/071d218453c713d0fe5584cac3ae3b60/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4983062526e194d0cd71dd6b8ad7d179/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4983062526e194d0cd71dd6b8ad7d179/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
 INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -576,15 +589,45 @@ INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/And
 		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
+ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
 	android:name
-		ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c0765efffee9deb14dd95c160dc0897a/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
+		ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
 meta-data#org.unimodules.core.AppLoader#react-native-headless
 ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
 	android:value
 		ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
 	android:name
 		ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+queries
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+intent
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+	android:name
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+provider#androidx.core.content.FileProvider
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+	android:grantUriPermissions
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+	android:authorities
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+	android:exported
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+	android:resource
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+	android:name
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+	android:theme
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+	android:name
+		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
 uses-permission#android.permission.STORAGE
 ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
 	android:name
@@ -601,12 +644,6 @@ ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_mod
 		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-48
 	android:name
 		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:70
-	android:resource
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-67
-	android:name
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
 uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
 	android:name
@@ -618,48 +655,48 @@ ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_module
 	android:name
 		ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5f5c869e0e0e135e79f700b3ff61b1dc/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d366353cb016764e440f2cf4c69d0d49/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
 uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
 service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
 service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
 service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/839ac090dbeb27dbb16f20d1e3570c03/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
