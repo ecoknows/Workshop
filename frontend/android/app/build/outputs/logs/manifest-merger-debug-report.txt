@@ -1,702 +1,344 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:8:1-18:12
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
-MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:expo-splash-screen] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
-MERGED from [:react-native-async-storage_async-storage] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-community_masked-view] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
-MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-safe-area-context] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-error-recovery] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-font] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-image-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-image-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-keep-awake] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-linear-gradient] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-permissions] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:expo-sqlite] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-app-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-app-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-permissions-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-task-manager-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-core] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-barcode-scanner-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-camera-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-constants-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-face-detector-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-file-system-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-font-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+MERGED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+MERGED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-async-storage_async-storage] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_masked-view] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-picker_picker] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
+MERGED from [:react-native-reanimated] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-safe-area-context] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-svg] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.react:react-native:0.64.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a56511b037fb04f244c71df782e66ef7/jetified-react-native-0.64.0/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0ea3fdda9f5684423892484ef8480b5f/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5f2c193a45b1b439ec8f5a8edcb37f33/jetified-stetho-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/336cee0c87f467fe6bfb36840b0630b2/jetified-fresco-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8850ed829d25245e8497182323bc73d2/jetified-drawee-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cedca5e04b0c20fa79ac1887f71f3325/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e5db14b71da4d91c0ca7d2ee268e707a/jetified-memory-type-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c0394800bb3c89c17ec23de03c5f2ca/jetified-memory-type-java-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf4b730f71bf97441bdf4ebe8cfeeb88/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c35a46a0a862651f1e0a89250dcee30d/jetified-soloader-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.10.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/99c6ff58ff6c83738ffbf8a18655305e/jetified-ucrop-2.2.6-native/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/747f53e70e3372703b3570ac3dfbfb03/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d14dbad7340cad958a2e361a440b498d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ce476dc2f1f7d59691ad234de1ec2fb1/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f66a3370e9e4f8cb0ae0c6936c538c41/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc37ff7af2e3c5de8e592a9550a0df07/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cda5d9a1a957ef402e55e5ba5c5bfd6d/jetified-imagepipeline-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8f540c10f5114d05b8ee24db3e19e1f8/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b51f59890c1c9ada8eed6d21cecc075e/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/803d31b2df2f8d968e6cb7c3ffa37ef9/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e5754defa7ec1b661ffd11a17838c67/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c1c25210c9523b781f68f6e5260d398/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/baebfc24ee3e9d675a4614c1f27f118a/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/22a5d9f52d495a432176451a4c4ba982/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2f70304b103eacfab05dbe55739e869f/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49dee3543bc65746b6bba9f83aa0b18a/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/412f4e60090d6c7e949274f12fef4b1d/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c38f0dcdb4eabb88f8961812937ce545/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/86cf751735e9e9dd0416cce35c4a71a1/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae1a1dddf9cea612695d8157e2ff38cd/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ee35bfe9d2e9019f071c4a047a96db2/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/361553562ce35cf8cf447832c4a7d1ec/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bae4382a703142a8f82a100a412243f1/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/74153744c3b76afb34d0c28a686a981b/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e0f82970a69a6b386ee45a08ac362fe/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/644db9887bcf690060a06a795c4e8303/exifinterface-1.1.0-beta01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/af9af86a2035b10a0514f89f66cf8a9a/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cbff631e500aff82164944184b49a648/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5af1825acc1d96709826d913b19b2820/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dcc76cd07ebcaa6166d73d461b1667fa/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b37a656be7da34e79d326523a32fbcaa/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/29e9e6ac99026fff5bb21139b2ad74ac/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/15faa7fdc535e832982b4615d300cb77/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/27e0ecfbdce6f985a506017f5fd54aeb/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268ebc0b2bd661fb18fff0cceeca14c7/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5ff10ad0f2bea4b2419e86a549e99aac/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ffdaca04e33e18187dfc99a2b0ddad3b/jetified-ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:70-103
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:70-103
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:2:5-51
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:1-42:12
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:1-25:12
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:2:3-64
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
 	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:2:20-62
-uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:3-75
-MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:3-75
-MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:3-75
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:20-73
-uses-permission#android.permission.MANAGE_DOCUMENTS
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:3-72
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:20-70
-uses-permission#android.permission.READ_INTERNAL_STORAGE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:3-77
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:20-75
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:3-72
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:20-70
-uses-permission#android.permission.USE_FINGERPRINT
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:3-71
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:20-69
-uses-permission#android.permission.VIBRATE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:3-63
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:20-61
-uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:9:3-77
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:9:20-75
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:3-78
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:20-76
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:3-76
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:20-74
-uses-permission#android.permission.CAMERA
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:3-62
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:20-60
-uses-permission#android.permission.READ_CONTACTS
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:3-69
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:20-67
-uses-permission#android.permission.READ_CALENDAR
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:3-69
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:20-67
-uses-permission#android.permission.WRITE_CALENDAR
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:3-70
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:20-68
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:3-77
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:20-75
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:3-68
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:20-66
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:3-78
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:20-76
-uses-permission#android.permission.WRITE_SETTINGS
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:3-70
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:20-68
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:3-76
-MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:20-74
-uses-permission#android.permission.WAKE_LOCK
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:3-65
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:20-63
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:22:3-79
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:22:20-77
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:3-41:17
-MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:3-41:17
-MERGED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:3-41:17
-MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:11:5-20
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [com.facebook.react:react-native:0.64.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a56511b037fb04f244c71df782e66ef7/jetified-react-native-0.64.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.64.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a56511b037fb04f244c71df782e66ef7/jetified-react-native-0.64.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/747f53e70e3372703b3570ac3dfbfb03/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/747f53e70e3372703b3570ac3dfbfb03/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/af9af86a2035b10a0514f89f66cf8a9a/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/af9af86a2035b10a0514f89f66cf8a9a/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:48-80
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:48-80
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:8:7-39
 	tools:ignore
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:6:75-114
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:116-161
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:116-161
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:10:7-52
 	tools:targetApi
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:6:54-74
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:81-115
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:81-115
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:9:7-41
 	android:allowBackup
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:162-188
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:162-188
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:11:7-34
 	android:theme
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:189-220
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:189-220
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:12:7-38
 	android:usesCleartextTraffic
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:6:18-53
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:8:9-44
 	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:16-47
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:16-47
-meta-data#expo.modules.updates.EXPO_SDK_VERSION
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:5-93
-	android:value
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:69-91
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:16-68
-meta-data#expo.modules.updates.ENABLED
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:5-82
-	android:value
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:60-80
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:16-59
-meta-data#expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:5-105
-	android:value
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:81-103
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:16-80
-meta-data#expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:5-99
-	android:value
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:80-97
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:16-79
-activity#com.ecovillaraza3.Camry.MainActivity
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:5-39:16
-	android:screenOrientation
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:276-312
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.frontend.MainActivity
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:13:7-23:18
 	android:label
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:44-76
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:15:9-41
 	android:launchMode
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:155-186
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:17:9-40
 	android:windowSoftInputMode
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:187-229
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:18:9-51
 	android:configChanges
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:77-154
-	android:theme
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:230-275
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:16:9-86
 	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:15-43
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:14:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:29:7-32:23
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:19:9-22:25
 action#android.intent.action.MAIN
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:30:9-60
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:20:13-65
 	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:30:17-58
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:20:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:31:9-68
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:21:13-73
 	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:31:19-66
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.ecovillaraza3.Camry
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:33:7-38:23
-action#android.intent.action.VIEW
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:34:9-60
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:34:17-58
-category#android.intent.category.DEFAULT
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:35:9-67
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:35:19-65
-category#android.intent.category.BROWSABLE
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:36:9-69
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:36:19-67
-data
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:37:9-57
-	android:scheme
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:37:15-55
-activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:40:5-81
-	android:name
-		ADDED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:40:15-79
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml:21:23-70
 uses-sdk
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a545f3797c49e17eb811c02a26a29afd/jetified-flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/0d3a11620188dd50a5373a335f6078ae/jetified-flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-splash-screen] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-splash-screen] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-updates] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-async-storage_async-storage] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_masked-view] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_masked-view] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-picker_picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-safe-area-context] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-screens] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.62.2] /home/eco/.gradle/caches/transforms-2/files-2.1/9d8c6a63d63bf2ad8f30b9a4075ed548/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
-MERGED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e082e318060eebd3942d31ecde9cc1e2/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc666cfb82b8efde4d12539fe781cd58/jetified-play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/32172cfeec9cc693dd77bebf60ee3df3/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b67ad2359946a617c0d37c5a9a2afd8f/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6a40e98f5d080f7d3082480b97704113/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/1af5fda6c9635a7aa403e6aedd7f76a2/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-constants] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-error-recovery] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-error-recovery] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-font] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-font] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-image-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-image-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-image-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-image-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-keep-awake] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-keep-awake] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-linear-gradient] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-linear-gradient] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-permissions] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-permissions] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-sqlite] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:expo-sqlite] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-app-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-app-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-app-loader] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-app-loader/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-permissions-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-permissions-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-task-manager-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-task-manager-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-core] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-core] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-barcode-scanner-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-barcode-scanner-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-camera-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-camera-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-constants-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-constants-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-face-detector-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-face-detector-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-file-system-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-file-system-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-font-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-font-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-image-loader-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:unimodules-sensors-interface] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/8ba86982ffba108365316ace548d4f0e/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:flipper:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3e11c15d389d2a4f5b1d1d705ff6feea/jetified-flipper-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/76d70cc2bf0b0c08391737412a3cf31b/jetified-stetho-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2c4448dfc738689853809560f752a4a1/jetified-fresco-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/da926edf3222263244b765f4992b0b43/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ff2aad0bdb65d978544621b8d4f05c8f/jetified-drawee-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0de5cbc3f887b2c2d9da706a0e6a8097/jetified-nativeimagefilters-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/db1a7c3788365d1d9911946c55a98b37/jetified-imagepipeline-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/9264f0f7467d06bb64d720c11960d3e5/jetified-nativeimagetranscoder-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/346bd43187a47d174fbeec37a2df3729/jetified-imagepipeline-base-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/2e8756cc9377569ea492172995b848c7/jetified-soloader-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/a7d66ee46ad04f31f769486c0fac80a3/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/4296203f7d4d1414389621fac63d5822/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/46d9743eec2f2ac018af0628aba10b89/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/14a62e9733d047410a39c01e3ebb003a/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/23e80da3f8e0f40f68ddd592d921a7a9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/efd5377a4979346f52353122e33cd616/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/591876b1dcb09215eb14effd58bb0c8a/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/191ebaec0811f833a22fe66bc14744e7/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/721fc5600d2ea79def5abfd8cae41a84/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/353caa6eb2661044b6396e87a3b19c67/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/7259d1326a560c03ab8638ecae148466/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/aade5036fd713c689a8b71226dd2e6b7/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/70269a53b172b8a72b99f43de73ef356/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/245e6930bac2dad4e43559fa0575b467/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a89f8c6b640b3423358adca8f3a45835/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/04160c90573c0b3df2dd593667f4017e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f91a350a306928090355aa8f228b55f0/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3615873fe2183265d75a71cdae04aa0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3d11cc332d99af123a0c9d5eca897337/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/10384b909e23a7e3bf9b6a0f942c182c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/63ccfb95c151684353cf89e8572c00cd/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ac2d512250fbf66c377e24f834fc40a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b9204de4f5b8431562660fc3cbbea4b1/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/252d67e7c8b47807055243bba6a747c7/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/c68155500d2c1fa788d437ac35a88927/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c6a88932cd5a86b531a78d76b0fefb57/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/92d5a9ab3f9b5d8c0a0dcad0e8cb51c4/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8cfc91d8736ce5bfe84d325476fca741/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49c70109d3f340f1bc09b6062f28ea1f/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c4b714f276383ea0e8748a4eb6813e77/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bb9ad1d7819dcbfc066cf0bf0c85a45d/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d183187f67afe032ed5918e180b3907f/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/59e268035014b48b5b6127d03a8921e6/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b425dd1f3b3d51d60fe8a0562b76ed3c/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3ba7794b5ff76d3bcb8f520163bafaa2/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e3afdc53f846ebada4b3fa27bbf946a5/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a93a19f6912466e3f5c79dff373320e4/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5735f1772c666e9d993a022c284ac7fd/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/50f42efbe4728117f9242c33894ec47e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:annotation:0.8.2] /home/eco/.gradle/caches/transforms-2/files-2.1/45a5df916912b07bd73309a57bb0a3ba/jetified-annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a542c59ab3a241829402073a36c3340d/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
-INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-async-storage_async-storage] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-async-storage_async-storage] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-picker_picker] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-picker_picker] /home/eco/Desktop/Camry Change/frontend/node_modules/@react-native-picker/picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-reanimated] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-safe-area-context] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.64.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a56511b037fb04f244c71df782e66ef7/jetified-react-native-0.64.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.64.0] /home/eco/.gradle/caches/transforms-2/files-2.1/a56511b037fb04f244c71df782e66ef7/jetified-react-native-0.64.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0ea3fdda9f5684423892484ef8480b5f/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/0ea3fdda9f5684423892484ef8480b5f/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/eco/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5f2c193a45b1b439ec8f5a8edcb37f33/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5f2c193a45b1b439ec8f5a8edcb37f33/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/336cee0c87f467fe6bfb36840b0630b2/jetified-fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/336cee0c87f467fe6bfb36840b0630b2/jetified-fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8850ed829d25245e8497182323bc73d2/jetified-drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8850ed829d25245e8497182323bc73d2/jetified-drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cedca5e04b0c20fa79ac1887f71f3325/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cedca5e04b0c20fa79ac1887f71f3325/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e5db14b71da4d91c0ca7d2ee268e707a/jetified-memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/e5db14b71da4d91c0ca7d2ee268e707a/jetified-memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c0394800bb3c89c17ec23de03c5f2ca/jetified-memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c0394800bb3c89c17ec23de03c5f2ca/jetified-memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf4b730f71bf97441bdf4ebe8cfeeb88/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cf4b730f71bf97441bdf4ebe8cfeeb88/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c35a46a0a862651f1e0a89250dcee30d/jetified-soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c35a46a0a862651f1e0a89250dcee30d/jetified-soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.10.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/99c6ff58ff6c83738ffbf8a18655305e/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /home/eco/.gradle/caches/transforms-2/files-2.1/99c6ff58ff6c83738ffbf8a18655305e/jetified-ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/747f53e70e3372703b3570ac3dfbfb03/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/747f53e70e3372703b3570ac3dfbfb03/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d14dbad7340cad958a2e361a440b498d/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d14dbad7340cad958a2e361a440b498d/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ce476dc2f1f7d59691ad234de1ec2fb1/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ce476dc2f1f7d59691ad234de1ec2fb1/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f66a3370e9e4f8cb0ae0c6936c538c41/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/f66a3370e9e4f8cb0ae0c6936c538c41/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc37ff7af2e3c5de8e592a9550a0df07/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/fc37ff7af2e3c5de8e592a9550a0df07/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cda5d9a1a957ef402e55e5ba5c5bfd6d/jetified-imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cda5d9a1a957ef402e55e5ba5c5bfd6d/jetified-imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8f540c10f5114d05b8ee24db3e19e1f8/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/8f540c10f5114d05b8ee24db3e19e1f8/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b51f59890c1c9ada8eed6d21cecc075e/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b51f59890c1c9ada8eed6d21cecc075e/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/803d31b2df2f8d968e6cb7c3ffa37ef9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/803d31b2df2f8d968e6cb7c3ffa37ef9/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e5754defa7ec1b661ffd11a17838c67/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/eco/.gradle/caches/transforms-2/files-2.1/5e5754defa7ec1b661ffd11a17838c67/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c1c25210c9523b781f68f6e5260d398/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/3c1c25210c9523b781f68f6e5260d398/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/baebfc24ee3e9d675a4614c1f27f118a/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/baebfc24ee3e9d675a4614c1f27f118a/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/22a5d9f52d495a432176451a4c4ba982/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/22a5d9f52d495a432176451a4c4ba982/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2f70304b103eacfab05dbe55739e869f/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2f70304b103eacfab05dbe55739e869f/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49dee3543bc65746b6bba9f83aa0b18a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/49dee3543bc65746b6bba9f83aa0b18a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/412f4e60090d6c7e949274f12fef4b1d/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/412f4e60090d6c7e949274f12fef4b1d/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c38f0dcdb4eabb88f8961812937ce545/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/c38f0dcdb4eabb88f8961812937ce545/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/86cf751735e9e9dd0416cce35c4a71a1/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/86cf751735e9e9dd0416cce35c4a71a1/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae1a1dddf9cea612695d8157e2ff38cd/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ae1a1dddf9cea612695d8157e2ff38cd/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ee35bfe9d2e9019f071c4a047a96db2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/2ee35bfe9d2e9019f071c4a047a96db2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/361553562ce35cf8cf447832c4a7d1ec/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/361553562ce35cf8cf447832c4a7d1ec/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bae4382a703142a8f82a100a412243f1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/bae4382a703142a8f82a100a412243f1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/74153744c3b76afb34d0c28a686a981b/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/74153744c3b76afb34d0c28a686a981b/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e0f82970a69a6b386ee45a08ac362fe/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/6e0f82970a69a6b386ee45a08ac362fe/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/644db9887bcf690060a06a795c4e8303/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /home/eco/.gradle/caches/transforms-2/files-2.1/644db9887bcf690060a06a795c4e8303/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/af9af86a2035b10a0514f89f66cf8a9a/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/af9af86a2035b10a0514f89f66cf8a9a/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cbff631e500aff82164944184b49a648/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/cbff631e500aff82164944184b49a648/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5af1825acc1d96709826d913b19b2820/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5af1825acc1d96709826d913b19b2820/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dcc76cd07ebcaa6166d73d461b1667fa/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/dcc76cd07ebcaa6166d73d461b1667fa/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b37a656be7da34e79d326523a32fbcaa/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/b37a656be7da34e79d326523a32fbcaa/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/29e9e6ac99026fff5bb21139b2ad74ac/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/29e9e6ac99026fff5bb21139b2ad74ac/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/15faa7fdc535e832982b4615d300cb77/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/eco/.gradle/caches/transforms-2/files-2.1/15faa7fdc535e832982b4615d300cb77/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/27e0ecfbdce6f985a506017f5fd54aeb/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/27e0ecfbdce6f985a506017f5fd54aeb/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268ebc0b2bd661fb18fff0cceeca14c7/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/268ebc0b2bd661fb18fff0cceeca14c7/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5ff10ad0f2bea4b2419e86a549e99aac/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/5ff10ad0f2bea4b2419e86a549e99aac/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ffdaca04e33e18187dfc99a2b0ddad3b/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/eco/.gradle/caches/transforms-2/files-2.1/ffdaca04e33e18187dfc99a2b0ddad3b/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:5:22-75
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:11:9-86
+	android:name
+		ADDED from /home/eco/Desktop/Camry Change/frontend/android/app/src/debug/AndroidManifest.xml:11:19-83
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
+ADDED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
 	android:name
-		ADDED from [com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
-meta-data#org.unimodules.core.AppLoader#react-native-headless
-ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
-	android:value
-		ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
-	android:name
-		ADDED from [:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+		ADDED from [com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 queries
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
-intent
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+intent#action:name:android.media.action.IMAGE_CAPTURE
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
 action#android.media.action.IMAGE_CAPTURE
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
 	android:name
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:22-78
 provider#androidx.core.content.FileProvider
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
 	android:grantUriPermissions
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
 	android:authorities
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
 	android:exported
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
 	android:resource
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
 	android:name
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
 activity#com.yalantis.ucrop.UCropActivity
-ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
 	android:theme
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
 	android:name
-		ADDED from [:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
-uses-permission#android.permission.STORAGE
-ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
-	android:name
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
-provider#expo.modules.filesystem.FileSystemFileProvider
-ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
-	android:grantUriPermissions
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
-	android:authorities
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
-	android:exported
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
-	tools:replace
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-48
-	android:name
-		ADDED from [:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
-uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
-	android:name
-		ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
-service#expo.modules.location.services.LocationTaskService
-ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
-	android:exported
-		ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
-	android:name
-		ADDED from [:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
-service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
-	android:exported
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
-uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
-uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
-service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
-service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
-service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+		ADDED from [:react-native-image-crop-picker] /home/eco/Desktop/Camry Change/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60

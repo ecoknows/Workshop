@@ -13,7 +13,6 @@ import { StyleSheet,
 } from 'react-native';
   
 import { Pic } from '../components';
-import { AntDesign as Icon} from '@expo/vector-icons';
 import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './AccountDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
@@ -141,7 +140,7 @@ function Main({navigation}) {
               </View>
             
               <TouchableOpacity style={styles.eyeBtn} onPress={ () => setHide(!Hide) }>
-                <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+                {/* <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/> */}
               </TouchableOpacity>  
 
               <View style={styles.input}>
