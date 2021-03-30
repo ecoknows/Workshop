@@ -26,7 +26,7 @@ export const delete_login_user = async () => {
 
 export async function check_login_user() {
   try {
-    const result = await AsyncStorage.getItem(USER_KEY);
+    // const result = await AsyncStorage.getItem(USER_KEY);
     if (result != null) {
       return JSON.parse(result);
     }

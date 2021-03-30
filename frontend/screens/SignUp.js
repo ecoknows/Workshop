@@ -18,7 +18,6 @@ import {AccountDetails, AccountStatusEmployee, AccountStatusEmployer} from './Ac
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../redux';
 import { delete_login_user } from '../database/current_user';
-import ImagePicker from 'react-native-image-crop-picker';
 
 
 
