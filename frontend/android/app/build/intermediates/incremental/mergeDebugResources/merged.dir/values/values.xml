@@ -111,15 +111,6 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="catalyst_logbox_background">#ffffffff</color>
     <color name="catalyst_redbox_background">#eecc0000</color>
-    <color name="colorPrimary">#023c69</color>
-    <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
-    <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
-    <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
-    <color name="common_google_signin_btn_text_dark_pressed">@android:color/white</color>
-    <color name="common_google_signin_btn_text_light_default">#90000000</color>
-    <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
-    <color name="common_google_signin_btn_text_light_focused">#90000000</color>
-    <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -165,7 +156,6 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="iconBackground">#FFFFFF</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -188,7 +178,6 @@
     <color name="mtrl_textinput_hovered_box_stroke_color">#DE000000</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
-    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -203,7 +192,6 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="splashscreen_background">#FFFFFF</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -551,10 +539,6 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
-    <dimen name="subtitle_corner_radius">2dp</dimen>
-    <dimen name="subtitle_outline_width">2dp</dimen>
-    <dimen name="subtitle_shadow_offset">2dp</dimen>
-    <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="test_mtrl_calendar_day_cornerSize">52dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
@@ -631,11 +615,11 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="flipper_skip_empty_view_group_traversal" type="id"/>
     <item name="flipper_skip_view_traversal" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
-    <item name="glide_custom_view_target_tag" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
@@ -684,7 +668,6 @@
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
-    <integer name="google_play_services_version">12451000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="mtrl_badge_max_character_count">4</integer>
     <integer name="mtrl_btn_anim_delay_ms">100</integer>
@@ -733,7 +716,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="alert_description" translatable="false">Alert</string>
-    <string name="app_name">Camry</string>
+    <string name="app_name">frontend</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="button_description" translatable="false">Button</string>
@@ -744,9 +727,9 @@
     <string name="catalyst_debug_chrome_stop" project="catalyst" translatable="false">Stop Chrome Debugging</string>
     <string name="catalyst_debug_connecting" project="catalyst" translatable="false">Connecting to debugger...</string>
     <string name="catalyst_debug_error" project="catalyst" translatable="false">Failed to connect to debugger!</string>
-    <string name="catalyst_debug_nuclide" project="catalyst" translatable="false">Debug with Nuclide</string>
-    <string name="catalyst_debug_nuclide_error" project="catalyst" translatable="false">Failed to communicate with the bundler to enabling debugging with Nuclide.</string>
+    <string name="catalyst_debug_open" project="catalyst" translatable="false">Open Debugger</string>
     <string name="catalyst_debug_stop" project="catalyst" translatable="false">Stop Debugging</string>
+    <string name="catalyst_devtools_open" project="catalyst" translatable="false">Open React DevTools</string>
     <string name="catalyst_dismiss_button" project="catalyst" translatable="false">Dismiss\n(ESC)</string>
     <string name="catalyst_heap_capture" project="catalyst" translatable="false">Capture Heap</string>
     <string name="catalyst_hot_reloading" project="catalyst" translatable="false">Enable Fast Refresh</string>
@@ -755,6 +738,7 @@
     <string name="catalyst_hot_reloading_stop" project="catalyst" translatable="false">Disable Fast Refresh</string>
     <string name="catalyst_inspector" project="catalyst" translatable="false">Toggle Inspector</string>
     <string name="catalyst_loading_from_url" project="catalyst" translatable="false">Loading from %1$s…</string>
+    <string name="catalyst_open_flipper_error" project="catalyst" translatable="false">Failed to open Flipper. Please check that Metro is running.</string>
     <string name="catalyst_perf_monitor" project="catalyst" translatable="false">Show Perf Monitor</string>
     <string name="catalyst_perf_monitor_stop" project="catalyst" translatable="false">Hide Perf Monitor</string>
     <string name="catalyst_reload" project="catalyst" translatable="false">Reload</string>
@@ -771,24 +755,6 @@
     <string name="chip_text">Chip text</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="combobox_description" translatable="false">Combo Box</string>
-    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
-    <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
-    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
-    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
-    <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
-    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
-    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
-    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
-    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
-    <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
-    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
-    <string msgid="9053896323427875356" name="common_google_play_services_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update Google Play services.</string>
-    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
-    <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
-    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
-    <string name="common_open_on_phone">Open on phone</string>
-    <string name="common_signin_button_text">Sign in</string>
-    <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
@@ -888,11 +854,10 @@
     <item name="android:windowEnterAnimation">@anim/mtrl_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
   </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:textColor">#000000</item>
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="android:windowTranslucentStatus">true</item>
-  </style>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#000000</item>
+    </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -2734,12 +2699,6 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <style name="ClockTimePickerDialog" ns2:targetApi="lollipop" parent="Theme.AppCompat.Light.Dialog">
-      <item name="android:timePickerStyle">@style/ClockTimePickerStyle</item>
-    </style>
-    <style name="ClockTimePickerStyle" ns2:targetApi="lollipop" parent="android:Widget.Material.Light.TimePicker">
-      <item name="android:timePickerMode">clock</item>
-    </style>
     <style name="DialogAnimationFade">
     <item name="android:windowEnterAnimation">@anim/catalyst_fade_in</item>
     <item name="android:windowExitAnimation">@anim/catalyst_fade_out</item>
@@ -3084,12 +3043,6 @@
     <style name="SpinnerDatePickerStyle" ns2:targetApi="lollipop" parent="android:Widget.Material.Light.DatePicker">
         <item name="android:datePickerMode">spinner</item>
     </style>
-    <style name="SpinnerTimePickerDialog" ns2:targetApi="lollipop" parent="Theme.AppCompat.Light.Dialog">
-      <item name="android:timePickerStyle">@style/SpinnerTimePickerStyle</item>
-    </style>
-    <style name="SpinnerTimePickerStyle" ns2:targetApi="lollipop" parent="android:Widget.Material.Light.TimePicker">
-      <item name="android:timePickerMode">spinner</item>
-    </style>
     <style name="Test.ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day" parent="">
     <item name="cornerFamily">rounded</item>
     <item name="cornerSize">@dimen/test_mtrl_calendar_day_cornerSize</item>
@@ -3202,17 +3155,12 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Compat.Notification.Info.Media"/>
     <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
-    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
-    <style name="TextAppearance.Compat.Notification.Media"/>
     <style name="TextAppearance.Compat.Notification.Time">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Compat.Notification.Time.Media"/>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
-    <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="TextAppearance.AppCompat.Display1">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
   </style>
@@ -3331,9 +3279,6 @@
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
     </style>
     <style name="Theme"/>
-    <style name="Theme.App.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/splashscreen</item>
-  </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>
     <style name="Theme.AppCompat.DayNight" parent="Theme.AppCompat.Light"/>
@@ -3366,6 +3311,7 @@
     <style name="Theme.Catalyst"/>
     <style name="Theme.Catalyst.LogBox">
     <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">false</item>
     <item name="android:windowBackground">@android:color/transparent</item>
     <item name="android:windowAnimationStyle">@style/Animation.Catalyst.LogBox</item>
     <item name="android:inAnimation">@android:anim/fade_in</item>
@@ -6154,7 +6100,7 @@
     <!-- Rounding border width-->
     <attr format="dimension" name="roundingBorderWidth"/>
     <!-- Rounding border color -->
-    <attr format="color" name="roundingBorderColor"/>
+    <attr format="color|reference" name="roundingBorderColor"/>
     <!-- Rounding border padding -->
     <attr format="dimension" name="roundingBorderPadding"/>
 
@@ -6251,19 +6197,6 @@
         <!-- Amount of pixels by which the drop down should be offset horizontally. -->
         <attr name="android:dropDownHorizontalOffset"/>
     </declare-styleable>
-    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
-<enum name="none" value="0"/>
-
-<enum name="adjust_width" value="1"/>
-
-<enum name="adjust_height" value="2"/>
-
-</attr>
-
-<attr format="float" name="imageAspectRatio"/>
-
-<attr format="boolean" name="circleCrop"/>
-</declare-styleable>
     <declare-styleable name="MaterialAlertDialog">
     <attr format="dimension" name="backgroundInsetStart"/>
     <attr format="dimension" name="backgroundInsetTop"/>
@@ -6786,25 +6719,6 @@
       <enum name="cut" value="1"/>
     </attr>
   </declare-styleable>
-    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
-<enum name="standard" value="0"/>
-
-<enum name="wide" value="1"/>
-
-<enum name="icon_only" value="2"/>
-
-</attr>
-<attr format="reference" name="colorScheme">
-<enum name="dark" value="0"/>
-
-<enum name="light" value="1"/>
-
-<enum name="auto" value="2"/>
-
-</attr>
-
-<attr format="reference|string" name="scopeUris"/>
-</declare-styleable>
     <declare-styleable name="SimpleDraweeView" parent="GenericDraweeHierarchy">
 
     <!-- An image uri . -->

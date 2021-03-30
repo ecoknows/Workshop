@@ -10,7 +10,6 @@ import {
   ScrollView,
   Keyboard } from 'react-native';
 
-import {AntDesign, Fontisto} from '@expo/vector-icons';
 import { current_user_id, get_user, sign_in } from '../database/firebase';
 import { update_login_user } from '../database/current_user';
 import {useSelector, useDispatch} from 'react-redux';
@@ -53,7 +52,7 @@ function Main({navigation}) {
                   value={password}
                 />
                 <TouchableOpacity onPress={ () => setHide(!Hide) }>
-                  <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/>
+                  {/* <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/> */}
                 </TouchableOpacity> 
               </View>
 
