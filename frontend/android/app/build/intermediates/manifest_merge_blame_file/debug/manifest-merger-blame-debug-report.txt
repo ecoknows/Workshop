@@ -1,0 +1,292 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ecovillaraza3.Camry"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="28" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:3-75
+11-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:3:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:2:3-64
+12-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+13-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:3-72
+13-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:20-70
+14    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+14-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:3-77
+14-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:20-75
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:3-72
+15-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:20-70
+16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+16-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:3-71
+16-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:20-69
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:3-63
+17-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:20-61
+18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+18-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:9:3-77
+18-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:9:20-75
+19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+19-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:3-78
+19-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:20-76
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:3-76
+20-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:20-74
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:3-62
+21-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:20-60
+22    <uses-permission android:name="android.permission.READ_CONTACTS" />
+22-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:3-69
+22-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:20-67
+23    <uses-permission android:name="android.permission.READ_CALENDAR" />
+23-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:3-69
+23-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:20-67
+24    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+24-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:3-70
+24-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:20-68
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:3-77
+25-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:20-75
+26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+26-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:3-68
+26-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:20-66
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:3-78
+27-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:20-76
+28    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+28-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:3-70
+28-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:20-68
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:3-76
+29-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:20-74
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:3-65
+30-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:20-63
+31    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+31-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:22:3-79
+31-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:22:20-77
+32    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+32-->[com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
+32-->[com.facebook.flipper:flipper:0.33.1] /home/eco/.gradle/caches/transforms-2/files-2.1/9cc161c44ffa1bbb7d03b8f28903b01e/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
+33
+34    <queries>
+34-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+35        <intent>
+35-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+36            <action android:name="android.media.action.IMAGE_CAPTURE" />
+36-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+36-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+37        </intent>
+38    </queries>
+39
+40    <uses-permission android:name="android.permission.STORAGE" />
+40-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+40-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+41    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+41-->[:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+41-->[:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+42    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+42-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+42-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+43    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+43-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+43-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+44
+45    <application
+45-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:3-41:17
+46        android:name="com.ecovillaraza3.Camry.MainApplication"
+46-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:16-47
+47        android:allowBackup="true"
+47-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:162-188
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/936cb5c7c30dd0dc083debbe3b303168/core-1.1.0/AndroidManifest.xml:24:18-86
+49        android:debuggable="true"
+50        android:icon="@mipmap/ic_launcher"
+50-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:81-115
+51        android:label="@string/app_name"
+51-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:48-80
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:116-161
+53        android:theme="@style/AppTheme"
+53-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:189-220
+54        android:usesCleartextTraffic="true" >
+54-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:6:18-53
+55        <meta-data
+55-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:5-93
+56            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+56-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:16-68
+57            android:value="38.0.0" />
+57-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:69-91
+58        <meta-data
+58-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:5-82
+59            android:name="expo.modules.updates.ENABLED"
+59-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:16-59
+60            android:value="true" />
+60-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:60-80
+61        <meta-data
+61-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:5-105
+62            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+62-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:16-80
+63            android:value="ALWAYS" />
+63-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:81-103
+64        <meta-data
+64-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:5-99
+65            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+65-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:16-79
+66            android:value="0" />
+66-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:27:80-97
+67
+68        <activity
+68-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:5-39:16
+69            android:name="com.ecovillaraza3.Camry.MainActivity"
+69-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:15-43
+70            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+70-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:77-154
+71            android:label="@string/app_name"
+71-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:44-76
+72            android:launchMode="singleTask"
+72-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:155-186
+73            android:screenOrientation="portrait"
+73-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:276-312
+74            android:theme="@style/Theme.App.SplashScreen"
+74-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:230-275
+75            android:windowSoftInputMode="adjustResize" >
+75-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:28:187-229
+76            <intent-filter>
+76-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:29:7-32:23
+77                <action android:name="android.intent.action.MAIN" />
+77-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:30:9-60
+77-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:30:17-58
+78
+79                <category android:name="android.intent.category.LAUNCHER" />
+79-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:31:9-68
+79-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:31:19-66
+80            </intent-filter>
+81            <intent-filter>
+81-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:33:7-38:23
+82                <action android:name="android.intent.action.VIEW" />
+82-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:34:9-60
+82-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:34:17-58
+83
+84                <category android:name="android.intent.category.DEFAULT" />
+84-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:35:9-67
+84-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:35:19-65
+85                <category android:name="android.intent.category.BROWSABLE" />
+85-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:36:9-69
+85-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:36:19-67
+86
+87                <data android:scheme="com.ecovillaraza3.Camry" />
+87-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:37:9-57
+87-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:37:15-55
+88            </intent-filter>
+89        </activity>
+90        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+90-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:40:5-81
+90-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:40:15-79
+91
+92        <meta-data
+92-->[:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
+93            android:name="org.unimodules.core.AppLoader#react-native-headless"
+93-->[:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+94            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
+94-->[:unimodules-react-native-adapter] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
+95
+96        <provider
+96-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+97            android:name="androidx.core.content.FileProvider"
+97-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+98            android:authorities="com.ecovillaraza3.Camry.provider"
+98-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+99            android:exported="false"
+99-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+100            android:grantUriPermissions="true" >
+100-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+101            <meta-data
+101-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+102                android:name="android.support.FILE_PROVIDER_PATHS"
+102-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+103                android:resource="@xml/provider_paths" />
+103-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+104        </provider>
+105
+106        <activity
+106-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+107            android:name="com.yalantis.ucrop.UCropActivity"
+107-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
+108            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+108-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+109
+110        <provider
+110-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+111            android:name="expo.modules.filesystem.FileSystemFileProvider"
+111-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+112            android:authorities="com.ecovillaraza3.Camry.FileSystemFileProvider"
+112-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+113            android:exported="false"
+113-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+114            android:grantUriPermissions="true" >
+114-->[:expo-file-system] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+115            <meta-data
+115-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+116                android:name="android.support.FILE_PROVIDER_PATHS"
+116-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+117                android:resource="@xml/file_system_provider_paths" />
+117-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+118        </provider>
+119
+120        <service
+120-->[:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+121            android:name="expo.modules.location.services.LocationTaskService"
+121-->[:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+122            android:exported="false" />
+122-->[:expo-location] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+123
+124        <activity
+124-->[com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+125            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+125-->[com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+126            android:exported="false"
+126-->[com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+127            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+127-->[com.google.android.gms:play-services-base:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/67e2b105c9696130d7b0b5796e5902ea/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+128
+129        <meta-data
+129-->[com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+130            android:name="com.google.android.gms.version"
+130-->[com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+131            android:value="@integer/google_play_services_version" />
+131-->[com.google.android.gms:play-services-basement:16.0.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a5b611d3d8d8c712c2782147b796de4f/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+132
+133        <service
+133-->[androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+134            android:name="androidx.room.MultiInstanceInvalidationService"
+134-->[androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+135            android:exported="false" />
+135-->[androidx.room:room-runtime:2.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/df5912a0c5d0d1a92ff355a620e7c163/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+136        <service
+136-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+137            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+137-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+138            android:exported="false" />
+138-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+139        <service
+139-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+140            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+140-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+141            android:exported="false" />
+141-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+142        <service
+142-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+143            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+143-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+144            android:exported="false" />
+144-->[io.nlopez.smartlocation:library:3.2.11] /home/eco/.gradle/caches/transforms-2/files-2.1/e5281c63afa586ec5802211e458eef2a/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+145    </application>
+146
+147</manifest>

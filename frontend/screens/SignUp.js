@@ -22,7 +22,6 @@ import ImagePicker from 'react-native-image-crop-picker';
 
 
 
-
 function Main({navigation}) {  
   const[Hide,setHide] = useState(true);
   const[name,setName] = useState('');
