@@ -61,14 +61,13 @@ export const signin = (email: string, password: string, navigation: any) => asyn
   }
 };
 
-export const verify = (info, status) => async (
+export const verify = (info: any, status: string, documents: {name: string, file: object}[]) => async (
   dispatch: any,
   getState: any,
 ) => {
   const {
     userDetails: {userData}
   }= getState();
-  console.log("Emploter : ", info);
   
 
   if(status == 'Employer'){
@@ -98,15 +97,47 @@ export const verify = (info, status) => async (
   }
 
 
-  
+
+
+
   try {
+
+    const filteredDocuments = documents.filter(docu => docu.file !== null);
+    
+    if(filteredDocuments.length > 0){
+
+      const formData = new FormData();
+      filteredDocuments.forEach((item: any) => {
+        formData.append('files[]',{
+          name: item.file.name,
+          type: item.file.type,
+          uri: item.file.uri,
+        });
+      })
+
+      console.log("formData: ",formData);
+      
+      const Documents = await Axios.post('/uploads/documents',formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if(Documents.data){
+        console.log(Documents.data, 'success?');
+        
+      }
+    }
+
     const { data } = await Axios.post(`/user/register/account?email=${userData.email}`, {
       ...userData,
       ...info
     });
+    
     if(data){
       dispatch({ type: USER_SIGNIN_SUCCESS, payload: data});
       update_login_user(data);
+
     }
   } catch (error) {
     dispatch({

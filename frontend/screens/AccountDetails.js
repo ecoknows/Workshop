@@ -7,14 +7,21 @@ import { StyleSheet,
   TextInput, 
   TouchableOpacity, 
   KeyboardAvoidingView,
-  ScrollView
+  ScrollView,
 } from 'react-native';
-import { Pic } from '../components';
+
+import { 
+  Pic, 
+  Input 
+} from '../components';
+
 import {useSelector, useDispatch } from 'react-redux';
 import { verify } from '../redux';
 
 import {Text as ComponentText} from '../components';
 import DocumentPicker from 'react-native-document-picker';
+import { theme } from '../constants';
+import Axios from 'axios';
 
  
 export function AccountDetails({accountStatus}){
@@ -49,41 +56,37 @@ export function AccountDetails({accountStatus}){
         
 
           <View style={styles.form}>
-  
-            <TextInput
-              style={styles.input}
-              placeholder='BIRTHDAY'
+
+            <Input 
+              onChangeText={ text=>setBirthday(text)}
+              placeholder={'BIRTHDAY'}
               placeholderTextColor='#808080'  
               returnKeyType='next'
-              onChangeText={ text=>setBirthday(text)}
-              value={Birthday}
+              icon={require('../assets/icons/sign_up/birthday.png')}
             />
 
-            <TextInput
-              style={styles.input}
+            <Input 
+              onChangeText={ text=>setAddress(text)}
               placeholder='ADDRESS (No./Street/Subdivision)'
               placeholderTextColor='#808080'  
               returnKeyType='next'
-              onChangeText={ text=>setAddress(text)}
-              value={Address}
+              icon={require('../assets/icons/sign_up/address.png')}
             />
 
-            <TextInput
-              style={styles.input}
-              placeholder='CITY'
-              placeholderTextColor='#808080'
-              returnKeyType='done'
+            <Input 
               onChangeText={ text=>setCity(text)}
-              value={City}
-            />         
+              placeholder='CITY'
+              placeholderTextColor='#808080'  
+              returnKeyType='next'
+              icon={require('../assets/icons/sign_up/address.png')}
+            />
 
-            <TextInput
-              style={styles.input}
-              placeholder='SEX'
-              placeholderTextColor='#808080'
-              returnKeyType='done'                
+            <Input 
               onChangeText={ text=>setSex(text)}
-              value={Sex}
+              placeholder='SEX'
+              placeholderTextColor='#808080'  
+              returnKeyType='next'
+              icon={require('../assets/icons/sign_up/sex.png')}
             />
               
             <DropDownPicker
@@ -91,7 +94,8 @@ export function AccountDetails({accountStatus}){
               placeholder='STATUS'
                 items={[
                   {label:'EMPLOYEE', value:'Employee'},
-                  {label:'EMPLOYER', value:'Employer'}]}
+                  {label:'EMPLOYER', value:'Employer'}
+                ]}
                 containerStyle={{
                   height: 40,
                   marginHorizontal: 5
@@ -129,13 +133,14 @@ export function AccountDetails({accountStatus}){
   )
 }
 
+
 export function AccountStatusEmployer({accountStatus, setStatus}){
   const [name_of_business, setNameBusiness] = useState(null);
   const [address_of_business, setAddressBusiness] = useState(null);
   const [nature_of_business, setNatureBusiness] = useState(null);
   const [position, setPosition] = useState(null);
   const dispatch = useDispatch();
-  const [documents, setDocuments] = useState([]);
+  const [documents, setDocuments] = useState([{name: null, file: null}]);
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
@@ -143,16 +148,63 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
       address_of_business,
       nature_of_business,
       position,
-    }, 'Employer'))
+    }, 'Employer',documents))
   }
 
-  const pickDocument = async() =>{
+  const DocumentSelector =()=>{
+
+    return(
+      <ScrollView style={{marginTop: 10, maxHeight: theme.height *.2}} nestedScrollEnabled={true}>
+      {
+        documents.map(
+          (item,index)=>(
+            <View key={index} style={{flexDirection:'row', alignItems:'center', justifyContent:'flex-start', marginTop: 10}}>
+              <TouchableOpacity style={{marginEnd: 10}}
+                onPress={
+                  ()=>{
+                    let array = documents.filter((item,index_ar) => index_ar != index)
+                    setDocuments(array);
+                  }
+              }
+              >
+                <Pic
+                  src={require('../assets/icons/profile/x.png')}
+                  scale={15}
+                />
+              </TouchableOpacity>
+              <View style={{borderBottomColor: '#C6C6C6', borderBottomWidth: 1, paddingHorizontal:10, marginEnd: 16}}>
+                <TextInput placeholder='Name of Document' style={{ paddingVertical:2}}/>
+              </View>
+      
+              <TouchableOpacity style={{flexDirection:'row', borderColor: item.file ? theme.colors.green : '#C6C6C6', borderWidth: 1, paddingHorizontal: 10, paddingVertical:2, borderRadius: 20, alignItems:'center', justifyContent:'center'}}
+                onPress={()=>pickDocument(index)}
+              >
+                <Text numberOfLines={1} ellipsizeMode='tail' style={{maxWidth : 70, color: item.file ? theme.colors.green : theme.colors.gray}}>
+                  { item.file != null ? item.file.name : "Select File"}
+                </Text>
+                <Pic
+                  src={require('../assets/icons/upload.png')}
+                  scale={15}
+                  style={{marginLeft: 10}}
+                />
+              </TouchableOpacity>
+            </View>
+          )
+        )
+      }
+      </ScrollView>
+    )
+  }
+
+  const pickDocument = async(document_index) =>{
 
     try {
       const res = await DocumentPicker.pick({
         type: [DocumentPicker.types.images],
       });
-      setDocuments(doc => [...doc, res]);
+      const docu = documents;
+      docu[document_index].file = res;
+      setDocuments([...docu]);
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
         // User cancelled the picker, exit any dialogs or menus and move on
@@ -178,36 +230,36 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
         
         <View style={styles.form}>
 
-          <TextInput
-            style={styles.input}
-            placeholder='NAME OF BUSINESS'
-            placeholderTextColor='#808080'  
-            returnKeyType='next'
+          <Input 
             onChangeText={text => setNameBusiness(text)}
-          />
-
-          <TextInput
-            style={styles.input}
-            placeholder='ADDRESS OF BUSINESS'
+            placeholder={'NAME OF BUSINESS'}
             placeholderTextColor='#808080'  
             returnKeyType='next'
+            icon={require('../assets/icons/sign_up/name_of_business.png')}
+          />
+
+          <Input 
             onChangeText={text => setAddressBusiness(text)}
-          />
-
-          <TextInput
-            style={styles.input}
-            placeholder='NATURE OF BUSINESS'
+            placeholder={'ADDRESS OF BUSINESS'}
             placeholderTextColor='#808080'  
             returnKeyType='next'
+            icon={require('../assets/icons/sign_up/address_of_business.png')}
+          />
+
+          <Input 
             onChangeText={text => setNatureBusiness(text)}
-          />
-
-          <TextInput
-            style={styles.input}
-            placeholder='POSITION'
+            placeholder={'NATURE OF BUSINESS'}
             placeholderTextColor='#808080'  
             returnKeyType='next'
+            icon={require('../assets/icons/sign_up/nature_of_business.png')}
+          />
+
+          <Input 
             onChangeText={text => setPosition(text)}
+            placeholder={'POSITION'}
+            placeholderTextColor='#808080'  
+            returnKeyType='next'
+            icon={require('../assets/icons/sign_up/position.png')}
           />
 
           <View style={{flexDirection:'row', justifyContent:'flex-start', alignItems:'flex-start'}}>
@@ -231,27 +283,13 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
                 <ComponentText medium gray size={12}>
                   (e.g. business permit)
                 </ComponentText>  
-              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'flex-start', marginTop: 10}}>
-                <View style={{borderBottomColor: '#C6C6C6', borderBottomWidth: 1, paddingHorizontal:10, marginEnd: 16}}>
-                  <TextInput placeholder='Name of Document' style={{ paddingVertical:2}}/>
-                </View>
 
-                <TouchableOpacity style={{flexDirection:'row', borderColor:'#C6C6C6', borderWidth: 1, paddingHorizontal: 10, paddingVertical:2, borderRadius: 20, alignItems:'center', justifyContent:'center'}}
-                  onPress={pickDocument}
-                >
-                  <Text>
-                    Select File
-                  </Text>
-                  <Pic
-                    src={require('../assets/icons/upload.png')}
-                    scale={15}
-                    style={{marginLeft: 10}}
-                  />
-                </TouchableOpacity>
-              </View>
+                <DocumentSelector/>
 
               <View  style={{justifyContent:'center', alignItems:'center',marginTop: 10}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>{
+                    setDocuments(doc => [...doc, {name:null ,res:null}]);
+                }}>
                   <Pic
                     src={require('../assets/icons/add-gray.png')}
                     scale={30}
@@ -288,7 +326,7 @@ export function AccountStatusEmployee({accountStatus, setStatus}){
     dispatch(verify({
       nature_of_work,
       position,
-    }, 'Employee'))
+    }, 'Employee',[{name: null, file: null}]))
   }
 
   return(
@@ -305,23 +343,23 @@ export function AccountStatusEmployee({accountStatus, setStatus}){
         
         <KeyboardAvoidingView behavior="position" style={styles.form}>
 
-          <TextInput
-            style={styles.input}
+
+          <Input 
+            onChangeText={text => setNatureWork(text)}
             placeholder='NATURE OF WORK'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            value={nature_of_work}
-            onChangeText={text => setNatureWork(text)}
+            icon={require('../assets/icons/sign_up/nature_of_business.png')}
           />
 
-          <TextInput
-            style={styles.input}
+          <Input 
+            onChangeText={text => setPosition(text)}
             placeholder='POSITION (if applicable)'
             placeholderTextColor='#808080'  
             returnKeyType='next'
-            value={position}
-            onChangeText={text => setPosition(text)}
+            icon={require('../assets/icons/sign_up/position.png')}
           />
+
           
           <TouchableOpacity style={styles.SignupBtn} onPress={ () => {
             SignUpButtonClick();

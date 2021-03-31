@@ -140,6 +140,7 @@ const verfyingInputs =()=> {
                     placeholder='FULL NAME'
                     placeholderTextColor='#808080'  
                     returnKeyType='next'
+                    style={{width: '100%'}}
                     onChangeText={ text=>setName(text)}
                     value={name}
                   />
@@ -154,6 +155,7 @@ const verfyingInputs =()=> {
                   placeholder='EMAIL ADDRESS'
                   placeholderTextColor='#808080'  
                   returnKeyType='next'
+                  style={{width: '100%'}}
                   onChangeText={ text=>setEmail(text)}
                   value={email}
                   />
@@ -168,6 +170,7 @@ const verfyingInputs =()=> {
                   placeholder='**********'
                   placeholderTextColor='#808080'
                   returnKeyType='done'
+                  style={{width: '100%'}}
                   secureTextEntry={Hide}
                   onChangeText={ text=>setPassword(text)}
                   value={password}
@@ -186,6 +189,7 @@ const verfyingInputs =()=> {
                 <TextInput
                 placeholder='**********'
                 placeholderTextColor='#808080'
+                style={{width: '100%'}}
                 returnKeyType='done'
                 secureTextEntry={Hide}
                 onChangeText={ text=>setConfirmPassword(text)}
