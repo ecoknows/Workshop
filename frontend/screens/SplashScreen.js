@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View, Pic, Circle, Button } from '../components';
 import { useSelector } from 'react-redux';
-
+import Toast from 'react-native-toast-message';
 
 const screens = [
   {
@@ -33,11 +33,22 @@ function Main({ navigation }){
           navigation.replace('UserScreen'); 
       }
     }
-    if (error) {
-      console.log(error);
-    }
   }, [userData, error]);
 
+  useEffect(()=>{
+    if (error) {
+      console.log("whay the");
+      
+      Toast.show({
+        type: 'error',
+        position: 'top',
+        text1: error,
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
+    }
+  },[error])
 
   const ProgressBar = () => {
     return(

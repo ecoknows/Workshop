@@ -19,7 +19,7 @@ import { register } from '../redux';
 import { delete_login_user } from '../database/current_user';
 import ImagePicker from 'react-native-image-crop-picker';
 import Axios from 'axios';
-
+import Toast from 'react-native-toast-message';
 
 function Main({navigation}) {  
   const[Hide,setHide] = useState(true);
@@ -58,6 +58,19 @@ function Main({navigation}) {
       }
     }
   },[userData])
+
+  useEffect(()=>{
+    if(error){
+      Toast.show({
+        type: 'error',
+        position: 'top',
+        text1: error,
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
+    }
+  },[error])
 
 
 

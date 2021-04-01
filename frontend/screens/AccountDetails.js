@@ -134,6 +134,92 @@ export function AccountDetails({accountStatus}){
 }
 
 
+
+function DocumentItems({index,item, documents,setDocuments}){
+  const [text, setText ] = useState(null);
+
+  useEffect(()=>{
+    documents[index].name = text
+  },[text]);
+
+  const pickDocument = async(document_index) =>{
+
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.images],
+      });
+      const docu = documents;
+      
+      docu[document_index].file = res;
+      setDocuments([...docu]);
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+      } else {
+        throw err;
+      }
+    }
+
+  }
+
+  return(
+        <View key={index} style={{flexDirection:'row', alignItems:'center', justifyContent:'flex-start', marginTop: 10}}>
+          <TouchableOpacity style={{marginEnd: 10}}
+            onPress={
+              ()=>{
+                let array = documents.filter((item,index_ar) => index_ar != index)
+                setDocuments(array);
+              }
+          }
+          >
+            <Pic
+              src={require('../assets/icons/profile/x.png')}
+              scale={15}
+            />
+          </TouchableOpacity>
+          <View style={{borderBottomColor: '#C6C6C6', borderBottomWidth: 1, paddingHorizontal:10, marginEnd: 16}}>
+            <TextInput 
+              onChangeText={(text)=> setText(text)} 
+              returnKeyType='next' 
+              placeholder='Name of Document' 
+              style={{ paddingVertical:2}}/>
+
+          </View>
+  
+          <TouchableOpacity style={{flexDirection:'row', borderColor: item.file ? theme.colors.green : '#C6C6C6', borderWidth: 1, paddingHorizontal: 10, paddingVertical:2, borderRadius: 20, alignItems:'center', justifyContent:'center'}}
+            onPress={()=>{
+              pickDocument(index)
+            }}
+          >
+            <Text numberOfLines={1} ellipsizeMode='tail' style={{maxWidth : 70, color: item.file ? theme.colors.green : theme.colors.gray}}>
+              { item.file != null ? item.file.name : "Select File"}
+            </Text>
+            <Pic
+              src={require('../assets/icons/upload.png')}
+              scale={15}
+              style={{marginLeft: 10}}
+            />
+          </TouchableOpacity>
+        </View>
+  )
+
+}
+
+
+const DocumentSelector =({documents, setDocuments})=>{
+
+  return(
+    <ScrollView style={{marginTop: 10, maxHeight: theme.height *.2}} nestedScrollEnabled={true}>
+    {
+      documents.map(
+        (item,index)=><DocumentItems key={index} item={item} index={index} setDocuments={setDocuments} documents={documents}/>
+      )
+    }
+    </ScrollView>
+  )
+}
+
+
 export function AccountStatusEmployer({accountStatus, setStatus}){
   const [name_of_business, setNameBusiness] = useState(null);
   const [address_of_business, setAddressBusiness] = useState(null);
@@ -149,70 +235,6 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
       nature_of_business,
       position,
     }, 'Employer',documents))
-  }
-
-  const DocumentSelector =()=>{
-
-    return(
-      <ScrollView style={{marginTop: 10, maxHeight: theme.height *.2}} nestedScrollEnabled={true}>
-      {
-        documents.map(
-          (item,index)=>(
-            <View key={index} style={{flexDirection:'row', alignItems:'center', justifyContent:'flex-start', marginTop: 10}}>
-              <TouchableOpacity style={{marginEnd: 10}}
-                onPress={
-                  ()=>{
-                    let array = documents.filter((item,index_ar) => index_ar != index)
-                    setDocuments(array);
-                  }
-              }
-              >
-                <Pic
-                  src={require('../assets/icons/profile/x.png')}
-                  scale={15}
-                />
-              </TouchableOpacity>
-              <View style={{borderBottomColor: '#C6C6C6', borderBottomWidth: 1, paddingHorizontal:10, marginEnd: 16}}>
-                <TextInput placeholder='Name of Document' style={{ paddingVertical:2}}/>
-              </View>
-      
-              <TouchableOpacity style={{flexDirection:'row', borderColor: item.file ? theme.colors.green : '#C6C6C6', borderWidth: 1, paddingHorizontal: 10, paddingVertical:2, borderRadius: 20, alignItems:'center', justifyContent:'center'}}
-                onPress={()=>pickDocument(index)}
-              >
-                <Text numberOfLines={1} ellipsizeMode='tail' style={{maxWidth : 70, color: item.file ? theme.colors.green : theme.colors.gray}}>
-                  { item.file != null ? item.file.name : "Select File"}
-                </Text>
-                <Pic
-                  src={require('../assets/icons/upload.png')}
-                  scale={15}
-                  style={{marginLeft: 10}}
-                />
-              </TouchableOpacity>
-            </View>
-          )
-        )
-      }
-      </ScrollView>
-    )
-  }
-
-  const pickDocument = async(document_index) =>{
-
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.images],
-      });
-      const docu = documents;
-      docu[document_index].file = res;
-      setDocuments([...docu]);
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
-
   }
 
 
@@ -284,7 +306,7 @@ export function AccountStatusEmployer({accountStatus, setStatus}){
                   (e.g. business permit)
                 </ComponentText>  
 
-                <DocumentSelector/>
+                <DocumentSelector documents={documents} setDocuments={setDocuments}/>
 
               <View  style={{justifyContent:'center', alignItems:'center',marginTop: 10}}>
                 <TouchableOpacity onPress={()=>{
@@ -320,13 +342,14 @@ export function AccountStatusEmployee({accountStatus, setStatus}){
   const [nature_of_work, setNatureWork] = useState(null);
   const [position, setPosition] = useState(null);
   const dispatch = useDispatch();
+  const [documents, setDocuments] = useState([{name: null, file: null}]);
 
 
   const SignUpButtonClick =()=>{
     dispatch(verify({
       nature_of_work,
       position,
-    }, 'Employee',[{name: null, file: null}]))
+    }, 'Employee',documents))
   }
 
   return(
@@ -360,6 +383,44 @@ export function AccountStatusEmployee({accountStatus, setStatus}){
             icon={require('../assets/icons/sign_up/position.png')}
           />
 
+          <View style={{flexDirection:'row', justifyContent:'flex-start', alignItems:'flex-start'}}>
+            <Pic
+              src={require('../assets/icons/document.png')}
+              scale={30}
+              style={{marginRight: 5}}
+            />
+            <View style={{paddingEnd: 5}}>
+              <View style={{flexDirection:'row', alignItems:'center'}}>
+                <ComponentText medium gray size={15} style={{marginEnd: 4}} >
+                  DOCUMENTATION: 
+                </ComponentText >
+
+                <ComponentText medium gray size={14} >(If applicable)</ComponentText >
+              </View>
+                <ComponentText medium gray size={12}>
+                  This may expedite the authorization process.
+                </ComponentText>  
+
+                <ComponentText medium gray size={12}>
+                  (e.g. business permit)
+                </ComponentText>  
+
+                <DocumentSelector documents={documents} setDocuments={setDocuments}/>
+
+              <View  style={{justifyContent:'center', alignItems:'center',marginTop: 10}}>
+                <TouchableOpacity onPress={()=>{
+                    setDocuments(doc => [...doc, {name:null ,res:null}]);
+                }}>
+                  <Pic
+                    src={require('../assets/icons/add-gray.png')}
+                    scale={30}
+                  />
+                </TouchableOpacity>
+              </View>
+
+            </View>
+
+          </View>
           
           <TouchableOpacity style={styles.SignupBtn} onPress={ () => {
             SignUpButtonClick();
@@ -374,6 +435,8 @@ export function AccountStatusEmployee({accountStatus, setStatus}){
   
   )
 }
+
+
 
 const styles = StyleSheet.create({
   container: {

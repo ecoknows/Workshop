@@ -23,8 +23,7 @@ const RespondEmployer =(res, createdUser)=>{
     sex: createdUser.sex,
     most_skilled: createdUser.most_skilled,
 
-    name_of_document: createdUser.name_of_document,
-    documentation_link: createdUser.documentation_link,
+    documentation_links: createdUser.documentation_links,
     position: createdUser.position,
 
 
@@ -52,8 +51,7 @@ const RespondWorker =(res, createdUser)=>{
     sex: createdUser.sex,
     most_skilled: createdUser.most_skilled,
 
-    name_of_document: createdUser.name_of_document,
-    documentation_link: createdUser.documentation_link,
+    documentation_links: createdUser.documentation_links,
     position: createdUser.position,
 
     nature_of_work: createdUser.nature_of_work,
@@ -136,8 +134,7 @@ userRouter.post(
       user.address = body.address;
       user.city = body.city;
       user.sex = body.sex;
-      user.name_of_document = body.name_of_document;
-      user.documentation_link = body.documentation_link;
+      user.documentation_links = body.documentation_links;
       user.position = body.position;
 
       if(body.status == 'Employer'){
@@ -151,7 +148,7 @@ userRouter.post(
 
       }else{
         user.is_employer = false,
-        nature_of_work = body.nature_of_work;
+        user.nature_of_work = body.nature_of_work;
         const verifiedUser = await user.save();
 
         

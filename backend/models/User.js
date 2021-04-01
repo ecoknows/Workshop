@@ -17,8 +17,10 @@ const userSchema = new mongoose.Schema(
     city: {type: String, },
     sex: {type: String, },
 
-    name_of_document: {type: String},
-    documentation_link: {type: String},
+    documentation_links: [{
+      name: {type: String},
+      path: {type: String}
+    }],
     position: {type: String},
 
     // EMPLOYER

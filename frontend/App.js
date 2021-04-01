@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { local_api_url } from './constants/urls';
+import Toast from 'react-native-toast-message';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -13,6 +14,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <Navigation />
+      <Toast ref={(ref)=>Toast.setRef(ref)}/>
     </Provider>
   );
 }

@@ -18,8 +18,7 @@ export interface UserInterface {
   city?: string,
   sex?: string,
   status?: string, 
-  name_of_document?: string,
-  documentation_link?: string,
+  documentation_links?: {name: string, path: string}[],
   position?: string,
 
   // EMPLOYER

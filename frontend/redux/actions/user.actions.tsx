@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import {
   USER_SIGNIN_FAIL,
+  USER_SIGNIN_REQUEST,
   USER_SIGNIN_SUCCESS,
   USER_SIGNOUT,
 } from '../types/user.types';
@@ -9,6 +10,7 @@ import {
   check_login_user,
   delete_login_user,
 } from '../../database/current_user';
+import Toast from 'react-native-toast-message';
 
 
 export const update_tag = (most_skilled: (string | number)[]) => async (
@@ -46,6 +48,7 @@ export const signin = (email: string, password: string, navigation: any) => asyn
 
   try {
     const { data } = await Axios.post('/user/login', { email, password });
+    
     if(data){
       dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
       update_login_user(data);
@@ -58,6 +61,8 @@ export const signin = (email: string, password: string, navigation: any) => asyn
           ? error.response.data.message
           : error.message,
     });
+
+    dispatch({ type: USER_SIGNIN_REQUEST});
   }
 };
 
@@ -74,6 +79,14 @@ export const verify = (info: any, status: string, documents: {name: string, file
     if(
       !info.name_of_business || !info.address_of_business || !info.nature_of_business || !info.position
     ){
+      Toast.show({
+        type: 'error',
+        position: 'top',
+        text1: "Please fill up all",
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
       return;
     }
   }
@@ -82,6 +95,14 @@ export const verify = (info: any, status: string, documents: {name: string, file
     if(
       !info.nature_of_work || !info.position
     ){
+      Toast.show({
+        type: 'error',
+        position: 'top',
+        text1: "Please fill up all",
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
       return;
     }
   }
@@ -98,24 +119,27 @@ export const verify = (info: any, status: string, documents: {name: string, file
 
 
 
+  console.log("matakot?");
+  
 
 
   try {
 
     const filteredDocuments = documents.filter(docu => docu.file !== null);
+    let documentation_links = [];
     
     if(filteredDocuments.length > 0){
 
       const formData = new FormData();
       filteredDocuments.forEach((item: any) => {
+        console.log(item);
+        
         formData.append('files[]',{
-          name: item.file.name,
+          name: item.name || 'unknown',
           type: item.file.type,
           uri: item.file.uri,
         });
       })
-
-      console.log("formData: ",formData);
       
       const Documents = await Axios.post('/uploads/documents',formData, {
         headers: {
@@ -124,20 +148,20 @@ export const verify = (info: any, status: string, documents: {name: string, file
       });
 
       if(Documents.data){
-        console.log(Documents.data, 'success?');
-        
+        documentation_links = Documents.data;
       }
     }
 
     const { data } = await Axios.post(`/user/register/account?email=${userData.email}`, {
       ...userData,
-      ...info
+      ...info,
+      documentation_links,
     });
     
     if(data){
       dispatch({ type: USER_SIGNIN_SUCCESS, payload: data});
+      
       update_login_user(data);
-
     }
   } catch (error) {
     dispatch({

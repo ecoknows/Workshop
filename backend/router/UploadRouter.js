@@ -32,7 +32,15 @@ uploadRouter.post('/', upload.single('image'), (req, res) => {
 });
 
 uploadRouter.post('/documents', document_upload.array('files[]',12), (req, res) => {
-  res.send(`/${req.files.path}`);
+  if(req.files){
+    const files = req.files.map(value=> {
+      return {
+          name: value.originalname,
+          path: '/' + value.path,
+      }
+    })
+    res.send(files);
+  }
 });
 
 export default uploadRouter;
