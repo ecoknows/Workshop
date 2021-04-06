@@ -14,14 +14,14 @@ export function openDrawerAction(tabSelected: number){
          payload: {status : false, tabSelected},
      }
  }
- export function openBottomDrawerAction(tabSelected: number){
+ export function openBottomDrawerAction(tabSelected: string){
      return{
          type: BOTTOM_DRAWER_TEXT,
          payload: {status: true,tabSelected},
      }
  }
 
- export function closeBottomDrawerAction(tabSelected: number){
+ export function closeBottomDrawerAction(tabSelected: string){
     return{
         type: BOTTOM_DRAWER_TEXT,
         payload: {status: false,tabSelected},

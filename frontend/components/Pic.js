@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Image, Dimensions } from 'react-native';
-import { theme } from '../constants';
+import {StyleSheet, Image, Dimensions} from 'react-native';
+import {theme} from '../constants';
 import View from './View';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 const IMAGE_SIZE_PERCENT = 0.3; // 10%
 
-const Pic = (props) => {
+const Pic = props => {
   const {
     style,
     children,
@@ -28,12 +28,12 @@ const Pic = (props) => {
   } = props;
 
   const PicStyle = [
-    flex == false && { flex: 0 },
-    flex && { flex: flex },
+    flex == false && {flex: 0},
+    flex && {flex: flex},
     styles.pic,
 
     // size
-    scale && { height: scale, width: scale },
+    scale && {height: scale, width: scale},
     profile_picture && styles.profile_picture,
     style,
   ];
@@ -81,7 +81,7 @@ const Pic = (props) => {
         <Image
           style={[
             PicStyle,
-            { height: theme.width * 0.15, width: theme.width * 0.15 },
+            {height: theme.width * 0.15, width: theme.width * 0.15},
           ]}
           source={src}
           {...rest}
@@ -133,7 +133,7 @@ const Pic = (props) => {
         <Image
           style={[
             PicStyle,
-            { height: theme.width * 0.26, width: theme.width * 0.26 },
+            {height: theme.width * 0.26, width: theme.width * 0.26},
           ]}
           source={src}
           {...rest}
@@ -183,7 +183,7 @@ const Pic = (props) => {
           }}
         />
         <Image
-          style={[PicStyle, { borderColor: theme.colors.green }]}
+          style={[PicStyle, {borderColor: theme.colors.green}]}
           source={src}
           {...rest}
         />
@@ -206,7 +206,7 @@ const Pic = (props) => {
         <Image
           style={[
             PicStyle,
-            { height: theme.width * 0.25, width: theme.width * 0.25 },
+            {height: theme.width * 0.25, width: theme.width * 0.25},
           ]}
           source={src}
           {...rest}
@@ -223,11 +223,15 @@ const Pic = (props) => {
           style={{
             position: 'absolute',
             resizeMode: 'contain',
-            height: height * 0.41,
-            width: width * 0.41,
+            height: 150,
+            width: 150,
           }}
         />
-        <Image style={[PicStyle]} source={src} {...rest} />
+        <Image
+          style={[PicStyle, {height: 111, width: 111}]}
+          source={src}
+          {...rest}
+        />
       </View>
     );
   }

@@ -6,5 +6,5 @@ export interface DrawerType {
 }
 export interface BottomDrawerType {
     type: typeof BOTTOM_DRAWER_TEXT,
-    payload: {status: boolean, tabSelected: number}
+    payload: {status: boolean, tabSelected: string}
 }

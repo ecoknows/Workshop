@@ -1,28 +1,33 @@
-import React, { useRef, useState, useEffect } from 'react';
-import {
-  StyleSheet,
-  Animated,
-  TouchableWithoutFeedback,
-} from 'react-native';
-import { theme } from '../constants';
+import React, {useRef, useState, useEffect} from 'react';
+import {StyleSheet, Animated, TouchableWithoutFeedback} from 'react-native';
+import {theme} from '../constants';
 import View from './View';
-import { useDispatch, useSelector } from 'react-redux';
-import { closeBottomDrawerAction } from '../redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {closeBottomDrawerAction} from '../redux';
 import {
   Message,
   Workers,
   Applicants,
   Documents,
-  EditProfile,
+  Settings,
   AddJob,
   JobInfo,
+  ApplyJob,
+  Notification,
+  PersonalInformation,
+  ContactInformation,
+  Password,
+  PrivacyPolicy,
+  HelpCenter,
+  Eula,
 } from '../bottom_drawer_screens';
+import {tabs} from '../constants/theme';
 
 let is_drawer_open = false;
 
 export default function BottomDrawer(props) {
   const [hide, setHide] = useState(true);
-  const { bottomDrawer } = useSelector((state) => state.bottomDrawerState);
+  const {bottomDrawer} = useSelector(state => state.bottomDrawerState);
   const dispatch = useDispatch();
   const UserChoice = check_user_choice(bottomDrawer.tabSelected);
 
@@ -42,15 +47,13 @@ export default function BottomDrawer(props) {
       toValue: UserChoice.height,
       duration: 1000,
       useNativeDriver: true,
-    }).start(({ finished }) => {
+    }).start(({finished}) => {
       setHide(true);
     });
   };
 
   const handleClose = () => {
-    dispatch(
-      closeBottomDrawerAction(bottomDrawer.tabSelected)
-    );
+    dispatch(closeBottomDrawerAction(bottomDrawer.tabSelected));
   };
 
   useEffect(() => {
@@ -88,7 +91,7 @@ export default function BottomDrawer(props) {
   );
 }
 
-function Fade({ drawer_anim, handleClose, UserChoice }) {
+function Fade({drawer_anim, handleClose, UserChoice}) {
   return (
     <TouchableWithoutFeedback onPress={handleClose}>
       <View
@@ -111,53 +114,72 @@ function Fade({ drawer_anim, handleClose, UserChoice }) {
 
 function check_user_choice(code) {
   switch (code) {
-    case 0:
+    case tabs.employerTabs[0]:
+      return {
+        height: theme.height * 0.9,
+      };
+    case tabs.employerTabs[1]:
+      return {
+        height: theme.height * 0.9,
+      };
+    case tabs.employerTabs[2]:
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Help Center':
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Privacy Policy':
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Eula':
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Documents':
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Contact Information':
+      return {
+        height: theme.height * 0.6,
+      };
+    case 'Personal Information':
       return {
         height: theme.height * 0.5,
       };
-    case 1:
+    case 'Password':
+      return {
+        height: theme.height * 0.5,
+      };
+    case 'Add Job':
       return {
         height: theme.height * 0.9,
       };
-    case 2:
+    case 'Job Info':
       return {
         height: theme.height * 0.9,
       };
-    case 3:
+    case 'Apply Job':
       return {
         height: theme.height * 0.9,
       };
-    case 4:
+    case 'Notification':
       return {
         height: theme.height * 0.9,
       };
-    case 5:
+    default:
       return {
-        height: theme.height * 0.9,
-      };
-    case 6:
-      return {
-        height: theme.height * 0.9,
+        height: theme.height * 0.5,
       };
   }
 }
 
-function TabSelectedView({
-  tabSelected,
-  drawer_anim,
-  handleClose,
-  UserChoice,
-}) {
+function TabSelectedView({tabSelected, drawer_anim, handleClose, UserChoice}) {
   switch (tabSelected) {
-    case 0:
-      return (
-        <EditProfile
-          drawer_anim={drawer_anim}
-          handleClose={handleClose}
-          UserChoice={UserChoice}
-        />
-      );
-    case 1:
+    case tabs.employerTabs[0]:
       return (
         <Message
           drawer_anim={drawer_anim}
@@ -165,7 +187,7 @@ function TabSelectedView({
           UserChoice={UserChoice}
         />
       );
-    case 2:
+    case tabs.employerTabs[1]:
       return (
         <Workers
           drawer_anim={drawer_anim}
@@ -173,7 +195,7 @@ function TabSelectedView({
           UserChoice={UserChoice}
         />
       );
-    case 3:
+    case tabs.employerTabs[2]:
       return (
         <Applicants
           drawer_anim={drawer_anim}
@@ -181,7 +203,31 @@ function TabSelectedView({
           UserChoice={UserChoice}
         />
       );
-    case 4:
+    case 'Help Center':
+      return (
+        <HelpCenter
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Privacy Policy':
+      return (
+        <PrivacyPolicy
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Eula':
+      return (
+        <Eula
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Documents':
       return (
         <Documents
           drawer_anim={drawer_anim}
@@ -189,7 +235,31 @@ function TabSelectedView({
           UserChoice={UserChoice}
         />
       );
-    case 5:
+    case 'Contact Information':
+      return (
+        <ContactInformation
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Password':
+      return (
+        <Password
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Personal Information':
+      return (
+        <PersonalInformation
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Add Job':
       return (
         <AddJob
           drawer_anim={drawer_anim}
@@ -197,9 +267,25 @@ function TabSelectedView({
           UserChoice={UserChoice}
         />
       );
-    case 6:
+    case 'Job Info':
       return (
         <JobInfo
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Apply Job':
+      return (
+        <ApplyJob
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Notification':
+      return (
+        <Notification
           drawer_anim={drawer_anim}
           handleClose={handleClose}
           UserChoice={UserChoice}

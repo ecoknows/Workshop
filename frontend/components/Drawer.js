@@ -1,19 +1,22 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {
   StyleSheet,
   Animated,
   StatusBar,
   TouchableWithoutFeedback,
   TouchableOpacity,
+  Modal,
 } from 'react-native';
-import { theme } from '../constants';
+import {theme} from '../constants';
 import View from './View';
 import Pic from './Pic';
 import Text from './Text';
-import { useDispatch, useSelector } from 'react-redux';
-import { closeDrawerAction, openBottomDrawerAction, signout } from '../redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {closeDrawerAction, openBottomDrawerAction, signout} from '../redux';
 import Skills from './Skills';
-import { local_url } from '../constants/urls';
+import {local_url} from '../constants/urls';
+import {tabs} from '../constants/theme';
+import {Settings} from '../modals';
 
 let is_drawer_open = false;
 const LOG_OUT = 6;
@@ -21,7 +24,8 @@ const LOG_OUT = 6;
 export default function Drawer({navigation}) {
   const [hide, setHide] = useState(true);
   const drawer_anim = useRef(new Animated.Value(-theme.height * 0.55)).current;
-  const { drawer } = useSelector((state) => state.drawerState);
+  const {drawer} = useSelector(state => state.drawerState);
+  const {userData} = useSelector(state => state.userDetails);
   const dispatch = useDispatch();
   const openDrawer = () => {
     Animated.timing(drawer_anim, {
@@ -35,20 +39,19 @@ export default function Drawer({navigation}) {
       toValue: -theme.height * 0.55,
       duration: 1000,
       useNativeDriver: true,
-    }).start(({ finished }) => {
+    }).start(({finished}) => {
       setHide(true);
-      if(drawer.tabSelected == LOG_OUT){
-        navigation.current?.navigate('Login')
+      if (drawer.tabSelected == LOG_OUT) {
         dispatch(signout());
       }
     });
   };
 
-  const handleClose = (status) => {
+  const handleClose = status => {
     dispatch(closeDrawerAction(status));
   };
 
-  const openBottomDrawer = (tabSelected) => {
+  const openBottomDrawer = tabSelected => {
     dispatch(openBottomDrawerAction(tabSelected));
   };
 
@@ -77,14 +80,15 @@ export default function Drawer({navigation}) {
         drawer_anim={drawer_anim}
         handleClose={handleClose}
         openBottomDrawer={openBottomDrawer}
+        navigation={navigation}
       />
     </View>
   );
 }
 
-function Fade({ drawer_anim, handleClose }) {
+function Fade({drawer_anim, handleClose}) {
   return (
-    <TouchableWithoutFeedback onPress={()=>handleClose(-1)}>
+    <TouchableWithoutFeedback onPress={() => handleClose(-1)}>
       <View
         animated
         flex={false}
@@ -103,10 +107,9 @@ function Fade({ drawer_anim, handleClose }) {
   );
 }
 
-function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
+function DrawerView({drawer_anim, handleClose, openBottomDrawer, navigation}) {
   const dispatch = useDispatch();
-  const { userData } = useSelector((state) => state.userDetails);
-
+  const {userData} = useSelector(state => state.userDetails);
   return (
     <View
       animated
@@ -120,16 +123,21 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
             },
           ],
         },
-      ]}
-    >
+      ]}>
       <View>
         <TouchableOpacity
-          style={{ position: 'absolute', left: '2%', padding: 10 }}
-          onPress={() => handleClose(-1)}
-        >
+          style={{position: 'absolute', left: '2%', padding: 10}}
+          onPress={() => handleClose(-1)}>
           <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
         </TouchableOpacity>
-        <Pic src={ userData?.profile_pic ? {uri:local_url + userData?.profile_pic} : require('../assets/image/user/man.png')} profile_picture />
+        <Pic
+          src={
+            userData?.profile_pic
+              ? {uri: local_url + userData?.profile_pic}
+              : require('../assets/image/user/man.png')
+          }
+          profile_picture
+        />
 
         <View center middle>
           <Text extra_bold gray size={17}>
@@ -140,7 +148,7 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
           </Text>
         </View>
 
-        <View flex={false} style={{ width: '90%' }} center middle>
+        <View flex={false} style={{width: '90%'}} center middle>
           <Skills
             skills={userData?.most_skilled}
             authorized={userData?.authorized || 0}
@@ -149,51 +157,42 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
             add
           />
         </View>
-        <View flex={false} center middle style={{ marginTop: 20 }}>
+
+        <View flex={false} center middle style={{marginTop: 20}}>
+          {userData?.is_employer
+            ? tabs.employerTabs.map((item, index) => (
+                <Text
+                  key={index}
+                  semi_bold
+                  size={16}
+                  gray
+                  touchable
+                  press={() => openBottomDrawer(item)}>
+                  {item}
+                </Text>
+              ))
+            : tabs.workerTabs.map((item, index) => (
+                <Text
+                  key={index}
+                  semi_bold
+                  size={16}
+                  gray
+                  touchable
+                  press={() => openBottomDrawer(item)}>
+                  {item}
+                </Text>
+              ))}
+
           <Text
             semi_bold
             size={16}
             gray
             touchable
-            press={() => openBottomDrawer(0)}
-          >
-            Edit Profile
-          </Text>
-          <Text
-            semi_bold
-            size={16}
-            gray
-            touchable
-            press={() => openBottomDrawer(1)}
-          >
-            Messages
-          </Text>
-          <Text
-            semi_bold
-            size={16}
-            gray
-            touchable
-            press={() => openBottomDrawer(2)}
-          >
-            Workers
-          </Text>
-          <Text
-            semi_bold
-            size={16}
-            gray
-            touchable
-            press={() => openBottomDrawer(3)}
-          >
-            Applicants
-          </Text>
-          <Text
-            semi_bold
-            size={16}
-            gray
-            touchable
-            press={() => openBottomDrawer(4)}
-          >
-            Documents
+            press={() => {
+              navigation.current.navigate('Settings');
+              handleClose(-1);
+            }}>
+            Settings
           </Text>
 
           <Text
@@ -203,11 +202,9 @@ function DrawerView({ drawer_anim, handleClose, openBottomDrawer }) {
             touchable
             press={() => {
               handleClose(LOG_OUT);
-            }}
-          >
+            }}>
             Log out
           </Text>
-          
         </View>
       </View>
     </View>
@@ -235,6 +232,6 @@ const styles = StyleSheet.create({
     borderTopStartRadius: 40,
     paddingTop: StatusBar.currentHeight + 5,
     paddingLeft: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
 });

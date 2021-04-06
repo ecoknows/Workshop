@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
 import Table from '../components/Table';
 import Button from '../components/Button';
-import { StyleSheet, FlatList, TouchableOpacity } from 'react-native';
-import { useDispatch } from 'react-redux';
-import { closeBottomDrawerAction } from '../redux';
+import {StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {
+  closeBottomDrawerAction,
+  get_applicant_contact_person,
+  get_applicant_info,
+  RootState,
+} from '../redux';
+import {local_url} from '../constants/urls';
+import {theme} from '../constants';
+import RNFetchBlob from 'rn-fetch-blob';
 
 interface ApplicantsProps {
   UserChoice: {
@@ -17,8 +25,8 @@ interface ApplicantsProps {
 }
 
 const testdata = [
-  { name: 'Github Website', key: 'https://github.com/', download: false },
-  { name: 'CISCO Certificate', key: 'https://github.com/', download: true },
+  {name: 'Github Website', key: 'https://github.com/', download: false},
+  {name: 'CISCO Certificate', key: 'https://github.com/', download: true},
   {
     name: 'TESDA National Certificate',
     key: 'https://github.com/',
@@ -27,11 +35,16 @@ const testdata = [
 ];
 
 function Applicants(props: ApplicantsProps) {
-  const { UserChoice, drawer_anim } = props;
+  const {UserChoice, drawer_anim} = props;
   const [isApplicant, setIsApplicant] = useState({
     status: false,
     item: {},
   });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(get_applicant_contact_person());
+  }, []);
   return (
     <View
       animated
@@ -47,8 +60,7 @@ function Applicants(props: ApplicantsProps) {
             },
           ],
         },
-      ]}
-    >
+      ]}>
       {isApplicant.status ? (
         <ApplicantInfo
           isApplicant={isApplicant}
@@ -62,19 +74,27 @@ function Applicants(props: ApplicantsProps) {
 }
 
 function ApplicantInfo(props: any) {
-  const { isApplicant, setIsApplicant } = props;
+  const {isApplicant, setIsApplicant} = props;
+  const dispatch = useDispatch();
+  const ApplicantInfo = useSelector(
+    (state: RootState) => state.selectedApplicantState,
+  );
+
+  useEffect(() => {
+    dispatch(get_applicant_info(isApplicant.item));
+  }, []);
+
   return (
     <View height="100%">
-      <View row center middle style={{ marginBottom: 15 }}>
+      <View row center middle style={{marginBottom: 15}}>
         <TouchableOpacity
-          style={{ position: 'absolute', left: '6%', padding: 10 }}
+          style={{position: 'absolute', left: '6%', padding: 10}}
           onPress={() =>
             setIsApplicant({
               status: false,
               item: {},
             })
-          }
-        >
+          }>
           <Pic src={require('../assets/icons/profile/back.png')} scale={25} />
         </TouchableOpacity>
 
@@ -84,21 +104,30 @@ function ApplicantInfo(props: any) {
       </View>
 
       <View middle>
-        <Pic profile_picture src={isApplicant.item.image} medium green />
+        <Pic
+          profile_picture
+          src={
+            isApplicant.item.applicant_name_profile
+              ? {uri: local_url + isApplicant.item.applicant_name_profile}
+              : require('../assets/image/user/man.png')
+          }
+          medium
+          green
+        />
 
         <Text extra_bold size={18} color="#65676A">
-          {isApplicant.item.name}
+          {isApplicant.item.applicant_name}
         </Text>
-        <Text medium size={14} color="#65676A" style={{ marginBottom: 15 }}>
+        <Text medium size={14} color="#65676A" style={{marginBottom: 15}}>
           {isApplicant.item.course}
         </Text>
         <TouchableOpacity style={styles.resume}>
           <Pic
             src={require('../assets/icons/profile/document.png')}
             scale={19}
-            style={{ marginEnd: 10 }}
+            style={{marginEnd: 10}}
           />
-          <Text extra_bold size={13} color="#292929" style={{ marginEnd: 30 }}>
+          <Text extra_bold size={13} color="#292929" style={{marginEnd: 30}}>
             Resume
           </Text>
 
@@ -114,8 +143,8 @@ function ApplicantInfo(props: any) {
       </Text>
       <View flex>
         <Table
-          maxHeight="100%"
-          data={testdata}
+          data={ApplicantInfo?.data?.documentation_links}
+          maxHeight={theme.height * 0.5}
           renderHeader={() => (
             <View row paddingVertical={3}>
               <View flex={1.3}>
@@ -125,12 +154,12 @@ function ApplicantInfo(props: any) {
               </View>
               <View flex middle>
                 <Text bold gray>
-                  Link
+                  Download
                 </Text>
               </View>
             </View>
           )}
-          renderItem={({ item }, index) => (
+          renderItem={({item}, index) => (
             <View
               row
               key={index}
@@ -140,30 +169,37 @@ function ApplicantInfo(props: any) {
                 borderTopColor: '#CCCCCC',
                 borderTopWidth: 1,
                 paddingVertical: 3,
-              }}
-            >
+              }}>
               <View flex={1.3}>
                 <Text gray>{item.name}</Text>
               </View>
-              <View flex middle>
-                {item.download ? (
-                  <TouchableOpacity
-                    style={{
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexDirection: 'row',
-                    }}
-                  >
-                    <Pic
-                      src={require('../assets/icons/profile/download_green.png')}
-                      scale={15}
-                      style={{ marginEnd: 5 }}
-                    />
-                    <Text green>Download</Text>
-                  </TouchableOpacity>
-                ) : (
-                  <Text green>{item.key}</Text>
-                )}
+              <View flex middle row center>
+                <TouchableOpacity
+                  onPress={() => {
+                    const {config, fs} = RNFetchBlob;
+                    const date = new Date();
+
+                    const {DownloadDir} = fs.dirs; // You can check the available directories in the wiki.
+                    const options = {
+                      fileCache: true,
+                      addAndroidDownloads: {
+                        useDownloadManager: true, // true will use native manager and be shown on notification bar.
+                        notification: true,
+                        path: `${DownloadDir}/${item.file_name}`,
+                        description: 'Downloading.',
+                      },
+                    };
+
+                    config(options)
+                      .fetch('GET', `${local_url}${item.path}`)
+                      .then(res => {});
+                  }}
+                  style={[styles.border_status, {borderColor: '#148D00'}]}>
+                  <Pic
+                    src={require('../assets/icons/download_green.png')}
+                    scale={17}
+                  />
+                </TouchableOpacity>
               </View>
             </View>
           )}
@@ -184,20 +220,24 @@ function ApplicantInfo(props: any) {
             width: '70%',
             alignSelf: 'center',
             marginTop: '5%',
-          }}
-        >
+          }}>
           Software Developer
         </Text>
 
-        <Button style={{ alignSelf: 'center' }}>Hire</Button>
+        <Button style={{alignSelf: 'center', marginTop: 20}}>Hire</Button>
       </View>
     </View>
   );
 }
 
 function ApplicantsList(props: any) {
-  const { setIsApplicant } = props;
+  const {setIsApplicant} = props;
   const dispatch = useDispatch();
+
+  const ApplicantState = useSelector(
+    (state: RootState) => state.applicantsState,
+  );
+
   return (
     <View>
       <View row center middle>
@@ -205,49 +245,33 @@ function ApplicantsList(props: any) {
           Applicants
         </Text>
         <TouchableOpacity
-          style={{ position: 'absolute', left: '2%', padding: 10 }}
+          style={{position: 'absolute', left: '2%', padding: 10}}
           onPress={() => {
-            dispatch(
-              closeBottomDrawerAction(3)
-            );
-          }}
-        >
+            dispatch(closeBottomDrawerAction('Applicants'));
+          }}>
           <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
         </TouchableOpacity>
       </View>
       <FlatList
         numColumns={3}
-        style={{ width: '100%' }}
-        data={[
-          {
-            name: 'Chevy Quitquitan',
-            course: 'Software Developer',
-            image: require('../assets/image/user/man.png'),
-          },
-          {
-            name: 'John Smith',
-            course: 'Software Developer',
-            image: require('../assets/image/user/man.png'),
-          },
-          {
-            name: 'Elon Musk',
-            course: 'Software Developer',
-            image: require('../assets/image/user/man.png'),
-          },
-          {
-            name: 'Eco Villaraza',
-            course: 'Software Developer',
-            image: require('../assets/image/user/man.png'),
-          },
-        ]}
-        renderItem={({ item }) => (
+        style={{width: '100%'}}
+        data={ApplicantState.data}
+        renderItem={({item}) => (
           <View flex center middle marginBottom={20}>
             <TouchableOpacity
-              onPress={() => setIsApplicant({ status: true, item: item })}
-            >
-              <Pic profile_picture src={item.image} small green />
-              <Text extra_bold size={12} gray>
-                {item.name}
+              onPress={() => setIsApplicant({status: true, item: item})}>
+              <Pic
+                profile_picture
+                src={
+                  item.applicant_name_profile
+                    ? {uri: local_url + item.applicant_name_profile}
+                    : require('../assets/image/user/man.png')
+                }
+                small
+                green
+              />
+              <Text extra_bold size={12} gray style={{textAlign: 'center'}}>
+                {item.person_of_contact}
               </Text>
             </TouchableOpacity>
           </View>
@@ -275,6 +299,17 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#FF900D',
     paddingTop: 15,
+  },
+  border_status: {
+    borderWidth: 1,
+    paddingHorizontal: 5,
+    width: '40%',
+    paddingVertical: 4,
+    borderRadius: 100,
+    marginVertical: 2,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
   resume: {
     backgroundColor: '#E5E5E5',

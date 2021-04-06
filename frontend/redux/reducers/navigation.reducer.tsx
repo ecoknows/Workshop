@@ -4,7 +4,7 @@ interface NAVIGATION_INTERFACE {
     drawer: boolean
 }
 interface BOTTOM_NAVIGATION_INTERFACE {
-    bottomDrawer: {status: boolean, tabSelected: number}
+    bottomDrawer: {status: boolean, tabSelected: string}
 }
 
 const initialState: NAVIGATION_INTERFACE = {
@@ -12,7 +12,7 @@ const initialState: NAVIGATION_INTERFACE = {
 }
 
 const bottomInitialState: BOTTOM_NAVIGATION_INTERFACE = {
-    bottomDrawer: {status: false, tabSelected: 0},
+    bottomDrawer: {status: false, tabSelected: ''},
 }
 export function drawerReducer(state : NAVIGATION_INTERFACE = initialState, action : DrawerType): NAVIGATION_INTERFACE{
     switch(action.type){

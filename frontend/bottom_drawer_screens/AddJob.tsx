@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
@@ -10,12 +10,12 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { theme } from '../constants';
-import { closeBottomDrawerAction } from '../redux';
-import { useDispatch, useSelector } from 'react-redux';
-import { add_job, get_jobs } from '../redux/actions/jobs.actions';
+import {theme} from '../constants';
+import {closeBottomDrawerAction} from '../redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {add_job, get_jobs} from '../redux/actions/jobs.actions';
 
-interface DocumentsProps {
+interface AddJobProps {
   UserChoice: {
     anim_treshold: number;
     height: number;
@@ -28,13 +28,13 @@ const DENIED = 1;
 const PENDING = 2;
 
 const testdata = [
-  { document: 'DTI Registration', status: APPROVED },
-  { document: 'SEC Registration', status: DENIED },
-  { document: 'BIR Registration', status: PENDING },
+  {document: 'DTI Registration', status: APPROVED},
+  {document: 'SEC Registration', status: DENIED},
+  {document: 'BIR Registration', status: PENDING},
 ];
 
-function Documents(props: DocumentsProps) {
-  const { drawer_anim } = props;
+function AddJob(props: AddJobProps) {
+  const {drawer_anim} = props;
   const dispatch = useDispatch();
   const [isProfile, setIsProfile] = useState(false);
   const [profilePic, setProfilePic] = useState(-1);
@@ -44,7 +44,7 @@ function Documents(props: DocumentsProps) {
 
   useEffect(() => {
     setIsProfile(false);
-  }, [profilePic])
+  }, [profilePic]);
 
   return (
     <View
@@ -61,18 +61,20 @@ function Documents(props: DocumentsProps) {
             },
           ],
         },
-      ]}
-    >
+      ]}>
       <ModalBox hide={isProfile} setHide={setIsProfile}>
         <View>
           <View
             row
             borderBottomColor="#CECECE"
             borderBottomWidth={1}
-            paddingBottom={10}
-          >
+            paddingBottom={10}>
             <Pic
-              src={profilePic == -1 ? require('../assets/icons/profile/icon_placeholder.png') : profilePic}
+              src={
+                profilePic == -1
+                  ? require('../assets/icons/profile/icon_placeholder.png')
+                  : profilePic
+              }
               scale={65}
             />
             <View center flex paddingStart={10}>
@@ -82,25 +84,22 @@ function Documents(props: DocumentsProps) {
             </View>
           </View>
           <View center middle paddingTop={10}>
-            <View row style={{flexWrap:'wrap', width : '90%'}}>
+            <View row style={{flexWrap: 'wrap', width: '90%'}}>
               {theme.jobsIcons.map((item, index) => (
-                <View  key={index} paddingRight={12} paddingBottom={10}>
-                  <TouchableOpacity onPress={()=>setProfilePic(item.image)}>
-                    <Pic
-                      src={item.image}
-                      scale={50}
-                    />
+                <View key={index} paddingRight={12} paddingBottom={10}>
+                  <TouchableOpacity onPress={() => setProfilePic(item.image)}>
+                    <Pic src={item.image} scale={50} />
                   </TouchableOpacity>
                 </View>
               ))}
-                <View paddingRight={12} paddingBottom={10}>
-                  <TouchableOpacity>
-                    <Pic
-                      src={require('../assets/icons/profile/job_icons/add_icon.png')}
-                      scale={50}
-                    />
-                  </TouchableOpacity>
-                </View>
+              <View paddingRight={12} paddingBottom={10}>
+                <TouchableOpacity>
+                  <Pic
+                    src={require('../assets/icons/profile/job_icons/add_icon.png')}
+                    scale={50}
+                  />
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
@@ -112,21 +111,22 @@ function Documents(props: DocumentsProps) {
             Add a Job
           </Text>
           <TouchableOpacity
-            style={{ position: 'absolute', left: '2%', padding: 10 }}
+            style={{position: 'absolute', left: '2%', padding: 10}}
             onPress={() => {
-              dispatch(
-                closeBottomDrawerAction(5)
-              );
-            }}
-          >
+              dispatch(closeBottomDrawerAction('Add Job'));
+            }}>
             <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
           </TouchableOpacity>
         </View>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View middle center paddingTop={40}>
             <TouchableOpacity onPress={() => setIsProfile(true)}>
               <Pic
-                src={profilePic == -1 ? require('../assets/icons/profile/icon_placeholder.png') : profilePic}
+                src={
+                  profilePic == -1
+                    ? require('../assets/icons/profile/icon_placeholder.png')
+                    : profilePic
+                }
                 scale={85}
               />
             </TouchableOpacity>
@@ -149,9 +149,12 @@ function Documents(props: DocumentsProps) {
               Available Positions:
             </Text>
             <View center middle row paddingTop={16}>
-              <TouchableOpacity onPress={()=>{
-                setAvailablePositions((parseInt(availablePositions)-1).toString())
-              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  setAvailablePositions(
+                    (parseInt(availablePositions) - 1).toString(),
+                  );
+                }}>
                 <Pic
                   src={require('../assets/icons/profile/circle-minus.png')}
                   scale={30}
@@ -166,9 +169,12 @@ function Documents(props: DocumentsProps) {
                   keyboardType="numeric"
                 />
               </View>
-              <TouchableOpacity onPress={()=>{
-                setAvailablePositions((parseInt(availablePositions)+1).toString())
-              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  setAvailablePositions(
+                    (parseInt(availablePositions) + 1).toString(),
+                  );
+                }}>
                 <Pic
                   src={require('../assets/icons/profile/circle-plus.png')}
                   scale={30}
@@ -193,26 +199,30 @@ function Documents(props: DocumentsProps) {
               middle
               justifyContent="space-around"
               width="80%"
-              alignSelf="center"
-            >
-              <Button onPress={()=>{
-                dispatch(
-                  closeBottomDrawerAction(5)
-                );
-              }}>Cancel</Button>
-              <Button onPress={()=>{
-                dispatch(add_job({       
-                    job: nameOfJob,
-                    current_workers: 0,
-                    current_applicants: 0,
-                    max_workers: parseInt(availablePositions),
-                    description: description,
-                    icons: profilePic,
-                }));
-                dispatch(
-                  closeBottomDrawerAction(5)
-                );
-              }}>Save</Button>
+              marginTop={20}
+              alignSelf="center">
+              <Button
+                onPress={() => {
+                  dispatch(closeBottomDrawerAction('Add Job'));
+                }}>
+                Cancel
+              </Button>
+              <Button
+                onPress={() => {
+                  dispatch(
+                    add_job({
+                      job: nameOfJob,
+                      current_workers: 0,
+                      current_applicants: 0,
+                      max_workers: parseInt(availablePositions),
+                      description: description,
+                      icons: profilePic,
+                    }),
+                  );
+                  dispatch(closeBottomDrawerAction('Add Job'));
+                }}>
+                Save
+              </Button>
             </View>
           </View>
         </ScrollView>
@@ -222,7 +232,7 @@ function Documents(props: DocumentsProps) {
   );
 }
 
-export default Documents;
+export default AddJob;
 
 const styles = StyleSheet.create({
   drawerView: {
@@ -264,7 +274,8 @@ const styles = StyleSheet.create({
   name_of_job: {
     borderBottomColor: '#CECECE',
     borderBottomWidth: 1,
-    paddingBottom: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingStart: 20,
     marginTop: 50,
   },

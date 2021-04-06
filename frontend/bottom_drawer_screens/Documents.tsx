@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
 import Table from '../components/Table';
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import { theme } from '../constants';
-import { closeBottomDrawerAction } from '../redux';
-import { useDispatch } from 'react-redux';
+import {StyleSheet, TouchableOpacity} from 'react-native';
+import {theme} from '../constants';
+import {closeBottomDrawerAction} from '../redux';
+import {useDispatch} from 'react-redux';
 
 interface DocumentsProps {
   UserChoice: {
@@ -21,13 +21,13 @@ const DENIED = 1;
 const PENDING = 2;
 
 const testdata = [
-  { document: 'DTI Registration', status: APPROVED },
-  { document: 'SEC Registration', status: DENIED },
-  { document: 'BIR Registration', status: PENDING },
+  {document: 'DTI Registration', status: APPROVED},
+  {document: 'SEC Registration', status: DENIED},
+  {document: 'BIR Registration', status: PENDING},
 ];
 
 function Documents(props: DocumentsProps) {
-  const { UserChoice, drawer_anim } = props;
+  const {UserChoice, drawer_anim} = props;
   const dispatch = useDispatch();
   const [edit, setEdit] = useState(false);
 
@@ -46,21 +46,17 @@ function Documents(props: DocumentsProps) {
             },
           ],
         },
-      ]}
-    >
+      ]}>
       <View>
         <View row center middle>
           <Text bold size={21} color="#65676A">
             Documents
           </Text>
           <TouchableOpacity
-            style={{ position: 'absolute', left: '2%', padding: 10 }}
+            style={{position: 'absolute', left: '2%', padding: 10}}
             onPress={() => {
-              dispatch(
-                closeBottomDrawerAction(4)
-              );
-            }}
-          >
+              dispatch(closeBottomDrawerAction('Documents'));
+            }}>
             <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
           </TouchableOpacity>
         </View>
@@ -70,19 +66,19 @@ function Documents(props: DocumentsProps) {
           <Text extra_bold size={18} gray>
             Status:
           </Text>
-          <View style={[styles.border, { borderColor: '#F79040' }]}>
+          <View style={[styles.border, {borderColor: '#F79040'}]}>
             <Text medium size={12} color="#F79040">
               Pending
             </Text>
           </View>
         </View>
 
-        <Text size={14} color="#858585" style={{ marginTop: 10 }}>
+        <Text size={14} color="#858585" style={{marginTop: 10}}>
           Uploading of documents related to the legitimacy of the business will
           earn an authorized tag.
         </Text>
       </View>
-      <View style={{ alignItems: 'flex-end' }}>
+      <View style={{alignItems: 'flex-end'}}>
         {!edit ? (
           <TouchableOpacity onPress={() => setEdit(!edit)}>
             <Pic
@@ -100,10 +96,10 @@ function Documents(props: DocumentsProps) {
         )}
       </View>
       {!edit ? <DocumentStatus /> : <DocumentUpdate />}
-      <Text bold size={18} gray style={{ marginTop: 20 }}>
+      <Text bold size={18} gray style={{marginTop: 20}}>
         Issues
       </Text>
-      <Text color="#7B7B7B" size={14} style={{ marginTop: 5 }}>
+      <Text color="#7B7B7B" size={14} style={{marginTop: 5}}>
         No issues found.
       </Text>
     </View>
@@ -130,7 +126,7 @@ function DocumentStatus(props: any) {
             </View>
           </View>
         )}
-        renderItem={({ item }, index) => (
+        renderItem={({item}, index) => (
           <View
             row
             key={index}
@@ -140,8 +136,7 @@ function DocumentStatus(props: any) {
               borderTopColor: '#CCCCCC',
               borderTopWidth: 1,
               paddingVertical: 3,
-            }}
-          >
+            }}>
             <View flex={1.3}>
               <Text gray>{item.document}</Text>
             </View>
@@ -164,8 +159,8 @@ function DocumentStatus(props: any) {
         )}
       />
       <View style={styles.updateTop}>
-        <TouchableOpacity style={{ flexDirection: 'row' }}>
-          <Text color="#8E8E8E" size={14} style={{ flex: 1.3 }}>
+        <TouchableOpacity style={{flexDirection: 'row'}}>
+          <Text color="#8E8E8E" size={14} style={{flex: 1.3}}>
             Add document...
           </Text>
           <View flex center middle>
@@ -199,7 +194,7 @@ function DocumentUpdate(props: any) {
             </View>
           </View>
         )}
-        renderItem={({ item }, index) => (
+        renderItem={({item}, index) => (
           <View
             row
             key={index}
@@ -209,19 +204,17 @@ function DocumentUpdate(props: any) {
               borderTopColor: '#CCCCCC',
               borderTopWidth: 1,
               paddingVertical: 3,
-            }}
-          >
+            }}>
             <View flex={1.3}>
               <Text gray>{item.document}</Text>
             </View>
             <View flex middle row center>
               <TouchableOpacity
-                style={[styles.border_status, { borderColor: '#148D00' }]}
-              >
+                style={[styles.border_status, {borderColor: '#148D00'}]}>
                 <Pic
                   src={require('../assets/icons/profile/share-arrow.png')}
                   scale={11}
-                  style={{ marginRight: 3 }}
+                  style={{marginRight: 3}}
                 />
                 <Text medium size={10} color="#148D00">
                   Update
@@ -229,12 +222,11 @@ function DocumentUpdate(props: any) {
               </TouchableOpacity>
 
               <TouchableOpacity
-                style={[styles.border_status, { borderColor: '#FF0000' }]}
-              >
+                style={[styles.border_status, {borderColor: '#FF0000'}]}>
                 <Pic
                   src={require('../assets/icons/profile/red-circle.png')}
                   scale={11}
-                  style={{ marginRight: 3 }}
+                  style={{marginRight: 3}}
                 />
                 <Text medium size={10} color="#FF0000">
                   Remove
@@ -250,8 +242,7 @@ function DocumentUpdate(props: any) {
         row
         paddingTop={10}
         justifyContent="space-around"
-        style={styles.updateTop}
-      >
+        style={styles.updateTop}>
         <TouchableOpacity style={styles.fire_btn}>
           <Text color="#F79040" size={12} medium>
             Cancel

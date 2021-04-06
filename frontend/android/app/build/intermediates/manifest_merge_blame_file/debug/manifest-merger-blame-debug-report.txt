@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.frontend"
+3    package="com.camry.workshop"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -14,94 +14,134 @@
 12    <uses-permission android:name="android.permission.INTERNET" />
 12-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:5-67
 12-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:4:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
-14
-15    <queries>
-15-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
-16        <intent>
-16-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
-17            <action android:name="android.media.action.IMAGE_CAPTURE" />
-17-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
-17-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
-18        </intent>
-19    </queries>
-20
-21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-21-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
-21-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:22-78
-22
-23    <application
-23-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:5-24:19
-24        android:name="com.frontend.MainApplication"
-24-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:7-38
-25        android:allowBackup="false"
-25-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:7-34
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
-27        android:debuggable="true"
-28        android:icon="@mipmap/ic_launcher"
-28-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:9:7-41
-29        android:label="@string/app_name"
-29-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:7-39
-30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:7-52
-31        android:theme="@style/AppTheme"
-31-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:7-38
-32        android:usesCleartextTraffic="true" >
-32-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:8:9-44
-33        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-33-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:11:9-86
-33-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:11:19-83
-34        <activity
-34-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:7-23:18
-35            android:name="com.frontend.MainActivity"
-35-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:9-37
-36            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-36-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:9-86
-37            android:label="@string/app_name"
-37-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:9-41
-38            android:launchMode="singleTask"
-38-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:9-40
-39            android:windowSoftInputMode="adjustResize" >
-39-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:9-51
-40            <intent-filter>
-40-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:9-22:25
-41                <action android:name="android.intent.action.MAIN" />
-41-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:13-65
-41-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:21-62
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:13-73
-43-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:23-70
-44            </intent-filter>
-45        </activity>
-46
-47        <provider
-47-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
-48            android:name="androidx.core.content.FileProvider"
-48-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
-49            android:authorities="com.frontend.provider"
-49-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
-50            android:exported="false"
-50-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
-51            android:grantUriPermissions="true" >
-51-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
-52            <meta-data
-52-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
-53                android:name="android.support.FILE_PROVIDER_PATHS"
-53-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
-54                android:resource="@xml/provider_paths" />
-54-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
-55        </provider>
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:5-80
+13-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:5:22-77
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:5-81
+14-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:6:22-78
+15    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+15-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:5-88
+15-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:7:22-85
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:5-79
+16-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:8:22-76
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->[com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+17-->[com.facebook.flipper:flipper:0.75.1] /home/eco/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+18
+19    <queries>
+19-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+20        <intent>
+20-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+21            <action android:name="android.media.action.IMAGE_CAPTURE" />
+21-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+21-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+22        </intent>
+23    </queries> <!-- Required to access Google Play Licensing -->
+24    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+24-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-73
+24-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-70
+25    <!--
+26         Required to keep CPU alive while downloading files
+27        (NOT to keep screen awake)
+28    -->
+29    <uses-permission android:name="android.permission.WAKE_LOCK" />
+29-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-68
+29-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:22-65
+30
+31    <application
+31-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:10:5-29:19
+32        android:name="com.camry.workshop.MainApplication"
+32-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:11:7-38
+33        android:allowBackup="false"
+33-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:15:7-34
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.1.0] /home/eco/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
+35        android:debuggable="true"
+36        android:icon="@mipmap/ic_launcher"
+36-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:13:7-41
+37        android:label="@string/app_name"
+37-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:12:7-39
+38        android:roundIcon="@mipmap/ic_launcher_round"
+38-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:14:7-52
+39        android:theme="@style/AppTheme"
+39-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:16:7-38
+40        android:usesCleartextTraffic="true" >
+40-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:8:9-44
+41        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+41-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:11:9-86
+41-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/debug/AndroidManifest.xml:11:19-83
+42        <activity
+42-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:17:7-28:18
+43            android:name="com.camry.workshop.MainActivity"
+43-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:18:9-37
+44            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+44-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:20:9-86
+45            android:label="@string/app_name"
+45-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:19:9-41
+46            android:launchMode="singleTask"
+46-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:21:9-40
+47            android:windowSoftInputMode="adjustResize" >
+47-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:22:9-51
+48            <intent-filter>
+48-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:23:9-27:25
+49                <action android:name="android.intent.action.MAIN" />
+49-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:13-65
+49-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:24:21-62
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:13-73
+51-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:25:23-70
+52+           
+53                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+53-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:13-77
+53-->/home/eco/GitHub/ecoknows/Camry/frontend/android/app/src/main/AndroidManifest.xml:26:21-75
+54            </intent-filter>
+55        </activity>
 56
-57        <activity
-57-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
-58            android:name="com.yalantis.ucrop.UCropActivity"
-58-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
-59            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-59-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
-60    </application>
-61
-62</manifest>
+57        <provider
+57-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+58            android:name="androidx.core.content.FileProvider"
+58-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+59            android:authorities="com.camry.workshop.provider"
+59-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+60            android:exported="false"
+60-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+61            android:grantUriPermissions="true" >
+61-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+62            <meta-data
+62-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+63                android:name="android.support.FILE_PROVIDER_PATHS"
+63-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+64                android:resource="@xml/provider_paths" />
+64-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+65        </provider>
+66
+67        <activity
+67-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+68            android:name="com.yalantis.ucrop.UCropActivity"
+68-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
+69            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+69-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+70
+71        <provider
+71-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:9-44:20
+72            android:name="com.RNFetchBlob.Utils.FileProvider"
+72-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:13-62
+73            android:authorities="com.camry.workshop.provider"
+73-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-60
+74            android:exported="false"
+74-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-37
+75            android:grantUriPermissions="true" >
+75-->[:rn-fetch-blob] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:13-47
+76            <meta-data
+76-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+77                android:name="android.support.FILE_PROVIDER_PATHS"
+77-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+78                android:resource="@xml/provider_paths" />
+78-->[:react-native-image-crop-picker] /home/eco/GitHub/ecoknows/Camry/frontend/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+79        </provider>
+80    </application>
+81
+82</manifest>

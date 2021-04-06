@@ -2,34 +2,37 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
-    verified: { type: Boolean, required: true},
+    verified: { type: Boolean, required: true },
 
     email: { type: String, required: true },
     password: { type: String, required: true },
     full_name: { type: String, required: true },
     authorized: { type: Number, required: true },
 
-    profile_pic: {type: String},
-    is_employer: { type: Boolean},
-    most_skilled: { type: [String],},
-    birth_day: {type: String, },
-    address: {type: String, },
-    city: {type: String, },
-    sex: {type: String, },
+    profile_pic: { type: String },
+    is_employer: { type: Boolean },
+    most_skilled: { type: [String] },
+    birth_day: { type: String },
+    address: { type: String },
+    city: { type: String },
+    sex: { type: String },
 
-    documentation_links: [{
-      name: {type: String},
-      path: {type: String}
-    }],
-    position: {type: String},
+    documentation_links: [
+      {
+        name: { type: String },
+        path: { type: String },
+        file_name: { type: String },
+      },
+    ],
+    position: { type: String },
 
     // EMPLOYER
-    name_of_business: {type: String},
-    address_of_business: {type: String},
-    nature_of_business: {type: String},
+    name_of_business: { type: String },
+    address_of_business: { type: String },
+    nature_of_business: { type: String },
 
     // EMPLOYEE
-    nature_of_work: {type: String},
+    nature_of_work: { type: String },
   },
   { timestamps: true }
 );

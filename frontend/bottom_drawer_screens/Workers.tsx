@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
@@ -12,9 +12,9 @@ import {
   Animated,
   PanResponder,
 } from 'react-native';
-import { theme } from '../constants';
-import { useDispatch } from 'react-redux';
-import { closeBottomDrawerAction } from '../redux';
+import {theme} from '../constants';
+import {useDispatch} from 'react-redux';
+import {closeBottomDrawerAction} from '../redux';
 
 interface WorkersProps {
   UserChoice: {
@@ -25,7 +25,7 @@ interface WorkersProps {
 }
 
 function Workers(props: WorkersProps) {
-  const { UserChoice, drawer_anim } = props;
+  const {UserChoice, drawer_anim} = props;
   const [isWorker, setIsWorker] = useState({
     status: false,
     item: {},
@@ -44,8 +44,7 @@ function Workers(props: WorkersProps) {
             },
           ],
         },
-      ]}
-    >
+      ]}>
       {isWorker.status ? (
         <WorkerInfo isWorker={isWorker} setIsWorker={setIsWorker} />
       ) : (
@@ -56,10 +55,10 @@ function Workers(props: WorkersProps) {
 }
 
 function WorkerInfo(props: any) {
-  const { isWorker, setIsWorker } = props;
+  const {isWorker, setIsWorker} = props;
   const [edit, setEdit] = useState(false);
   const progressPan = useRef<any>(
-    new Animated.ValueXY({ y: theme.height * 0.7, x: 0 })
+    new Animated.ValueXY({y: theme.height * 0.7, x: 0}),
   ).current;
   const panResponder = useRef(
     PanResponder.create({
@@ -69,28 +68,27 @@ function WorkerInfo(props: any) {
           y: progressPan.y._value,
         });
       },
-      onPanResponderMove: (e, { dy }) => {
-        progressPan.setValue({ y: dy });
+      onPanResponderMove: (e, {dy}) => {
+        progressPan.y.setValue(dy);
       },
-      onPanResponderRelease: (_, { dy }) => {
+      onPanResponderRelease: (_, {dy}) => {
         // progressPan.setValue({ y: 0 });
         progressPan.flattenOffset();
       },
-    })
+    }),
   ).current;
 
   return (
     <View height="100%" paddingBottom={15}>
-      <View row center middle style={{ marginBottom: 15 }}>
+      <View row center middle style={{marginBottom: 15}}>
         <TouchableOpacity
-          style={{ position: 'absolute', left: '6%', padding: 10 }}
+          style={{position: 'absolute', left: '6%', padding: 10}}
           onPress={() =>
             setIsWorker({
               status: false,
               item: {},
             })
-          }
-        >
+          }>
           <Pic src={require('../assets/icons/profile/back.png')} scale={25} />
         </TouchableOpacity>
 
@@ -105,16 +103,14 @@ function WorkerInfo(props: any) {
           extra_bold
           size={18}
           color="#65676A"
-          style={{ alignSelf: 'center' }}
-        >
+          style={{alignSelf: 'center'}}>
           {isWorker.item.name}
         </Text>
         <Text
           medium
           size={14}
           color="#65676A"
-          style={{ marginBottom: 15, alignSelf: 'center' }}
-        >
+          style={{marginBottom: 15, alignSelf: 'center'}}>
           {isWorker.item.course}
         </Text>
       </View>
@@ -136,8 +132,7 @@ function WorkerInfo(props: any) {
           medium
           size={14}
           color="#65676A"
-          style={{ marginTop: 15, alignSelf: 'center' }}
-        >
+          style={{marginTop: 15, alignSelf: 'center'}}>
           Work Progress
         </Text>
       </View>
@@ -153,8 +148,7 @@ function WorkerInfo(props: any) {
             ],
           },
         ]}
-        white
-      >
+        white>
         <View flex>
           <View paddingVertical={15} {...panResponder.panHandlers}>
             <View
@@ -170,14 +164,13 @@ function WorkerInfo(props: any) {
           </View>
 
           <View row middle>
-            <Text bold size={18} color="#65676A" style={{ marginStart: '5%' }}>
+            <Text bold size={18} color="#65676A" style={{marginStart: '5%'}}>
               Progress:
             </Text>
 
             <TouchableOpacity
-              style={{ position: 'absolute', right: '10%' }}
-              onPress={() => setEdit(!edit)}
-            >
+              style={{position: 'absolute', right: '10%'}}
+              onPress={() => setEdit(!edit)}>
               {!edit ? (
                 <Pic
                   src={require('../assets/icons/profile/pencil-edit.png')}
@@ -196,13 +189,13 @@ function WorkerInfo(props: any) {
         </View>
       </View>
 
-      <Button style={{ alignSelf: 'flex-end', marginEnd: 10 }}>Fire</Button>
+      <Button style={{alignSelf: 'flex-end', marginEnd: 10}}>Fire</Button>
     </View>
   );
 }
 
 function WorkersList(props: any) {
-  const { setIsWorker } = props;
+  const {setIsWorker} = props;
   const dispatch = useDispatch();
   return (
     <View>
@@ -211,19 +204,16 @@ function WorkersList(props: any) {
           Workers
         </Text>
         <TouchableOpacity
-          style={{ position: 'absolute', left: '2%', padding: 10 }}
+          style={{position: 'absolute', left: '2%', padding: 10}}
           onPress={() => {
-            dispatch(
-              closeBottomDrawerAction(2)
-            );
-          }}
-        >
+            dispatch(closeBottomDrawerAction('Workers'));
+          }}>
           <Pic src={require('../assets/icons/profile/x.png')} scale={20} />
         </TouchableOpacity>
       </View>
       <FlatList
         numColumns={3}
-        style={{ width: '100%' }}
+        style={{width: '100%'}}
         data={[
           {
             name: 'Chevy Quitquitan',
@@ -246,11 +236,10 @@ function WorkersList(props: any) {
             image: require('../assets/image/user/man.png'),
           },
         ]}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <View flex center middle marginBottom={20}>
             <TouchableOpacity
-              onPress={() => setIsWorker({ status: true, item: item })}
-            >
+              onPress={() => setIsWorker({status: true, item: item})}>
               <Pic profile_picture src={item.image} small />
               <Text extra_bold size={12} gray>
                 {item.name}
@@ -271,18 +260,18 @@ function WorkStatus(props: any) {
         <Table
           maxHeight={theme.height * 0.3}
           data={[
-            { tasks: 'Create UI/UX Design', status: 0 },
-            { tasks: 'Construct Front-end', status: 0 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
-            { tasks: 'Construct Back-end', status: 2 },
+            {tasks: 'Create UI/UX Design', status: 0},
+            {tasks: 'Construct Front-end', status: 0},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
+            {tasks: 'Construct Back-end', status: 2},
           ]}
           renderHeader={() => (
             <View row paddingVertical={3}>
@@ -298,7 +287,7 @@ function WorkStatus(props: any) {
               </View>
             </View>
           )}
-          renderItem={({ item }, index) => (
+          renderItem={({item}, index) => (
             <View
               row
               key={index}
@@ -308,8 +297,7 @@ function WorkStatus(props: any) {
                 borderTopColor: '#CCCCCC',
                 borderTopWidth: 1,
                 paddingVertical: 3,
-              }}
-            >
+              }}>
               <View flex={1.3}>
                 <Text gray>{item.tasks}</Text>
               </View>
@@ -405,15 +393,15 @@ function WorkUpdate(props: any) {
         <Table
           maxHeight={theme.height * 0.3}
           data={[
-            { tasks: 'Create UI/UX Design', status: 0 },
-            { tasks: 'Construct Front-end', status: 0 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
-            { tasks: 'Install Frameworks', status: 1 },
+            {tasks: 'Create UI/UX Design', status: 0},
+            {tasks: 'Construct Front-end', status: 0},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
+            {tasks: 'Install Frameworks', status: 1},
           ]}
           renderHeader={() => (
             <View row paddingVertical={3}>
@@ -424,7 +412,7 @@ function WorkUpdate(props: any) {
               </View>
             </View>
           )}
-          renderItem={({ item }, index) => (
+          renderItem={({item}, index) => (
             <View
               row
               key={index}
@@ -434,8 +422,7 @@ function WorkUpdate(props: any) {
                 borderTopColor: '#CCCCCC',
                 borderTopWidth: 1,
                 paddingVertical: 3,
-              }}
-            >
+              }}>
               <View flex={1.3}>
                 <Text gray>{item.tasks}</Text>
               </View>
@@ -445,16 +432,14 @@ function WorkUpdate(props: any) {
       </View>
 
       <View flex={1.5} style={styles.updateTop}>
-        <TouchableOpacity
-          style={{ alignItems: 'center', flexDirection: 'row' }}
-        >
+        <TouchableOpacity style={{alignItems: 'center', flexDirection: 'row'}}>
           <Text color="#8E8E8E" size={14}>
             Add Task
           </Text>
           <Pic
             src={require('../assets/icons/profile/add_circle.png')}
             scale={25}
-            style={{ position: 'absolute', right: 0 }}
+            style={{position: 'absolute', right: 0}}
           />
         </TouchableOpacity>
         <View middle center row marginTop={20} justifyContent="space-around">

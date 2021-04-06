@@ -1,4 +1,4 @@
-package com.frontend;
+package com.camry.workshop;
 
 import com.facebook.react.ReactActivity;
 

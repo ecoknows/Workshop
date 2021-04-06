@@ -16,13 +16,36 @@ import {useSelector, useDispatch} from 'react-redux';
 import { signin } from '../redux/actions';
 import { red } from 'react-native-redash/lib/module/v1';
 import { theme } from '../constants';
-
+import Toast from 'react-native-toast-message';
 
 function Main({navigation}) {
   const[Hide,setHide] = useState(true);
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState('');
   const dispatch = useDispatch();
+  const {userData, error} = useSelector(state => state.userDetails);
+
+  useEffect(()=>{
+    if(userData){
+      if(userData.verified){
+        navigation.replace('UserScreen');
+      }
+    }
+  },[userData]);
+
+  useEffect(()=>{
+    if(error){
+      Toast.show({
+        type: 'error',
+        position: 'top',
+        text1: error,
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
+    }
+  },[error])
+
   return (
     <ScrollView style={styles.container}>
       <View paddingHorizontal={20} height={theme.height}>

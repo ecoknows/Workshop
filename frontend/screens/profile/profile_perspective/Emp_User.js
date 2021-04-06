@@ -1,14 +1,21 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, TouchableOpacity, StatusBar } from 'react-native';
-import { View, Text, Pic, Table } from '../../../components';
-import { useDispatch, useSelector } from 'react-redux';
-import { openBottomDrawerAction, openDrawerAction } from '../../../redux';
+import React, {useEffect} from 'react';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  StatusBar,
+  ScrollView,
+} from 'react-native';
+import {View, Text, Pic, Table} from '../../../components';
+import {useDispatch, useSelector} from 'react-redux';
+import {openBottomDrawerAction, openDrawerAction} from '../../../redux';
 import Skills from '../../../components/Skills';
-import { theme } from '../../../constants';
-import { add_selected_job, get_jobs } from '../../../redux/actions/jobs.actions';
-import { local_url } from '../../../constants/urls';
+import {theme} from '../../../constants';
+import {add_selected_job, get_jobs} from '../../../redux/actions/jobs.actions';
+import {local_url} from '../../../constants/urls';
+import {height} from '../../../constants/theme';
+import Toast from 'react-native-toast-message';
 
-function Main({ navigation }) {
+function Main({navigation}) {
   return (
     <View flex white>
       <Top navigation={navigation} />
@@ -19,47 +26,61 @@ function Main({ navigation }) {
 
 function Top({navigation}) {
   const dispatch = useDispatch();
-  const JobsState = useSelector((state) => state.jobsListState);
-  const UserState = useSelector((state) => state.userDetails);
+  const JobsState = useSelector(state => state.jobsListState);
+  const UserState = useSelector(state => state.userDetails);
 
-  const CreateJobState = useSelector((state) => state.jobCreateState);
+  const CreateJobState = useSelector(state => state.jobCreateState);
   const {jobCreated} = CreateJobState;
 
-  const { error, loading, jobs } = JobsState;
-  const { userData } = UserState;
-  console.log("UserData: " ,userData);
+  const {error, loading, jobs} = JobsState;
+  const {userData} = UserState;
+
   useEffect(() => {
     dispatch(get_jobs());
+    if (jobCreated) {
+      Toast.show({
+        type: 'success',
+        position: 'top',
+        text1: 'Job Created!',
+        text2: 'Goodluck for finding employees! 💖',
+        visibilityTime: 2000,
+        autoHide: true,
+      });
+    }
   }, [jobCreated]);
 
   return (
     <View
-      paddingHorizontal={5}
-      paddingTop={StatusBar.currentHeight}
-      height="100%"
-    >
+      style={{
+        paddingHorizontal: 20,
+        paddingTop: StatusBar.currentHeight,
+        height: '100%',
+      }}>
       <TouchableOpacity
         style={{
           position: 'absolute',
-          top: StatusBar.currentHeight + 5,
           right: '5%',
+          top: StatusBar.currentHeight,
           height: 40,
           width: 40,
           alignItems: 'flex-end',
         }}
         onPress={() => {
           dispatch(openDrawerAction(0));
-        }}
-      >
+        }}>
         <Pic
           src={require('../../../assets/icons/burger.png')}
-          style={{ resizeMode: 'contain', height: 20, width: 20 }}
+          style={{resizeMode: 'contain', height: 20, width: 20}}
         />
       </TouchableOpacity>
 
       <View center middle>
         <Pic
-          src={userData?.profile_pic ? {uri:local_url + userData?.profile_pic} :require('../../../assets/image/user/man.png')}
+          src={
+            userData?.profile_pic
+              ? {uri: local_url + userData?.profile_pic}
+              : require('../../../assets/image/user/man.png')
+          }
           profile_picture
         />
         <Text extra_bold gray size={23}>
@@ -70,13 +91,16 @@ function Top({navigation}) {
         </Text>
 
         <View width={'80%'} marginVertical={5} center middle>
-          <Skills skills={userData?.most_skilled} authorized={userData?.authorized || 0} />
+          <Skills
+            skills={userData?.most_skilled}
+            authorized={userData?.authorized || 0}
+          />
         </View>
       </View>
 
       <View flex>
         <Table
-          maxHeight="100%"
+          maxHeight={theme.height * 0.5}
           data={jobs}
           renderHeader={() => (
             <View row paddingVertical={3}>
@@ -97,10 +121,10 @@ function Top({navigation}) {
               </View>
             </View>
           )}
-          renderItem={({ item }, index) => (
+          renderItem={({item}, index) => (
             <TouchableOpacity
               onPress={() => {
-                dispatch(openBottomDrawerAction(6));
+                dispatch(openBottomDrawerAction('Job Info'));
                 dispatch(add_selected_job(item));
               }}
               key={index}
@@ -111,13 +135,14 @@ function Top({navigation}) {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-              }}
-            >
+              }}>
               <View flex={1.3}>
                 <Text gray>{item.job}</Text>
               </View>
               <View flex middle>
-                <Text gray>{item.current_workers} / {item.max_workers}</Text>
+                <Text gray>
+                  {item.current_workers} / {item.max_workers}
+                </Text>
               </View>
               <View flex middle>
                 {item.current_workers != item.max_workers ? (
@@ -130,13 +155,12 @@ function Top({navigation}) {
           )}
         />
       </View>
-      <View center middle>
+      <View middle>
         <TouchableOpacity
-          style={{ paddingTop: 10 }}
+          style={{paddingTop: 10}}
           onPress={() => {
-            dispatch(openBottomDrawerAction(5));
-          }}
-        >
+            dispatch(openBottomDrawerAction('Add Job'));
+          }}>
           <View row middle>
             <Pic src={require('../../../assets/icons/profile/job.png')} />
             <Text semi_bold color="#145DCA">

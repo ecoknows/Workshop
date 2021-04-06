@@ -1,22 +1,19 @@
-import React, { useEffect } from 'react';
-import { StyleSheet } from 'react-native';
-import { Text, View } from '../components';
-import { check_login_user } from '../database/current_user';
-import { useSelector, useDispatch } from 'react-redux';
+import React, {useEffect} from 'react';
+import {StyleSheet} from 'react-native';
+import {Text, View} from '../components';
+import {check_login_user} from '../database/current_user';
+import {useSelector, useDispatch} from 'react-redux';
 
-
-
-function Main({ navigation }) {
-
-  const { userData, error } = useSelector(state=> state.userDetails);
+function Main({navigation}) {
+  const {userData, error} = useSelector(state => state.userDetails);
   useEffect(() => {
     if (userData) {
-      if(userData.verified){  
-          navigation.replace('UserScreen'); 
+      if (userData.verified) {
+        navigation.replace('UserScreen');
       }
     }
     if (error) {
-      console.log(error);
+      error;
     }
   }, [userData, error]);
 
@@ -34,8 +31,7 @@ function Main({ navigation }) {
           touchable
           press={() => {
             navigation.navigate('Login');
-          }}
-        >
+          }}>
           Login
         </Text>
         <Text
@@ -43,8 +39,7 @@ function Main({ navigation }) {
           accent
           bold
           touchable
-          press={() => navigation.navigate('SignUp')}
-        >
+          press={() => navigation.navigate('SignUp')}>
           Sign up
         </Text>
       </View>
