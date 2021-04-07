@@ -17,6 +17,7 @@ import {
   SplashScreen,
   Login,
   SignUp,
+  Settings,
   WorkerProfile,
 } from '../screens';
 
@@ -28,7 +29,6 @@ import socketIOClient from 'socket.io-client';
 import {local_url} from '../constants/urls';
 import Axios from 'axios';
 import {get_notifications} from '../redux/actions/notifications.actions';
-import {Settings} from '../modals';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();

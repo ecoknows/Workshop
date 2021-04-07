@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -8,33 +8,35 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   ScrollView,
-  Keyboard } from 'react-native';
+  Keyboard,
+} from 'react-native';
 
-import { current_user_id, get_user, sign_in } from '../database/firebase';
-import { update_login_user } from '../database/current_user';
+import {current_user_id, get_user, sign_in} from '../database/firebase';
+import {update_login_user} from '../database/current_user';
 import {useSelector, useDispatch} from 'react-redux';
-import { signin } from '../redux/actions';
-import { red } from 'react-native-redash/lib/module/v1';
-import { theme } from '../constants';
+import {signin} from '../redux/actions';
+import {red} from 'react-native-redash/lib/module/v1';
+import {theme} from '../constants';
 import Toast from 'react-native-toast-message';
+import {InputPassword} from '../components';
 
 function Main({navigation}) {
-  const[Hide,setHide] = useState(true);
-  const[email,setEmail] = useState('');
-  const[password,setPassword] = useState('');
+  const [Hide, setHide] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const {userData, error} = useSelector(state => state.userDetails);
 
-  useEffect(()=>{
-    if(userData){
-      if(userData.verified){
+  useEffect(() => {
+    if (userData) {
+      if (userData.verified) {
         navigation.replace('UserScreen');
       }
     }
-  },[userData]);
+  }, [userData]);
 
-  useEffect(()=>{
-    if(error){
+  useEffect(() => {
+    if (error) {
       Toast.show({
         type: 'error',
         position: 'top',
@@ -44,62 +46,68 @@ function Main({navigation}) {
         autoHide: true,
       });
     }
-  },[error])
+  }, [error]);
 
   return (
     <ScrollView style={styles.container}>
       <View paddingHorizontal={20} height={theme.height}>
-            <View flex={1} >
-              <Text style={{fontWeight:'bold',fontSize: 38, marginLeft: 20, marginTop: 20, color:'#4f4f4f' }}>Login</Text>
-              <Image source={require('../assets/image/Profile.png')} style={styles.image} resizeMode="contain"/>
-            </View>
+        <View flex={1}>
+          <Text
+            style={{
+              fontWeight: 'bold',
+              fontSize: 38,
+              marginLeft: 20,
+              marginTop: 20,
+              color: '#4f4f4f',
+            }}>
+            Login
+          </Text>
+          <Image
+            source={require('../assets/image/Profile.png')}
+            style={styles.image}
+            resizeMode="contain"
+          />
+        </View>
 
-            <View justifyContent='center' >
-              <TextInput
-                style={styles.input}
-                placeholder='EMAIL ADDRESS'
-                placeholderTextColor='#808080'  
-                returnKeyType='next'
-                onChangeText={ text=>setEmail(text)}
-                value={email}
-              />
+        <View justifyContent="center">
+          <TextInput
+            style={styles.input}
+            placeholder="EMAIL ADDRESS"
+            placeholderTextColor="#808080"
+            returnKeyType="next"
+            onChangeText={text => setEmail(text)}
+            value={email}
+          />
+          <InputPassword
+            style={{fontSize: 18, flex: 1}}
+            placeholder="**********"
+            onChangeText={text => setPassword(text)}
+            value={password}
+          />
+        </View>
 
-              <View style={styles.input}>
-                <TextInput
-                  style={{fontSize: 18,flex: 1}}
-                  placeholder='**********'
-                  placeholderTextColor='#808080'
-                  returnKeyType='done'
-                  secureTextEntry={Hide}
-                  onChangeText={ text=>setPassword(text)}
-                  value={password}
-                />
-                <TouchableOpacity onPress={ () => setHide(!Hide) }>
-                  {/* <AntDesign name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/> */}
-                </TouchableOpacity> 
-              </View>
-
-            </View>
-              
-            <View flex={1} justifyContent='center' alignItems='center' >
-              <View flex={1} justifyContent='flex-end'>
-                <TouchableOpacity style={styles.loginBtn} onPress={()=> dispatch(signin(email,password)) }>
-                  <Text style={styles.loginText}>LOGIN</Text>
-                </TouchableOpacity>
-              </View>
-              <View flex={1} justifyContent='center'>
-                <Text style={{color: '#808080', fontWeight: 'bold'}}>Haven't made an account yet? 
-                  <TouchableWithoutFeedback onPress={()=>navigation.navigate('SignUp')}>
-                    <Text style={{color: '#f68025', fontWeight: 'bold'}}>Sign Up</Text>
-                  </TouchableWithoutFeedback>
+        <View flex={1} justifyContent="center" alignItems="center">
+          <View flex={1} justifyContent="flex-end">
+            <TouchableOpacity
+              style={styles.loginBtn}
+              onPress={() => dispatch(signin(email, password))}>
+              <Text style={styles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
+          </View>
+          <View flex={1} justifyContent="center">
+            <Text style={{color: '#808080', fontWeight: 'bold'}}>
+              Haven't made an account yet?
+              <TouchableWithoutFeedback
+                onPress={() => navigation.navigate('SignUp')}>
+                <Text style={{color: '#f68025', fontWeight: 'bold'}}>
+                  Sign Up
                 </Text>
-              </View>
-            </View>
+              </TouchableWithoutFeedback>
+            </Text>
+          </View>
+        </View>
       </View>
-        
-  </ScrollView>
-    
-    
+    </ScrollView>
   );
 }
 
@@ -111,7 +119,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 10,
   },
-  image:{
+  image: {
     marginTop: 20,
     alignSelf: 'center',
     width: 137,
@@ -119,7 +127,7 @@ const styles = StyleSheet.create({
   },
   form: {
     marginHorizontal: 20,
-    marginTop: 50
+    marginTop: 50,
   },
   text: {
     color: '#f68025',
@@ -127,9 +135,9 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginVertical: 5,
   },
-  input:{
-    borderBottomWidth: 1, 
-    borderStyle: 'solid', 
+  input: {
+    borderBottomWidth: 1,
+    borderStyle: 'solid',
     marginBottom: 20,
     paddingHorizontal: 8,
     paddingVertical: 8,
@@ -141,7 +149,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 5,
     paddingHorizontal: 50,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   loginText: {
     color: '#f68025',

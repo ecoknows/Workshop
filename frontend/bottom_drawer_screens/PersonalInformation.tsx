@@ -1,16 +1,25 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
+import Button from '../components/Button';
 import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
   ScrollView,
 } from 'react-native';
-import {useDispatch} from 'react-redux';
-import {closeBottomDrawerAction} from '../redux';
+import {
+  closeBottomDrawerAction,
+  RootState,
+  update_personal_info,
+} from '../redux';
 import {theme} from '../constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {local_url} from '../constants/urls';
+import ImagePicker from 'react-native-image-crop-picker';
+import Axios from 'axios';
+import Toast from 'react-native-toast-message';
 
 interface PersonalInformationProps {
   UserChoice: {
@@ -24,6 +33,8 @@ function PersonalInformation(props: PersonalInformationProps) {
   const {UserChoice, drawer_anim} = props;
   const [edit, setEdit] = useState(false);
   const dispatch = useDispatch();
+  const [profilePic, setProfilePic] = useState(null);
+  const {userData} = useSelector((state: RootState) => state.userDetails);
   return (
     <View
       animated
@@ -64,12 +75,46 @@ function PersonalInformation(props: PersonalInformationProps) {
             )}
           </TouchableOpacity>
         </View>
-        <Pic src={require('../assets/image/user/man.png')} profile_picture />
+        {edit ? (
+          <View center middle>
+            <TouchableOpacity
+              onPress={() => {
+                ImagePicker.openPicker({
+                  width: 300,
+                  height: 400,
+                  cropping: true,
+                }).then((image: any) => {
+                  setProfilePic(image);
+                });
+              }}>
+              <Pic
+                src={
+                  profilePic
+                    ? {uri: profilePic.path}
+                    : userData.profile_pic
+                    ? {uri: local_url + userData.profile_pic}
+                    : require('../assets/image/user/man.png')
+                }
+                profile_picture
+                edit
+              />
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <Pic
+            src={
+              userData.profile_pic
+                ? {uri: local_url + userData.profile_pic}
+                : require('../assets/image/user/man.png')
+            }
+            profile_picture
+          />
+        )}
 
         {!edit ? (
           <EditProfileStatus setEdit={setEdit} />
         ) : (
-          <EditProfileUpdate setEdit={setEdit} />
+          <EditProfileUpdate setEdit={setEdit} profile={profilePic} />
         )}
       </View>
     </View>
@@ -78,6 +123,7 @@ function PersonalInformation(props: PersonalInformationProps) {
 
 function EditProfileStatus(props: any) {
   const {setEdit} = props;
+  const {userData} = useSelector((state: RootState) => state.userDetails);
 
   return (
     <View>
@@ -95,12 +141,16 @@ function EditProfileStatus(props: any) {
             Name
           </Text>
           <Text medium gray>
-            Jerico C. Villaraza
+            {userData.full_name}
           </Text>
           <Text extra_bold gray size={20}>
             Address
           </Text>
-          <Text>Manila, Philippines</Text>
+          <Text>{userData.address}</Text>
+          <Text extra_bold gray size={20}>
+            City
+          </Text>
+          <Text>{userData.city}, Philippines</Text>
         </View>
 
         <View flex>
@@ -121,22 +171,120 @@ function EditProfileStatus(props: any) {
     </View>
   );
 }
+
 function EditProfileUpdate(props: any) {
+  const {profile} = props;
+  const {userData} = useSelector((state: RootState) => state.userDetails);
+  const dispatch = useDispatch();
+  const [full_name, setFullName] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [city, setCity] = useState(null);
+  const [birth_day, setBirthday] = useState(null);
+  const [sex, setSex] = useState(null);
+  const updateStart = useRef(false);
+
+  useEffect(() => {
+    if (userData && updateStart.current) {
+      Toast.show({
+        type: 'success',
+        position: 'top',
+        text1: 'Update Successful',
+        text2: 'Please try again 🥺',
+        visibilityTime: 4000,
+        autoHide: true,
+      });
+    }
+    updateStart.current = true;
+  }, [userData]);
+
+  async function UploadImage() {
+    const formData = new FormData();
+    formData.append('image', {
+      name: 'deymsan',
+      type: profile.mime,
+      uri: profile.path,
+    });
+
+    try {
+      const {data} = await Axios.post('/uploads', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      if (data) {
+        dispatch(
+          update_personal_info({
+            full_name,
+            birth_day,
+            address,
+            sex,
+            city,
+            profile_pic: data,
+          }),
+        );
+      }
+    } catch (error) {}
+  }
+
+  const verfifyInputs = () => {
+    if (profile != null) {
+      UploadImage();
+    } else {
+      dispatch(
+        update_personal_info({
+          full_name,
+          birth_day,
+          address,
+          sex,
+          city,
+          profile_pic: profile,
+        }),
+      );
+    }
+  };
+
   return (
-    <ScrollView>
-      <View row paddingHorizontal={10}>
+    <ScrollView contentContainerStyle={{paddingVertical: 20}}>
+      <View row paddingHorizontal={10} paddingVertical={20}>
         <View flex paddingEnd={10}>
           <Text extra_bold gray size={20}>
             Name
           </Text>
           <View style={{maxHeight: 90}}>
-            <TextInput style={styles.editInput} multiline maxLength={40} />
+            <TextInput
+              style={styles.editInput}
+              placeholder={userData.full_name}
+              multiline
+              maxLength={40}
+              value={full_name}
+              onChangeText={text => setFullName(text)}
+            />
           </View>
           <Text extra_bold gray size={20}>
             Address
           </Text>
           <View style={{maxHeight: 90}}>
-            <TextInput style={styles.editInput} multiline maxLength={40} />
+            <TextInput
+              style={styles.editInput}
+              placeholder={userData.address}
+              multiline
+              maxLength={40}
+              value={address}
+              onChangeText={text => setAddress(text)}
+            />
+          </View>
+          <Text extra_bold gray size={20}>
+            City
+          </Text>
+          <View style={{maxHeight: 90}}>
+            <TextInput
+              style={styles.editInput}
+              placeholder={userData.city}
+              multiline
+              maxLength={40}
+              value={city}
+              onChangeText={text => setCity(text)}
+            />
           </View>
         </View>
 
@@ -145,15 +293,34 @@ function EditProfileUpdate(props: any) {
             Birthday
           </Text>
           <View style={{maxHeight: 90}}>
-            <TextInput style={styles.editInput} multiline maxLength={40} />
+            <TextInput
+              style={styles.editInput}
+              placeholder={userData.birth_day}
+              multiline
+              maxLength={40}
+              value={birth_day}
+              onChangeText={text => setBirthday(text)}
+            />
           </View>
           <Text extra_bold gray size={20}>
             Sex
           </Text>
           <View style={{maxHeight: 90}}>
-            <TextInput style={styles.editInput} multiline maxLength={40} />
+            <TextInput
+              style={styles.editInput}
+              placeholder={userData.sex}
+              multiline
+              maxLength={40}
+              value={sex}
+              onChangeText={text => setSex(text)}
+            />
           </View>
         </View>
+      </View>
+
+      <View row justifyContent="space-around">
+        <Button>Cancel</Button>
+        <Button onPress={verfifyInputs}>Save</Button>
       </View>
     </ScrollView>
   );

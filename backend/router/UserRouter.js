@@ -3,7 +3,7 @@ import expressAsyncHandler from 'express-async-handler';
 import User from '../models/User.js';
 import bcrypt from 'bcryptjs';
 import { NEW } from '../api/api_constants.js';
-import { generateToken } from '../utils.js';
+import { generateToken, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
@@ -167,6 +167,30 @@ userRouter.post(
       });
     } else {
       res.status(401).send({ message: 'Email already exist!' });
+    }
+  })
+);
+
+userRouter.put(
+  '/update/:id/personal_info',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const body = req.body;
+    const user = await User.findById(id);
+    if (user) {
+      user.full_name = body.full_name ? body.full_name : user.full_name;
+      user.address = body.address ? body.address : user.address;
+      user.city = body.city ? body.city : user.city;
+      user.birth_day = body.birth_day ? body.birth_day : user.birth_day;
+      user.sex = body.sex ? body.sex : user.sex;
+      user.profile_pic = body.profile_pic ? body.profile_pic : user.profile_pic;
+      const createdUser = await user.save();
+      if (createdUser.is_employer) {
+        RespondEmployer(res, createdUser);
+      } else {
+        RespondWorker(res, createdUser);
+      }
     }
   })
 );

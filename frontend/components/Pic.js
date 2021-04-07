@@ -18,6 +18,8 @@ const Pic = props => {
     large,
     small,
 
+    edit,
+
     // constant sizes
     medium,
 
@@ -210,6 +212,38 @@ const Pic = props => {
           ]}
           source={src}
           {...rest}
+        />
+      </View>
+    );
+  }
+
+  if (profile_picture && edit) {
+    return (
+      <View center middle>
+        <Image
+          source={require('../assets/image/profile_pic_small.png')}
+          style={{
+            position: 'absolute',
+            resizeMode: 'contain',
+            height: 150,
+            width: 150,
+          }}
+        />
+        <Image
+          style={[PicStyle, {height: 111, width: 111}]}
+          source={src}
+          {...rest}
+        />
+        <Image
+          source={require('../assets/icons/circle-plus.png')}
+          style={{
+            position: 'absolute',
+            resizeMode: 'contain',
+            bottom: 20,
+            right: 10,
+            height: 25,
+            width: 25,
+          }}
         />
       </View>
     );

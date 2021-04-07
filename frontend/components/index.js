@@ -10,6 +10,7 @@ import CirclePercent from './CirclePercent';
 import Button from './Button';
 import ModalBox from './ModalBox';
 import Input from './Input';
+import InputPassword from './InputPassword';
 
 export {
   Text,
@@ -24,4 +25,5 @@ export {
   Button,
   ModalBox,
   Input,
+  InputPassword,
 };

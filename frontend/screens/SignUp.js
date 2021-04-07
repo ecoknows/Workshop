@@ -26,7 +26,6 @@ import Axios from 'axios';
 import Toast from 'react-native-toast-message';
 
 function Main({navigation}) {
-  const [Hide, setHide] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -159,78 +158,52 @@ function Main({navigation}) {
                   : require('../assets/image/user/man.png')
               }
               profile_picture
+              edit
             />
           </TouchableOpacity>
         </View>
 
         <View style={{padding: 5}}>
-          <View style={styles.input}>
-            <Pic
-              src={require('../assets/icons/sign_up/user.png')}
-              style={{marginRight: 10}}
-            />
-            <TextInput
-              placeholder="FULL NAME"
-              placeholderTextColor="#808080"
-              returnKeyType="next"
-              style={{width: '100%'}}
-              onChangeText={text => setName(text)}
-              value={name}
-            />
-          </View>
+          <Input
+            placeholder="FULL NAME"
+            placeholderTextColor="#808080"
+            returnKeyType="next"
+            style={{width: '100%'}}
+            onChangeText={text => setName(text)}
+            value={name}
+            icon={require('../assets/icons/sign_up/user.png')}
+          />
+          <Input
+            onChangeText={text => setEmail(text)}
+            value={email}
+            placeholder={'EMAIL ADDRESS'}
+            placeholderTextColor="#808080"
+            returnKeyType="next"
+            icon={require('../assets/icons/sign_up/mail.png')}
+          />
 
-          <View style={styles.input}>
-            <Pic
-              src={require('../assets/icons/sign_up/mail.png')}
-              style={{marginRight: 10}}
-            />
-            <TextInput
-              placeholder="EMAIL ADDRESS"
-              placeholderTextColor="#808080"
-              returnKeyType="next"
-              style={{width: '100%'}}
-              onChangeText={text => setEmail(text)}
-              value={email}
-            />
-          </View>
+          <Input
+            placeholder="**********"
+            placeholderTextColor="#808080"
+            returnKeyType="done"
+            password
+            style={{width: '100%'}}
+            onChangeText={text => setPassword(text)}
+            value={password}
+            icon={require('../assets/icons/sign_up/password.png')}
+          />
 
-          <View style={styles.input}>
-            <Pic
-              src={require('../assets/icons/sign_up/password.png')}
-              style={{marginRight: 10}}
-            />
-            <TextInput
-              placeholder="**********"
-              placeholderTextColor="#808080"
-              returnKeyType="done"
-              style={{width: '100%'}}
-              secureTextEntry={Hide}
-              onChangeText={text => setPassword(text)}
-              value={password}
-            />
-          </View>
+          <Input
+            placeholder="**********"
+            placeholderTextColor="#808080"
+            style={{width: '100%'}}
+            returnKeyType="done"
+            password
+            onChangeText={text => setConfirmPassword(text)}
+            value={confirm_password}
+            icon={require('../assets/icons/sign_up/password.png')}
+          />
 
-          <TouchableOpacity
-            style={styles.eyeBtn}
-            onPress={() => setHide(!Hide)}>
-            {/* <Icon name={Hide === false ? 'eye' : 'eyeo' } size={30} color='#f68025'/> */}
-          </TouchableOpacity>
-
-          <View style={styles.input}>
-            <Pic
-              src={require('../assets/icons/sign_up/password.png')}
-              style={{marginRight: 10}}
-            />
-            <TextInput
-              placeholder="**********"
-              placeholderTextColor="#808080"
-              style={{width: '100%'}}
-              returnKeyType="done"
-              secureTextEntry={Hide}
-              onChangeText={text => setConfirmPassword(text)}
-              value={confirm_password}
-            />
-          </View>
           <TouchableOpacity style={styles.SignupBtn} onPress={verfyingInputs}>
             <Text style={styles.SignupText}>Signup</Text>
           </TouchableOpacity>

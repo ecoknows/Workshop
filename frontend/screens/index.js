@@ -2,6 +2,7 @@ import JobSearch from './job_search/JobSearch';
 import Profile from './profile/Profile';
 import Notifications from './notifications/Notifications';
 import Login from './Login';
+import Settings from './Settings';
 import SignUp from './SignUp';
 import InfoSlide from './InfoSlide';
 import SplashScreen from './SplashScreen';
@@ -23,5 +24,6 @@ export {
     SignUp,
     InfoSlide,
     SplashScreen,
-    WorkerProfile
+    WorkerProfile,
+    Settings
 }

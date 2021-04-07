@@ -12,6 +12,39 @@ import {
 } from '../../database/current_user';
 import Toast from 'react-native-toast-message';
 
+export const update_personal_info = (info: any) => async (
+  dispatch: any,
+  getState: any,
+) => {
+  const {
+    userDetails: {userData},
+  } = getState();
+  try {
+    const {data} = await Axios.put(
+      `/user/update/${userData._id}/personal_info`,
+      info,
+      {
+        headers: {Authorization: `Bearer ${userData.token}`},
+      },
+    );
+    if (data) {
+      const mergeData = {...userData, ...data};
+      console.log(mergeData);
+
+      dispatch({type: USER_SIGNIN_SUCCESS, payload: mergeData});
+      update_login_user(mergeData);
+    }
+  } catch (error) {
+    dispatch({
+      type: USER_SIGNIN_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
 export const update_tag = (most_skilled: (string | number)[]) => async (
   dispatch: any,
   getState: any,

@@ -2,8 +2,9 @@ import React from 'react';
 import {Modal, Image, TouchableOpacity} from 'react-native';
 import {View, Text, Pic} from '../components';
 import {theme} from '../constants';
-import {useDispatch} from 'react-redux';
-import {openBottomDrawerAction} from '../redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {openBottomDrawerAction, RootState} from '../redux';
+import {local_url} from '../constants/urls';
 
 interface SettingsProps {
   navigation: any;
@@ -12,6 +13,7 @@ interface SettingsProps {
 function Settings(props: SettingsProps) {
   const {navigation} = props;
   const dispatch = useDispatch();
+  const {userData}: any = useSelector((state: RootState) => state.userDetails);
   return (
     <View accent flex>
       <View backgroundColor="white" flex>
@@ -39,16 +41,20 @@ function Settings(props: SettingsProps) {
             paddingHorizontal: 18,
           }}>
           <Pic
-            src={require('../assets/image/user/man.png')}
+            src={
+              userData.profile_pic
+                ? {uri: local_url + userData.profile_pic}
+                : require('../assets/image/user/man.png')
+            }
             profile_picture
             large
           />
           <View flex center middle>
             <Text extra_bold size={18} gray>
-              Jerico C. Villaraza
+              {userData.full_name}
             </Text>
             <Text medium size={13} gray>
-              Manila, Philippines
+              {userData.address} {userData.city} Philippines
             </Text>
           </View>
           <View center>
