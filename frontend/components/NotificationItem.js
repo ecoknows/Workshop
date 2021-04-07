@@ -16,9 +16,6 @@ import {theme} from '../constants';
 // import {TouchableHighlight, Swipeable} from 'react-native-gesture-handler';
 // import { Ionicons } from '@expo/vector-icons';
 
-import AdminModalContent from './modalcontents/AdminModalContent';
-import EmployeeModalContent from './modalcontents/EmployeeModalContent';
-
 const NotificationItem = ({
   title,
   description,

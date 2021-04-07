@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Image, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import {View, Text, Pic} from '../components';
 import {theme} from '../constants';
 import {useDispatch, useSelector} from 'react-redux';
