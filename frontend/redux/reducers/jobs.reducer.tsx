@@ -22,7 +22,6 @@ import {
 
 const initialState: JobsReducerType = {
   loading: false,
-  // userData: localStorage.getItem('userInfo')? getUserData(localStorage.getItem('userInfo')): null,
   jobs: [],
   error: false,
 };

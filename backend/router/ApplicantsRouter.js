@@ -9,10 +9,12 @@ const ResponApplicant = (applicant, res) => {
   res.send({
     _id: applicant._id,
     job_id: applicant.job_id,
+    job_name: applicant.job_name,
     person_of_contact_id: applicant.person_of_contact_id,
     applicant_id: applicant.applicant_id,
 
     person_of_contact: applicant.person_of_contact,
+    person_of_contact_position: applicant.person_of_contact_position,
     applicant_name: applicant.applicant_name,
   });
 };
@@ -24,7 +26,12 @@ applicantRoutes.get(
     const query = req.query;
     if (query._id) {
       const applicant = await User.findOne({ _id: query._id });
-      res.send({ documentation_links: applicant.documentation_links });
+      res.send({
+        documentation_links: applicant.documentation_links,
+        most_skilled: applicant.most_skilled,
+        authorized: applicant.authorized,
+        resume: applicant.resume.path ? applicant.resume : null,
+      });
     }
   })
 );
@@ -62,11 +69,13 @@ applicantRoutes.post(
       // TODO:
       const newApplicant = new Applicants({
         job_id: body.job_id,
+        job_name: body.job_name,
         person_of_contact_id: body.person_of_contact_id,
         applicant_id: body.applicant_id,
 
         person_of_contact: body.person_of_contact,
         person_of_contact_profile: body.person_of_contact_profile,
+        person_of_contact_position: body.person_of_contact_position,
 
         applicant_name: body.applicant_name,
         applicant_name_profile: body.applicant_name_profile,

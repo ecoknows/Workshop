@@ -8,6 +8,8 @@ export interface JobsInterface {
   _id: number;
   employer_id: string;
   employer_full_name: string;
+  employer_profile: string;
+  employer_position: string;
   job: string;
 
   current_workers: number;
@@ -23,9 +25,9 @@ export const JOBS_REQUEST = 'JOBS_REQUEST';
 export const JOBS_SUCCESS = 'JOBS_SUCCESS';
 export const JOBS_FAIL = 'JOBS_FAIL';
 
-export const JOBS_ALL_REQUEST = 'JOBS_REQUEST';
-export const JOBS_ALL_SUCCESS = 'JOBS_SUCCESS';
-export const JOBS_ALL_FAIL = 'JOBS_FAIL';
+export const JOBS_ALL_REQUEST = 'JOBS_ALL_REQUEST';
+export const JOBS_ALL_SUCCESS = 'JOBS_ALL_SUCCESS';
+export const JOBS_ALL_FAIL = 'JOBS_ALL_FAIL';
 
 export const CREATE_JOB_REQUEST = 'CREATE_JOB_REQUEST';
 export const CREATE_JOB_SUCCESS = 'CREATE_JOB_SUCCESS';

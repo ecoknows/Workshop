@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema(
     address: { type: String },
     city: { type: String },
     sex: { type: String },
-
+    resume: {
+      name: { type: String },
+      path: { type: String },
+      file_name: { type: String },
+    },
     documentation_links: [
       {
         name: { type: String },

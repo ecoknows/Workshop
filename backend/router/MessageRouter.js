@@ -17,17 +17,22 @@ messageRoutes.post(
       author_id: body.author_id,
       author_profile: body.author_profile,
       author_name: body.author_name,
+      author_status: body.author_status,
 
       reciever_id: body.reciever_id,
       reciever_name: body.reciever_name,
       reciever_profile: body.reciever_profile,
+      reciever_status: body.reciever_status,
 
       message: body.message,
       attached_message: body.attached_message,
     });
 
-    const createdMessage = await newMesssage.save();
-    ResponderMessage(createdMessage, res);
+    if (newMesssage) {
+      const createdMessage = await newMesssage.save();
+      console.log(createdMessage);
+      ResponderMessage(createdMessage, res);
+    }
   })
 );
 
@@ -50,6 +55,7 @@ messageRoutes.get(
       ],
     }).sort({ createdAt: -1 });
     if (messages) {
+      console.log(messages);
       res.send(messages);
     }
   })

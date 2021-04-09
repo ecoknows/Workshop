@@ -24,7 +24,7 @@ export const size = {
 };
 export const tabs = {
   employerTabs: ['Messages', 'Workers', 'Applicants'],
-  workerTabs: ['Messages', 'Applications'],
+  workerTabs: ['Employers', 'Messages', 'Applications'],
 };
 export const {width, height} = Dimensions.get('window');
 

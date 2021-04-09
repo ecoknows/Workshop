@@ -24,6 +24,11 @@ import {
   notificationsReducerType,
   selectedNotificationsReducerType,
 } from './reducers/notifications.reducer';
+import {
+  singleWorkersReducerType,
+  workersReducerType,
+} from './reducers/workers.reducer';
+import {tasksReducerType} from './reducers/tasks.reducer';
 
 const RootReducer = combineReducers({
   userDetails: userSignInReducer,
@@ -32,6 +37,10 @@ const RootReducer = combineReducers({
 
   applicantsState: applicantsReducerType,
   selectedApplicantState: selectedApplicantReducerType,
+
+  workersState: workersReducerType,
+  singleWorkerState: singleWorkersReducerType,
+  taskState: tasksReducerType,
 
   messagesState: messagesReducerType,
   chatState: chatReducerType,

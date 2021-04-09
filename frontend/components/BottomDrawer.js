@@ -19,6 +19,7 @@ import {
   Password,
   PrivacyPolicy,
   HelpCenter,
+  Employers,
   Eula,
 } from '../bottom_drawer_screens';
 import {tabs} from '../constants/theme';
@@ -114,15 +115,19 @@ function Fade({drawer_anim, handleClose, UserChoice}) {
 
 function check_user_choice(code) {
   switch (code) {
-    case tabs.employerTabs[0]:
+    case 'Messages':
       return {
         height: theme.height * 0.9,
       };
-    case tabs.employerTabs[1]:
+    case 'Workers':
       return {
         height: theme.height * 0.9,
       };
-    case tabs.employerTabs[2]:
+    case 'Applicants':
+      return {
+        height: theme.height * 0.9,
+      };
+    case 'Employers':
       return {
         height: theme.height * 0.9,
       };
@@ -179,7 +184,7 @@ function check_user_choice(code) {
 
 function TabSelectedView({tabSelected, drawer_anim, handleClose, UserChoice}) {
   switch (tabSelected) {
-    case tabs.employerTabs[0]:
+    case 'Messages':
       return (
         <Message
           drawer_anim={drawer_anim}
@@ -187,7 +192,7 @@ function TabSelectedView({tabSelected, drawer_anim, handleClose, UserChoice}) {
           UserChoice={UserChoice}
         />
       );
-    case tabs.employerTabs[1]:
+    case 'Workers':
       return (
         <Workers
           drawer_anim={drawer_anim}
@@ -195,9 +200,17 @@ function TabSelectedView({tabSelected, drawer_anim, handleClose, UserChoice}) {
           UserChoice={UserChoice}
         />
       );
-    case tabs.employerTabs[2]:
+    case 'Applicants':
       return (
         <Applicants
+          drawer_anim={drawer_anim}
+          handleClose={handleClose}
+          UserChoice={UserChoice}
+        />
+      );
+    case 'Employers':
+      return (
+        <Employers
           drawer_anim={drawer_anim}
           handleClose={handleClose}
           UserChoice={UserChoice}

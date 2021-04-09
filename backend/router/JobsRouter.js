@@ -12,6 +12,7 @@ const RespondSend = (user, res) => {
     employer_id: user.employer_id,
     employer_full_name: user.employer_full_name,
     employer_profile: user.employer_profile,
+    employer_position: user.employer_position,
     job: user.job,
     current_workers: user.current_workers,
     current_applicants: user.current_applicants,
@@ -36,6 +37,21 @@ jobRoutes.get(
   })
 );
 
+jobRoutes.get(
+  '/:id/new_worker',
+  expressAsyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const job = await Jobs.findById(id);
+    if (job) {
+      if (job.current_workers < job.max_workers) {
+        job.current_workers += 1;
+      }
+      const newWorker = await job.save();
+      res.send(newWorker);
+    }
+  })
+);
+
 jobRoutes.post(
   '/add',
   expressAsyncHandler(async (req, res) => {
@@ -43,6 +59,7 @@ jobRoutes.post(
       employer_id: req.body.employer_id,
       employer_full_name: req.body.employer_full_name,
       employer_profile: req.body.employer_profile,
+      employer_position: req.body.employer_position,
       job: req.body.job,
       current_workers: req.body.current_workers,
       current_applicants: req.body.current_applicants,

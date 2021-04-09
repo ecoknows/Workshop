@@ -19,6 +19,7 @@ export interface UserInterface {
   city?: string;
   sex?: string;
   status?: string;
+  resume?: string;
   documentation_links?: {name: string; path: string; file_name: string}[];
   position?: string;
 

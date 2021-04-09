@@ -13,6 +13,7 @@ export interface ApplicantsInterface {
 
   person_of_contact: string;
   applicant_name: string;
+  applicant_name_profile?: string;
   documentation_links?: {name: string; path: string; file_name: string}[];
 }
 

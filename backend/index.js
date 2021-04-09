@@ -6,7 +6,9 @@ import JobsRouter from './router/JobsRouter.js';
 import UploadRouter from './router/UploadRouter.js';
 import ApplicantsRouter from './router/ApplicantsRouter.js';
 import MessageRouter from './router/MessageRouter.js';
+import TaskRouter from './router/TaskRouter.js';
 import NotificationRouter from './router/NotificationRouter.js';
+import WorkerRouter from './router/WorkersRouter.js';
 import path from 'path';
 import { Server } from 'socket.io';
 import Notification from './models/Notification.js';
@@ -21,7 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/user', UserRouter);
 app.use('/api/jobs', JobsRouter);
 app.use('/api/applicants', ApplicantsRouter);
+app.use('/api/workers', WorkerRouter);
 app.use('/api/messages', MessageRouter);
+app.use('/api/tasks', TaskRouter);
 app.use('/api/uploads', UploadRouter);
 app.use('/api/notification', NotificationRouter);
 
@@ -58,7 +62,6 @@ io.on('connection', (socket) => {
       reciever_id: data.reciever_id,
       seen: false,
     });
-    console.log(notifs);
     io.in(roomId).emit(data.reciever_id, { notify_size: notifs.length });
   });
 

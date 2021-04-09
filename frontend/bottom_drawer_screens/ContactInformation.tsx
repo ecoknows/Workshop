@@ -8,7 +8,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {closeBottomDrawerAction} from '../redux';
 import {theme} from '../constants';
 
@@ -88,6 +88,8 @@ function ContactInformation(props: ContactInformationProps) {
 function ContactInformationStatus(props: any) {
   const {setEdit} = props;
 
+  const {userData} = useSelector(state => state.userDetails);
+
   return (
     <View>
       <TouchableOpacity
@@ -110,7 +112,7 @@ function ContactInformationStatus(props: any) {
             />
             <View paddingHorizontal={10}>
               <Text extra_bold size={17} gray>
-                jerico.villaraza@gmail.com
+                {userData.email}
               </Text>
               <View row middle>
                 <Text medium size={14} gray>
@@ -145,6 +147,7 @@ function ContactInformationStatus(props: any) {
   );
 }
 function ContactInformationUpdate(props: any) {
+  const {userData} = useSelector(state => state.userDetails);
   return (
     <View>
       <View center middle paddingVertical={20}>
@@ -152,11 +155,7 @@ function ContactInformationUpdate(props: any) {
           <Text medium size={14} gray>
             Primary Email Address
           </Text>
-          <TextInput
-            style={styles.editInput}
-            placeholder="
-                jerico.villaraza@gmail.com"
-          />
+          <TextInput style={styles.editInput} placeholder={userData.email} />
           <Text medium size={14} gray style={{marginTop: 40}}>
             Primary Phone Number
           </Text>

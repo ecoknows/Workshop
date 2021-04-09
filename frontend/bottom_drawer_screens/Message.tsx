@@ -19,7 +19,10 @@ import {
   update_latest_chat,
 } from '../redux/actions/messages.actions';
 import {local_url} from '../constants/urls';
-import socketIOClient from 'socket.io-client';
+import SocketInstance from '../constants/SocketIO';
+
+import ImagePicker from 'react-native-image-crop-picker';
+import Axios from 'axios';
 
 interface MessageProps {
   UserChoice: {
@@ -42,37 +45,6 @@ interface DataType {
   workers: boolean;
 }
 
-const chat_data = [
-  // ******TEMPORARY****
-  {
-    _id: '1234123',
-    message:
-      'We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible',
-  },
-  {
-    _id: '678901',
-    message: 'Okay Chevy lets think about a solution about that problem',
-  },
-  {
-    _id: '1234123',
-    message:
-      'I found a place where we can buy a high quality genartor on a affordable cause.',
-  },
-  {_id: '678901', message: 'Where? can you tell me what place'},
-  {_id: '678901', message: 'And also specify the address'},
-  {_id: '678901', message: 'remember also the cause'},
-  {
-    _id: '1234123',
-    message:
-      'We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible',
-  },
-  {
-    _id: '1234123',
-    message:
-      'We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible We have a problem sir, I think our generator is not working anymore and we need some replacement of it as soon as possible',
-  },
-];
-
 function Message(props: MessageProps) {
   const {UserChoice, drawer_anim} = props;
 
@@ -88,7 +60,7 @@ function Message(props: MessageProps) {
       style={[
         styles.drawerView,
         {
-          height: '90%',
+          height: UserChoice.height,
           transform: [
             {
               translateY: drawer_anim,
@@ -109,52 +81,119 @@ function Chat(props: ChatProps) {
   const dispatch = useDispatch();
   const ChatState = useSelector((state: RootState) => state.chatState);
   const {userData}: any = useSelector((state: RootState) => state.userDetails);
-  const socket = useRef<any>();
   const [message, setMessage] = useState('');
+  const socket = SocketInstance.getInstance();
+  const [attachment, setAttachment] = useState(false);
+  const [image, setImage] = useState(null);
 
+  async function UploadImage() {
+    const formData = new FormData();
+    formData.append('message_image', {
+      name: 'deymsan',
+      type: image.mime,
+      uri: image.path,
+    });
+
+    try {
+      const {data} = await Axios.post('/uploads/message', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      if (data) {
+        if (message) {
+          let messageData = null;
+          if (messageList.item.reciever_id != userData._id) {
+            messageData = {
+              author_id: userData._id,
+              author_profile: userData.profile_pic,
+              author_name: userData.full_name,
+              author_status: userData.is_employer,
+
+              reciever_id: messageList.item.reciever_id,
+              reciever_name: messageList.item.reciever_name,
+              reciever_profile: messageList.item.reciever_profile,
+              reciever_status: !userData.is_employer,
+
+              message: message,
+              attached_message: data,
+            };
+          } else {
+            messageData = {
+              author_id: userData._id,
+              author_profile: userData.profile_pic,
+              author_name: userData.full_name,
+              author_status: userData.is_employer,
+
+              reciever_id: messageList.item.author_id,
+              reciever_name: messageList.item.author_name,
+              reciever_profile: messageList.item.author_profile,
+              reciever_status: !userData.is_employer,
+
+              message: message,
+              attached_message: data,
+            };
+          }
+
+          dispatch(send_message(messageData));
+          socket.send('message', {...messageData});
+          setMessage('');
+          setImage(null);
+        }
+      }
+    } catch (error) {}
+  }
   useEffect(() => {
     dispatch(get_chats(messageList.item.author_id));
-    socket.current = socketIOClient(local_url, {
-      query: {roomId: '1234'},
-    });
-    socket.current.on('message', data => {
+    socket.listen('message', (data: any) => {
       dispatch(update_latest_chat(data));
     });
-
-    return () => socket.current.disconnect();
   }, []);
 
   const sendMessage = () => {
     let messageData = null;
-    if (messageList.item.reciever_id != userData._id) {
-      messageData = {
-        author_id: userData._id,
-        author_profile: userData.profile_pic,
-        author_name: userData.full_name,
 
-        reciever_id: messageList.item.reciever_id,
-        reciever_name: messageList.item.reciever_name,
-        reciever_profile: messageList.item.reciever_profile,
-        message: message,
-        attached_message: 'unknown',
-      };
+    if (image) {
+      UploadImage();
     } else {
-      messageData = {
-        author_id: userData._id,
-        author_profile: userData.profile_pic,
-        author_name: userData.full_name,
+      if (message) {
+        if (messageList.item.reciever_id != userData._id) {
+          messageData = {
+            author_id: userData._id,
+            author_profile: userData.profile_pic,
+            author_name: userData.full_name,
+            author_status: userData.is_employer,
 
-        reciever_id: messageList.item.author_id,
-        reciever_name: messageList.item.author_name,
-        reciever_profile: messageList.item.author_profile,
-        message: message,
-        attached_message: 'unknown',
-      };
+            reciever_id: messageList.item.reciever_id,
+            reciever_name: messageList.item.reciever_name,
+            reciever_profile: messageList.item.reciever_profile,
+            reciever_status: !userData.is_employer,
+
+            message: message,
+            attached_message: 'unknown',
+          };
+        } else {
+          messageData = {
+            author_id: userData._id,
+            author_profile: userData.profile_pic,
+            author_name: userData.full_name,
+            author_status: userData.is_employer,
+
+            reciever_id: messageList.item.author_id,
+            reciever_name: messageList.item.author_name,
+            reciever_profile: messageList.item.author_profile,
+            reciever_status: !userData.is_employer,
+
+            message: message,
+            attached_message: 'unknown',
+          };
+        }
+
+        dispatch(send_message(messageData));
+        socket.send('message', {...messageData});
+        setMessage('');
+      }
     }
-
-    dispatch(send_message(messageData));
-    socket.current.emit('message', {...messageData});
-    setMessage('');
   };
 
   return (
@@ -179,6 +218,8 @@ function Chat(props: ChatProps) {
         <FlatList
           inverted
           data={ChatState.data}
+          style={{height: '90%'}}
+          showsVerticalScrollIndicator={false}
           contentContainerStyle={{paddingTop: 100}}
           renderItem={({item, index}) => {
             if (item.author_id !== userData._id)
@@ -189,7 +230,7 @@ function Chat(props: ChatProps) {
                   paddingVertical={10}>
                   <Pic
                     src={
-                      item.author_name
+                      item.author_profile
                         ? {uri: local_url + item.author_profile}
                         : require('../assets/image/user/man.png')
                     }
@@ -197,20 +238,37 @@ function Chat(props: ChatProps) {
                     green={!item.workers}
                     large
                   />
-                  <View center width={'100%'} flex>
-                    <Text medium size={14} gray style={{paddingStart: 10}}>
-                      {item.message}
-                    </Text>
+                  <View>
+                    <View center width={'100%'} flex>
+                      <Text medium size={14} gray style={{paddingStart: 10}}>
+                        {item.message}
+                      </Text>
+                    </View>
+
+                    {item.attached_message != 'unknown' ? (
+                      <Pic
+                        src={{uri: local_url + item.attached_message}}
+                        scale={200}
+                        style={{marginTop: 20}}
+                        resizeMode="contain"
+                      />
+                    ) : null}
                   </View>
                 </View>
               );
             else
               return (
                 <View
-                  rowVerse
                   paddingVertical={10}
                   width={'100%'}
-                  style={{alignSelf: 'flex-end'}}>
+                  style={{alignSelf: 'flex-end', alignItems: 'flex-end'}}>
+                  {item.attached_message != 'unknown' ? (
+                    <Pic
+                      src={{uri: local_url + item.attached_message}}
+                      scale={200}
+                      resizeMode="contain"
+                    />
+                  ) : null}
                   <Text medium size={14} gray style={{textAlign: 'right'}}>
                     {item.message}
                   </Text>
@@ -227,26 +285,86 @@ function Chat(props: ChatProps) {
           position: 'absolute',
           bottom: 0,
           width: '100%',
-          backgroundColor: 'white',
-          paddingBottom: 15,
         }}>
-        <View style={styles.sender} middle paddingHorizontal={5} row>
-          <Pic
-            src={require('../assets/icons/profile/attachments.png')}
-            scale={25}
-            style={{marginBottom: 13, marginRight: 5}}
-          />
-          <TextInput
-            style={{minHeight: 50, maxHeight: 100, flex: 1}}
-            onChangeText={text => setMessage(text)}
-            value={message}
-            multiline
-          />
-          <TouchableOpacity
-            style={{marginBottom: 13, marginRight: 5}}
-            onPress={sendMessage}>
-            <Pic src={require('../assets/icons/profile/send.png')} scale={25} />
-          </TouchableOpacity>
+        {attachment ? (
+          <View width="92%" alignItems="flex-start" paddingHorizontal={10}>
+            <View
+              row
+              padding={6}
+              marginBottom={10}
+              style={{borderColor: '#F68025', borderWidth: 1, borderRadius: 5}}>
+              <TouchableOpacity
+                onPress={() => {
+                  ImagePicker.openPicker({
+                    width: 300,
+                    height: 400,
+                    cropping: true,
+                  }).then((image: any) => {
+                    setImage(image);
+                  });
+                }}>
+                <Pic src={require('../assets/icons/image.png')} scale={20} />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Pic
+                  src={require('../assets/icons/paperclip.png')}
+                  scale={20}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
+        ) : null}
+        <View white flex paddingBottom={15} center middle>
+          <View style={styles.sender} middle paddingHorizontal={5} row>
+            <TouchableOpacity
+              style={{marginBottom: 13, marginRight: 5}}
+              onPress={() => {
+                setAttachment(!attachment);
+              }}>
+              <Pic
+                src={require('../assets/icons/profile/attachments.png')}
+                scale={25}
+              />
+            </TouchableOpacity>
+
+            <View flex middle center>
+              {image ? (
+                <View style={{marginTop: 25}}>
+                  <TouchableOpacity
+                    style={{alignSelf: 'flex-end'}}
+                    onPress={() => setImage(null)}>
+                    <Pic
+                      src={require('../assets/icons/profile/x.png')}
+                      scale={20}
+                    />
+                  </TouchableOpacity>
+                  <Pic
+                    src={{uri: image.path}}
+                    resizeMode="contain"
+                    scale={250}
+                  />
+                </View>
+              ) : null}
+              <TextInput
+                style={{
+                  minHeight: 50,
+                  maxHeight: 100,
+                  width: '100%',
+                }}
+                onChangeText={text => setMessage(text)}
+                value={message}
+                multiline
+              />
+            </View>
+            <TouchableOpacity
+              style={{marginBottom: 13, marginRight: 5}}
+              onPress={sendMessage}>
+              <Pic
+                src={require('../assets/icons/profile/send.png')}
+                scale={25}
+              />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -316,15 +434,15 @@ function MessageList(props: MessageListProps) {
               <TouchableOpacity onPress={() => ChatClick(item)}>
                 <Pic
                   src={
-                    item.reciever_profile
-                      ? {uri: local_url + item.reciever_profile}
+                    item.author_profile
+                      ? {uri: local_url + item.author_profile}
                       : require('../assets/image/user/man.png')
                   }
                   profile_picture
                   medium
                 />
                 <Text extra_bold gray size={17} style={{textAlign: 'center'}}>
-                  {item.reciever_name}
+                  {item.author_name}
                 </Text>
                 <Text medium gray size={13} style={{textAlign: 'center'}}>
                   {item.message}

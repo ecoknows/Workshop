@@ -126,7 +126,7 @@ function EditProfileStatus(props: any) {
   const {userData} = useSelector((state: RootState) => state.userDetails);
 
   return (
-    <View>
+    <ScrollView>
       <TouchableOpacity
         style={{alignItems: 'flex-end'}}
         onPress={() => setEdit(true)}>
@@ -168,7 +168,7 @@ function EditProfileStatus(props: any) {
           </Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -176,11 +176,11 @@ function EditProfileUpdate(props: any) {
   const {profile} = props;
   const {userData} = useSelector((state: RootState) => state.userDetails);
   const dispatch = useDispatch();
-  const [full_name, setFullName] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [city, setCity] = useState(null);
-  const [birth_day, setBirthday] = useState(null);
-  const [sex, setSex] = useState(null);
+  const [full_name, setFullName] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [birth_day, setBirthday] = useState('');
+  const [sex, setSex] = useState('');
   const updateStart = useRef(false);
 
   useEffect(() => {
@@ -189,7 +189,7 @@ function EditProfileUpdate(props: any) {
         type: 'success',
         position: 'top',
         text1: 'Update Successful',
-        text2: 'Please try again 🥺',
+        text2: 'Hello mr. new man!',
         visibilityTime: 4000,
         autoHide: true,
       });

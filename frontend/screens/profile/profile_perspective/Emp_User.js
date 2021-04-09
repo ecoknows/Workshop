@@ -34,19 +34,8 @@ function Top({navigation}) {
 
   const {error, loading, jobs} = JobsState;
   const {userData} = UserState;
-
   useEffect(() => {
     dispatch(get_jobs());
-    if (jobCreated) {
-      Toast.show({
-        type: 'success',
-        position: 'top',
-        text1: 'Job Created!',
-        text2: 'Goodluck for finding employees! 💖',
-        visibilityTime: 2000,
-        autoHide: true,
-      });
-    }
   }, [jobCreated]);
 
   return (

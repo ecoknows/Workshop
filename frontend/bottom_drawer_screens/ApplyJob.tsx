@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import View from '../components/View';
 import Text from '../components/Text';
 import Pic from '../components/Pic';
@@ -8,10 +8,6 @@ import {StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import {theme} from '../constants';
 import {useDispatch, useSelector} from 'react-redux';
 import {add_applicant, closeBottomDrawerAction, RootState} from '../redux';
-import Toast from 'react-native-toast-message';
-import {notify_someone} from '../constants/notification_request';
-import socketIOClient from 'socket.io-client';
-import {local_url} from '../constants/urls';
 
 interface ApplyJobProps {
   UserChoice: {
@@ -21,73 +17,22 @@ interface ApplyJobProps {
   drawer_anim: any;
 }
 
-const person = [
-  {name: 'Chevy Quitquitan'},
-  {name: 'John Smith'},
-  {name: 'Elon Musk'},
-  {name: 'Jerico Villaraza'},
-  {name: 'Jerico Villaraza'},
-];
-
 function ApplyJob(props: ApplyJobProps) {
   const {UserChoice, drawer_anim} = props;
   const CreateJobState = useSelector(
     (state: RootState) => state.jobsSelectedState,
   );
   const {userData}: any = useSelector((state: RootState) => state.userDetails);
-  const ApplicantState = useSelector(
-    (state: RootState) => state.applicantsState,
-  );
   const {jobSelected}: any = CreateJobState;
-  const [isApplicant, setApplicant] = useState(false);
-  const socket = useRef<any>();
-
   const dispatch = useDispatch();
-  useEffect(() => {
-    socket.current = socketIOClient(local_url, {
-      query: {roomId: '1234'},
-    });
-    return () => socket.current.disconnect();
-  }, []);
-  useEffect(() => {
-    if (ApplicantState.data) {
-      Toast.show({
-        type: 'success',
-        position: 'top',
-        text1: 'Application Sent!',
-        text2: 'Wait a further notice from the Employer',
-        visibilityTime: 2000,
-        autoHide: true,
-      });
 
-      notify_someone(
-        userData,
-        {
-          sender_id: userData._id,
-          sender_name: userData.full_name,
-          sender_profile: userData.profile_pic,
-
-          reciever_id: jobSelected.employer_id,
-
-          description: 'Application Notice',
-        },
-        socket.current,
-      );
-    }
-  }, [ApplicantState.data]);
-
-  useEffect(() => {
-    if (ApplicantState.error) {
-      Toast.show({
-        type: 'error',
-        position: 'top',
-        text1: 'You already Applied!',
-        text2: 'Application already sent please wait',
-        visibilityTime: 2000,
-        autoHide: true,
-      });
-    }
-  }, [ApplicantState.error]);
+  // const socket = useRef<any>();
+  // useEffect(() => {
+  //   socket.current = socketIOClient(local_url, {
+  //     query: {roomId: '1234'},
+  //   });
+  //   return () => socket.current.disconnect();
+  // }, []);
 
   return (
     <View
@@ -165,8 +110,12 @@ function ApplyJob(props: ApplyJobProps) {
                     dispatch(
                       add_applicant({
                         job_id: jobSelected._id,
+                        job_name: jobSelected.job,
                         person_of_contact_id: jobSelected.employer_id,
                         person_of_contact: jobSelected.employer_full_name,
+                        person_of_contact_profile: jobSelected.employer_profile,
+                        person_of_contact_position:
+                          jobSelected.employer_position,
                       }),
                     );
                   }}>

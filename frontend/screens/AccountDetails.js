@@ -22,11 +22,11 @@ import {theme} from '../constants';
 import Axios from 'axios';
 
 export function AccountDetails({accountStatus}) {
-  const [Birthday, setBirthday] = useState(null);
-  const [Address, setAddress] = useState(null);
-  const [City, setCity] = useState(null);
-  const [Sex, setSex] = useState(null);
-  const [statusChecker, setStatusChecker] = useState(null);
+  const [Birthday, setBirthday] = useState('');
+  const [Address, setAddress] = useState('');
+  const [City, setCity] = useState('');
+  const [Sex, setSex] = useState('');
+  const [statusChecker, setStatusChecker] = useState('');
   const dispatch = useDispatch();
 
   const SignUpButtonClick = () => {
@@ -131,7 +131,7 @@ export function AccountDetails({accountStatus}) {
 }
 
 function DocumentItems({index, item, documents, setDocuments}) {
-  const [text, setText] = useState(null);
+  const [text, setText] = useState('');
 
   useEffect(() => {
     documents[index].name = text;
@@ -238,10 +238,10 @@ const DocumentSelector = ({documents, setDocuments}) => {
 };
 
 export function AccountStatusEmployer({accountStatus, setStatus}) {
-  const [name_of_business, setNameBusiness] = useState(null);
-  const [address_of_business, setAddressBusiness] = useState(null);
-  const [nature_of_business, setNatureBusiness] = useState(null);
-  const [position, setPosition] = useState(null);
+  const [name_of_business, setNameBusiness] = useState('');
+  const [address_of_business, setAddressBusiness] = useState('');
+  const [nature_of_business, setNatureBusiness] = useState('');
+  const [position, setPosition] = useState('');
   const dispatch = useDispatch();
   const [documents, setDocuments] = useState([{name: null, file: null}]);
 
@@ -369,8 +369,8 @@ export function AccountStatusEmployer({accountStatus, setStatus}) {
 }
 
 export function AccountStatusEmployee({accountStatus, setStatus}) {
-  const [nature_of_work, setNatureWork] = useState(null);
-  const [position, setPosition] = useState(null);
+  const [nature_of_work, setNatureWork] = useState('');
+  const [position, setPosition] = useState('');
   const dispatch = useDispatch();
   const [documents, setDocuments] = useState([{name: null, file: null}]);
 

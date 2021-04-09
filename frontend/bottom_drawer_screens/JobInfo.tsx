@@ -8,6 +8,7 @@ import {StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import {theme} from '../constants';
 import {useDispatch, useSelector} from 'react-redux';
 import {closeBottomDrawerAction, get_applicant, RootState} from '../redux';
+import {get_workers_contact_person} from '../redux/actions/workers.actions';
 
 interface JobInfoProps {
   UserChoice: {
@@ -37,8 +38,11 @@ function JobInfo(props: JobInfoProps) {
   const ApplicantsState = useSelector(
     (state: RootState) => state.applicantsState,
   );
+  const WorkerState = useSelector((state: RootState) => state.workersState);
+
   useEffect(() => {
     dispatch(get_applicant());
+    dispatch(get_workers_contact_person());
   }, []);
 
   return (
@@ -115,7 +119,7 @@ function JobInfo(props: JobInfoProps) {
             {!isApplicant ? (
               <View middle row>
                 <Text size={18} style={{paddingLeft: 10}}>
-                  {jobSelected.current_workers}{' '}
+                  {WorkerState?.data?.length ? WorkerState.data.length : '0'}{' '}
                 </Text>
                 <Text size={14} color="#AAAAAA">
                   / {jobSelected.max_workers}
@@ -123,7 +127,7 @@ function JobInfo(props: JobInfoProps) {
               </View>
             ) : (
               <Text size={18} style={{paddingLeft: 10}}>
-                {jobSelected.current_applicants}
+                {ApplicantsState.data.length}
               </Text>
             )}
           </View>
@@ -132,7 +136,7 @@ function JobInfo(props: JobInfoProps) {
             {!isApplicant ? (
               <Table
                 maxHeight={theme.height * 0.3}
-                data={person}
+                data={WorkerState.data}
                 renderHeader={() => (
                   <View row paddingVertical={3}>
                     <View flex={1.3}>
@@ -163,7 +167,7 @@ function JobInfo(props: JobInfoProps) {
                       alignItems: 'center',
                     }}>
                     <View flex={1.3}>
-                      <Text gray>{item.name}</Text>
+                      <Text gray>{item.worker_name}</Text>
                     </View>
                     <View flex middle>
                       <Pic

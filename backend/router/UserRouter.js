@@ -78,6 +78,7 @@ const RespondWorker = (res, createdUser) => {
     sex: createdUser.sex,
     most_skilled: createdUser.most_skilled,
 
+    resume: createdUser.resume.path ? createdUser.resume : null,
     documentation_links: createdUser.documentation_links,
     position: createdUser.position,
 
@@ -102,6 +103,7 @@ const RespondWorkerWithToken = (res, createdUser) => {
     sex: createdUser.sex,
     most_skilled: createdUser.most_skilled,
 
+    resume: createdUser.resume.path ? createdUser.resume : null,
     documentation_links: createdUser.documentation_links,
     position: createdUser.position,
 
@@ -257,6 +259,23 @@ userRouter.put(
         ...user.documentation_links,
         body.newDocument,
       ];
+      const updatedUser = await user.save();
+      if (updatedUser.is_employer) {
+        RespondEmployer(res, updatedUser);
+      } else {
+        RespondWorker(res, updatedUser);
+      }
+    }
+  })
+);
+
+userRouter.put(
+  '/:id/resume',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    const body = req.body;
+    if (user) {
+      user.resume = body.resume;
       const updatedUser = await user.save();
       if (updatedUser.is_employer) {
         RespondEmployer(res, updatedUser);

@@ -10,6 +10,7 @@ import {
 import {View, Text, Pic, Table} from '../../../components';
 import {useDispatch, useSelector} from 'react-redux';
 import {
+  add_resume,
   openBottomDrawerAction,
   openDrawerAction,
   update_document,
@@ -22,6 +23,7 @@ import Axios from 'axios';
 import RNFetchBlob from 'rn-fetch-blob';
 
 import DocumentPicker from 'react-native-document-picker';
+import Toast from 'react-native-toast-message';
 
 function Main({navigation}) {
   return (
@@ -31,6 +33,25 @@ function Main({navigation}) {
     </View>
   );
 }
+
+const pickDocument = async callback => {
+  try {
+    const res = await DocumentPicker.pick({
+      type: [DocumentPicker.types.allFiles],
+    });
+    if (res) {
+      if (callback) {
+        callback(res);
+      }
+    }
+  } catch (err) {
+    if (DocumentPicker.isCancel(err)) {
+      // User cancelled the picker, exit any dialogs or menus and move on
+    } else {
+      throw err;
+    }
+  }
+};
 function Top({navigation}) {
   const dispatch = useDispatch();
   const JobsState = useSelector(state => state.jobsListState);
@@ -48,29 +69,11 @@ function Top({navigation}) {
     dispatch(get_jobs());
   }, [jobCreated]);
 
-  const pickDocument = async () => {
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.images],
-      });
-      if (res) {
-        dispatch(update_document(res, documentName));
-        setDocumentName(null);
-      }
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
-  };
-
   return (
-    <View
+    <ScrollView
       style={{
         paddingHorizontal: 20,
-        paddingTop: StatusBar.currentHeight,
+        paddingBottom: 100,
         height: '100%',
       }}>
       <TouchableOpacity
@@ -91,7 +94,12 @@ function Top({navigation}) {
         />
       </TouchableOpacity>
 
-      <View center middle>
+      <View
+        center
+        middle
+        style={{
+          paddingTop: StatusBar.currentHeight,
+        }}>
         <Pic
           src={
             userData?.profile_pic
@@ -116,7 +124,46 @@ function Top({navigation}) {
       </View>
 
       <View center middle>
-        <TouchableOpacity style={styles.resume}>
+        <TouchableOpacity
+          style={styles.resume}
+          onPress={() => {
+            console.log(userData.resume);
+            if (!userData.resume) {
+              pickDocument(res => {
+                dispatch(add_resume(res));
+              });
+            } else {
+              Toast.show({
+                type: 'success',
+                position: 'top',
+                text1: 'Your resume downloaded!',
+                text2:
+                  'if you want to change your resume please go to settings',
+                visibilityTime: 2000,
+                autoHide: true,
+              });
+
+              const {config, fs} = RNFetchBlob;
+              const date = new Date();
+
+              const {DownloadDir} = fs.dirs; // You can check the available directories in the wiki.
+              const options = {
+                fileCache: true,
+                addAndroidDownloads: {
+                  useDownloadManager: true, // true will use native manager and be shown on notification bar.
+                  notification: true,
+                  path: `${DownloadDir}/${Math.floor(
+                    date.getTime() + date.getSeconds() / 2,
+                  )}-${userData.resume.file_name}`,
+                  description: 'Downloading.',
+                },
+              };
+
+              config(options)
+                .fetch('GET', `${local_url}${userData.resume.path}`)
+                .then(res => {});
+            }
+          }}>
           <Pic
             src={require('../../../assets/icons/profile/document.png')}
             scale={19}
@@ -269,7 +316,12 @@ function Top({navigation}) {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}
-                onPress={() => pickDocument()}>
+                onPress={() =>
+                  pickDocument(res => {
+                    dispatch(update_document(res, documentName));
+                    setDocumentName(null);
+                  })
+                }>
                 <Pic
                   src={require('../../../assets/icons/profile/add_circle.png')}
                   scale={30}
@@ -279,7 +331,7 @@ function Top({navigation}) {
           </View>
         ) : null}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

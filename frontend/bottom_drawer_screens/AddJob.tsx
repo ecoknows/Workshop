@@ -39,8 +39,8 @@ function AddJob(props: AddJobProps) {
   const [isProfile, setIsProfile] = useState(false);
   const [profilePic, setProfilePic] = useState(-1);
   const [availablePositions, setAvailablePositions] = useState('0');
-  const [nameOfJob, setNameOfJob] = useState(null);
-  const [description, setDescription] = useState(null);
+  const [nameOfJob, setNameOfJob] = useState('');
+  const [description, setDescription] = useState('');
 
   useEffect(() => {
     setIsProfile(false);
@@ -219,7 +219,6 @@ function AddJob(props: AddJobProps) {
                       icons: profilePic,
                     }),
                   );
-                  dispatch(closeBottomDrawerAction('Add Job'));
                 }}>
                 Save
               </Button>

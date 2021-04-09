@@ -12,6 +12,53 @@ import {
 } from '../../database/current_user';
 import Toast from 'react-native-toast-message';
 
+export const add_resume = (file: {
+  name: string;
+  type: string;
+  uri: string;
+}) => async (dispatch: any, getState: any) => {
+  const {
+    userDetails: {userData},
+  } = getState();
+  try {
+    if (file) {
+      const formData = new FormData();
+      formData.append('file', {
+        name: userData.full_name + '_resume' || 'unknown',
+        type: file.type,
+        uri: file.uri,
+      });
+
+      const Documents = await Axios.post('/uploads/document', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if (Documents.data) {
+        const newDocument = Documents.data;
+        const {data} = await Axios.put(`/user/${userData._id}/resume`, {
+          resume: newDocument,
+        });
+
+        if (data) {
+          const mergeData = {...userData, ...data};
+          dispatch({type: USER_SIGNIN_SUCCESS, payload: mergeData});
+          update_login_user(mergeData);
+        }
+      }
+    }
+  } catch (error) {
+    dispatch({
+      type: USER_SIGNIN_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
 export const update_personal_info = (info: any) => async (
   dispatch: any,
   getState: any,
@@ -29,7 +76,6 @@ export const update_personal_info = (info: any) => async (
     );
     if (data) {
       const mergeData = {...userData, ...data};
-      console.log(mergeData);
 
       dispatch({type: USER_SIGNIN_SUCCESS, payload: mergeData});
       update_login_user(mergeData);
@@ -58,8 +104,9 @@ export const update_tag = (most_skilled: (string | number)[]) => async (
         most_skilled,
       });
       if (data) {
-        dispatch({type: USER_SIGNIN_SUCCESS, payload: data});
-        update_login_user(data);
+        const mergeData = {...userData, ...data};
+        dispatch({type: USER_SIGNIN_SUCCESS, payload: mergeData});
+        update_login_user(mergeData);
       }
     }
   } catch (error) {
@@ -107,8 +154,9 @@ export const update_document = (
           newDocument,
         });
         if (data) {
-          dispatch({type: USER_SIGNIN_SUCCESS, payload: data});
-          update_login_user(data);
+          const mergeData = {...userData, ...data};
+          dispatch({type: USER_SIGNIN_SUCCESS, payload: mergeData});
+          update_login_user(mergeData);
         }
       }
     }

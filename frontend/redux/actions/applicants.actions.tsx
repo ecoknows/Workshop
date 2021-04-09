@@ -1,4 +1,6 @@
 import Axios from 'axios';
+import Toast from 'react-native-toast-message';
+import {notify_someone} from '../../constants/notification_request';
 import {
   APPLICANTS_FAIL,
   APPLICANTS_REQUEST,
@@ -12,7 +14,6 @@ export const get_applicant_info = (applicant_info: any) => async (
   dispatch: any,
   getState: any,
 ) => {
-  dispatch({type: SELECTED_APPLICANTS_REQUEST});
   const {
     userDetails: {userData},
   } = getState();
@@ -130,11 +131,38 @@ export const add_applicant = (applicant_info: object) => async (
 
     if (data) {
       dispatch({type: APPLICANTS_SUCCESS, payload: data});
+
+      Toast.show({
+        type: 'success',
+        position: 'top',
+        text1: 'Application Sent!',
+        text2: 'Wait a further notice from the Employer',
+        visibilityTime: 2000,
+        autoHide: true,
+      });
+
+      notify_someone(userData, {
+        sender_id: userData._id,
+        sender_name: userData.full_name,
+        sender_profile: userData.profile_pic,
+
+        reciever_id: jobSelected.employer_id,
+
+        description: 'Application Notice',
+      });
       await Axios.get(
         `/jobs/current_applicants?status=new&_id=${jobSelected._id}`,
       );
     }
   } catch (error) {
+    Toast.show({
+      type: 'error',
+      position: 'top',
+      text1: 'You already Applied!',
+      text2: 'Application already sent please wait',
+      visibilityTime: 2000,
+      autoHide: true,
+    });
     dispatch({
       type: APPLICANTS_FAIL,
       payload:

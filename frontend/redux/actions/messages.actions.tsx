@@ -73,7 +73,7 @@ export const update_latest_chat = (new_chat: any) => (
   dispatch({type: CHAT_SUCCESS, payload: [new_chat, ...data]});
 };
 
-export const get_chats = (author_id: string) => async (
+export const get_chats = (reciever_id: string) => async (
   dispatch: any,
   getState: any,
 ) => {
@@ -84,7 +84,7 @@ export const get_chats = (author_id: string) => async (
 
   try {
     const {data} = await Axios.get(
-      `/messages/get/chat?reciever_id=${userData._id}&author_id=${author_id}`,
+      `/messages/get/chat?reciever_id=${reciever_id}&author_id=${userData._id}`,
       {
         headers: {Authorization: `Bearer ${userData.token}`},
       },
